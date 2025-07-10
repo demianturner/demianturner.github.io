@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Which Bin – Guildford Bin Collection App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+  <!-- Logo -->
+  <div class="absolute top-4 left-4 z-10">
+    <img src="images/whichbin-logo.png" alt="Which Bin Logo" class="h-16 md:h-32 lg:h-48 w-auto" />
+  </div>
+
+  <!-- Hero -->
+  <section class="px-4 py-8 md:py-12 text-center">
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Which Bin</h1>
+    <p class="text-lg md:text-xl mb-4">Never Miss Bin Day Again</p>
+    <p class="text-gray-600 max-w-xl mx-auto mb-6 text-sm md:text-base">
+      For residents of the <strong>Borough of Guildford</strong>, Which Bin tells you exactly which bins to put out — and when.
+    </p>
+
+<!-- paste code here -->
+  <div class="relative">
+    <!-- Loading animation -->
+    <div id="loading" class="absolute inset-0 flex items-center justify-center bg-gray-50 rounded-lg" style="height: 500px;">
+      <div class="flex flex-col items-center">
+        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mb-4"></div>
+        <p class="text-gray-600">Loading waiting list...</p>
+      </div>
+    </div>
+    <!-- Iframe -->
+    <iframe 
+      src="https://waitlistsnow.com/whichbin" 
+      width="100%" 
+      height="500" 
+      class="border-0 rounded-lg"
+      onload="setTimeout(() => document.getElementById('loading').style.display='none', 3000);"
+    ></iframe>
+  </div>
+  
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="px-4 py-6 text-center text-sm text-gray-500">
+    <p>This app is not affiliated with Guildford Borough Council.</p>
+    <div class="mt-2 flex justify-center gap-4">
+      <a href="index.html" class="underline">Which Bin</a>
+      <script>
+        const user = "demianturner+whichbin";
+        const domain = "gmail.com";
+        document.write(`<a href="mailto:${user}@${domain}" class="underline">Contact</a>`);
+      </script>
+      <noscript>Enable JavaScript to see email</noscript>      
+      <a href="privacy.html" class="underline">Privacy</a>
+    </div>
+  </footer>
+
+</body>
+</html>
