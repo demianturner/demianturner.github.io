@@ -7,33 +7,75 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-900">
+  <!-- Logo -->
+  <div class="absolute top-4 left-4 z-10">
+    <img src="images/logo.png" alt="Which Bin Logo" class="h-60 w-auto" />
+  </div>
+
   <!-- Hero -->
-  <section class="px-4 py-16 text-center">
-    <h1 class="text-4xl font-bold mb-4">Which Bin</h1>
-    <p class="text-xl mb-6">Never Miss Bin Day Again</p>
+  <section class="px-4 py-12 text-center">
+    <h1 class="text-5xl font-bold mb-4">Which Bin</h1>
+    <p class="text-xl mb-4">Never Miss Bin Day Again</p>
     <p class="text-gray-600 max-w-xl mx-auto mb-6">
       For residents of the <strong>Borough of Guildford</strong>, Which Bin tells you exactly which bins to put out — and when.
     </p>
-    <div class="flex flex-col sm:flex-row justify-center gap-4">
+    <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
       <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold">Get Early Access on TestFlight</a>
       <button class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold">Add to Waiting List</button>
     </div>
-    <img src="images/screenshot.png" alt="App Screenshot" class="mt-10 mx-auto w-full max-w-md rounded-xl shadow-lg" />
   </section>
 
   <!-- Features -->
-  <section class="bg-gray-50 px-4 py-16 text-center">
-    <h2 class="text-2xl font-semibold mb-8">Your Bin Schedule, Sorted</h2>
-    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-      <div>✅ Automatically finds your address</div>
-      <div>♻️ Tells you which bins are due</div>
-      <div>📅 Shows this week & next</div>
-      <div>🔔 Optional reminders</div>
+  <section class="bg-gray-50 px-8 md:px-16 lg:px-24 py-12">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4 text-gray-800">Never Miss Bin Day Again</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Whether you're a new resident or longtime local, Which Bin helps you stay on top of your collection schedule.
+      </p>
+    </div>
+    
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-start gap-20">
+      <!-- Features list on left -->
+      <div class="flex-1 flex flex-col gap-4">
+        <div class="flex items-center gap-4 p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div class="text-3xl">✅</div>
+          <div>
+            <div class="font-semibold text-lg mb-1 text-gray-800">Automatic address detection</div>
+            <div class="text-gray-600 text-sm">Find your collection schedule instantly with location services.</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div class="text-3xl">♻️</div>
+          <div>
+            <div class="font-semibold text-lg mb-1 text-gray-800">Know which bins are due</div>
+            <div class="text-gray-600 text-sm">Clear visual indicators for each bin type and collection day.</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div class="text-3xl">📅</div>
+          <div>
+            <div class="font-semibold text-lg mb-1 text-gray-800">This week & next</div>
+            <div class="text-gray-600 text-sm">Always stay ahead with upcoming collection schedules.</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div class="text-3xl">🔒</div>
+          <div>
+            <div class="font-semibold text-lg mb-1 text-gray-800">Private by design</div>
+            <div class="text-gray-600 text-sm">Your postcode is used only on your device and never sent to third parties.</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Screenshot on right -->
+      <div class="flex-shrink-0">
+        <img src="images/screenshot2.png" alt="App Screenshot" class="w-full max-w-sm rounded-2xl border-blue-100" style="border-width: 12px;" />
+      </div>
     </div>
   </section>
 
   <!-- Guildford Notice -->
-  <section class="px-4 py-16 text-center">
+  <section class="px-4 py-12 text-center">
     <h2 class="text-2xl font-semibold mb-4">📍 Guildford Borough Residents Only</h2>
     <p class="text-gray-600 max-w-xl mx-auto">
       For now, Which Bin supports homes in the <strong>Guildford Borough Council</strong> area. Support for more councils is planned.
@@ -41,7 +83,7 @@
   </section>
 
   <!-- CTA -->
-  <section class="bg-blue-50 px-4 py-16 text-center">
+  <section class="bg-blue-50 px-4 py-12 text-center">
     <h2 class="text-2xl font-semibold mb-4">Be First to Know</h2>
     <p class="text-gray-700 max-w-xl mx-auto mb-6">
       Sign up to the waiting list for app store release or try it now on TestFlight.
