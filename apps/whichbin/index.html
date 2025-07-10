@@ -76,15 +76,83 @@
 
   <!-- Guildford Notice -->
   <section class="px-4 py-12 text-center">
-    <h2 class="text-2xl font-semibold mb-4">📍 Guildford Borough Residents Only</h2>
+    <h2 class="text-4xl font-bold mb-4 text-gray-800">📍 Guildford Borough Residents Only</h2>
     <p class="text-gray-600 max-w-xl mx-auto">
       For now, Which Bin supports homes in the <strong>Guildford Borough Council</strong> area. Support for more councils is planned.
     </p>
   </section>
 
+  <!-- FAQ -->
+  <section class="px-8 md:px-16 lg:px-24 py-12">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold mb-8 text-center text-gray-800">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none">
+            <span class="font-semibold text-lg text-gray-800">What is Which Bin?</span>
+            <span class="faq-icon text-2xl text-blue-600 font-bold">+</span>
+          </button>
+          <div class="faq-answer p-6 pt-0 hidden">
+            <p class="text-gray-600">Which Bin is an iOS app for Guildford Borough residents that shows which bins to put out, and when — based on your location.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none">
+            <span class="font-semibold text-lg text-gray-800">Do I need to create an account?</span>
+            <span class="faq-icon text-2xl text-blue-600 font-bold">+</span>
+          </button>
+          <div class="faq-answer p-6 pt-0 hidden">
+            <p class="text-gray-600">No. The app works without registration. Just allow location access and it fetches your bin schedule.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none">
+            <span class="font-semibold text-lg text-gray-800">How does it know my address?</span>
+            <span class="faq-icon text-2xl text-blue-600 font-bold">+</span>
+          </button>
+          <div class="faq-answer p-6 pt-0 hidden">
+            <p class="text-gray-600">It uses your phone's GPS to find your postcode, then looks up your collection dates from Guildford's official data.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none">
+            <span class="font-semibold text-lg text-gray-800">Is my data private?</span>
+            <span class="faq-icon text-2xl text-blue-600 font-bold">+</span>
+          </button>
+          <div class="faq-answer p-6 pt-0 hidden">
+            <p class="text-gray-600">Yes. Your location and postcode are only used on your device. Nothing is stored or shared with anyone.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none">
+            <span class="font-semibold text-lg text-gray-800">Does it work outside Guildford?</span>
+            <span class="faq-icon text-2xl text-blue-600 font-bold">+</span>
+          </button>
+          <div class="faq-answer p-6 pt-0 hidden">
+            <p class="text-gray-600">Not yet. We currently support only the Borough of Guildford — but more areas may be added in future.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none">
+            <span class="font-semibold text-lg text-gray-800">How can I get the app?</span>
+            <span class="faq-icon text-2xl text-blue-600 font-bold">+</span>
+          </button>
+          <div class="faq-answer p-6 pt-0 hidden">
+            <p class="text-gray-600">You can join the TestFlight beta now, or add yourself to the waiting list for public release.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="bg-blue-50 px-4 py-12 text-center">
-    <h2 class="text-2xl font-semibold mb-4">Be First to Know</h2>
+    <h2 class="text-4xl font-bold mb-4 text-gray-800">Be First to Know</h2>
     <p class="text-gray-700 max-w-xl mx-auto mb-6">
       Sign up to the waiting list for app store release or try it now on TestFlight.
     </p>
@@ -98,10 +166,49 @@
   <footer class="px-4 py-6 text-center text-sm text-gray-500">
     <p>This app is not affiliated with Guildford Borough Council.</p>
     <div class="mt-2 flex justify-center gap-4">
-      <a href="#">Contact</a>
+      <script>
+        const user = "demianturner+whichbin";
+        const domain = "gmail.com";
+        document.write(`<a href="mailto:${user}@${domain}">Contact</a>`);
+      </script>
+      <noscript>Enable JavaScript to see email</noscript>
       <a href="#">Privacy</a>
       <a href="#">GitHub</a>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+          const faqItem = this.parentElement;
+          const answer = faqItem.querySelector('.faq-answer');
+          const icon = this.querySelector('.faq-icon');
+          
+          // Close all other FAQ items
+          faqQuestions.forEach(otherQuestion => {
+            if (otherQuestion !== this) {
+              const otherItem = otherQuestion.parentElement;
+              const otherAnswer = otherItem.querySelector('.faq-answer');
+              const otherIcon = otherQuestion.querySelector('.faq-icon');
+              otherAnswer.classList.add('hidden');
+              otherIcon.textContent = '+';
+            }
+          });
+          
+          // Toggle current FAQ item
+          if (answer.classList.contains('hidden')) {
+            answer.classList.remove('hidden');
+            icon.textContent = '−';
+          } else {
+            answer.classList.add('hidden');
+            icon.textContent = '+';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
