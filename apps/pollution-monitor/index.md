@@ -27,8 +27,8 @@ If you have any enquiries about the app please [get in touch][5].
 
 [1]:	https://itunes.apple.com/gb/app/pollution-monitor/id1197195842?mt=12
 [2]:	https://itunes.apple.com/cn/app/pollution-monitor/id1197195842?l=zh&mt=12
-[3]:	http://waqi.info/
-[4]:	pollution%20monitor%20changelog
+[3]:	https://waqi.info/
+[4]:	/apps/pollution-monitor/pollution%20monitor%20changelog
 [5]:	mailto:demianturner+pollutionmonitor@gmail.com
 
 [image-1]:	images/Download_on_the_Mac_App_Store_Badge_US-UK_165x40.svg

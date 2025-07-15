@@ -2,7 +2,7 @@
 layout: page
 title: Crypto Tools for the Mac
 ---
-# Download Crypto Tools on the Mac AppStore
+
 Crypto Tools Pro is a handy menu bar app to convert between fiat currencies and cryptos.  Also features real-time price and news feeds.  Get the latest exchange data live in your menu bar.
 
 
@@ -67,7 +67,7 @@ If you have any enquiries or requests please [get in touch][11].
 [7]:	https://github.com/ashleymills/Reachability.swift
 [8]:	https://github.com/shpakovski/MASShortcut
 [9]:	https://github.com/DaveWoodCom/XCGLogger
-[10]:	Crypto%20Tools%20Changelog
+[10]:	/apps/crypto-calculator/Crypto%20Tools%20Changelog
 [11]:	mailto:demianturner+cryptotools@gmail.com
 [12]:  https://github.com/sindresorhus/LaunchAtLogin
 [13]:  https://github.com/demianturner/DTOnboarding

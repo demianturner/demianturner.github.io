@@ -4,12 +4,12 @@ icon: fas fa-brands fa-apple
 order: 1
 ---
 
-| Kids Birthdays | Crypto Calculator  | Pollution Monitor | Doris Desktop
+| Which Bin | Kids Birthdays | Crypto Calculator  | Pollution Monitor
 | --- | --- | --- | --- | 
-| [![Kids Birthdays][image-7]][4]   | [![Crypto Calculator][image-1]][1]   | [![][image-2]][2]  | [![][image-3]][3]| 
-| Lifestyle | Finance | Environment | Productivity | 
-| Platform: iOS | Platform: macOS | Platform: macOS  | Platform: macOS  |
-| Release: Sep 14, 2020 | Release: Feb 6, 2018 | Release: Jan 20, 2017  | Release: Dec 3rd, 2010 |
+| [![][image-3]][3] | [![Kids Birthdays][image-7]][4]   | [![Crypto Calculator][image-1]][1]   | [![][image-2]][2] 
+| Utilities | Lifestyle | Finance | Environment | 
+| Platform: iOS  |Platform: iOS | Platform: macOS | Platform: macOS  | 
+| Release: Jul 15, 2025 | Release: Sep 14, 2020 | Release: Feb 6, 2018 | Release: Jan 20, 2017  |
 
 <br /> <br />
 
@@ -24,12 +24,12 @@ order: 1
 
 [1]:	/apps/crypto-calculator
 [2]:	/apps/pollution-monitor
-[3]:	http://beta.dorisapp.com/en/desktop/
+[3]:	/apps/whichbin
 [4]:	/apps/kids-birthdays
 
 [image-1]:	/apps/crypto-calculator/images/icon_256x256.png
 [image-2]:	/apps/pollution-monitor/images/512.png
-[image-3]:	/apps/doris-desktop/images/doris.png
+[image-3]:	/apps/whichbin/images/whichbin-logo.png
 [image-4]:	/apps/doris/images/doris.png
 [image-5]:	/apps/read-later/images/read-later.png
 [image-6]:	/apps/my-high-street/images/mhs.png
