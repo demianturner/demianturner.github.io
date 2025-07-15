@@ -6,7 +6,7 @@ order: 1
 
 | Which Bin | Kids Birthdays | Crypto Calculator  | Pollution Monitor
 | --- | --- | --- | --- | 
-| [![][image-3]][3] | [![Kids Birthdays][image-7]][4]   | [![Crypto Calculator][image-1]][1]   | [![][image-2]][2] 
+| [![][image-3]{: w="175" h="175" }][3] | [![Kids Birthdays][image-7]][4]   | [![Crypto Calculator][image-1]][1]   | [![][image-2]][2] 
 | Utilities | Lifestyle | Finance | Environment | 
 | Platform: iOS  |Platform: iOS | Platform: macOS | Platform: macOS  | 
 | Release: Jul 15, 2025 | Release: Sep 14, 2020 | Release: Feb 6, 2018 | Release: Jan 20, 2017  |
