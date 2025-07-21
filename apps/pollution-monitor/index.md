@@ -31,8 +31,8 @@ If you have any enquiries about the app please [get in touch][5].
 [4]:	/apps/pollution-monitor/pollution%20monitor%20changelog.md
 [5]:	mailto:demianturner+pollutionmonitor@gmail.com
 
-[image-1]:	images/Download_on_the_Mac_App_Store_Badge_US-UK_165x40.svg
-[image-2]:	images/Download_on_the_App_Store_Badge_CN_135x40.svg
-[image-3]:	images/512.png
-[image-4]:	images/pollution-monitor-appstore-image-1.png
-[image-5]:	images/pollution-monitor-appstore-image-2.png
+[image-1]:	/apps/pollution-monitor/images/Download_on_the_Mac_App_Store_Badge_US-UK_165x40.svg
+[image-2]:	/apps/pollution-monitor/images/Download_on_the_App_Store_Badge_CN_135x40.svg
+[image-3]:	/apps/pollution-monitor/images/512.png
+[image-4]:	/apps/pollution-monitor/images/pollution-monitor-appstore-image-1.png
+[image-5]:	/apps/pollution-monitor/images/pollution-monitor-appstore-image-2.png
