@@ -104,6 +104,9 @@ avatar: https://avatars.githubusercontent.com/u/136587?s=400&amp;u=7303a2e9f775a
 # It can be overridden by a customized `page.image` in front matter.
 social_preview_image: # string, local or CORS resources
 
+plugins:
+  - jekyll-compose
+  
 # boolean type, the global switch for TOC in posts.
 toc: true
 

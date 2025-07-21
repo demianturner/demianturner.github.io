@@ -1,5 +1,5 @@
 ---
-title: 🗑️ Introducing Which Bin Guildford — Now in Beta
+title: Introducing Which Bin Guildford — Now in Beta
 date: 2025-07-16 17:13:48 BST
 # categories: [category1, category2]
 tags: [apps]     # TAG names should always be lowercase

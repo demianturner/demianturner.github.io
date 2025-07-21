@@ -1,5 +1,5 @@
 ---
-layout: kids-birthdays
+layout: page
 title: Kids Birthdays for the iOS
 ---
 # Download Kids Birthdays on the AppStore
