@@ -1,7 +1,6 @@
 ---
 title: Why Not Use the Website?
 date: 2025-07-18 10:17:48 BST
-# categories: [category1, category2]
 tags: [apps, whichbin]
 description: Why Bother Making an App
 ---
