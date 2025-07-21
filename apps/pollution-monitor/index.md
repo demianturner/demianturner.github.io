@@ -1,5 +1,5 @@
 ---
-layout: pollution-monitor
+layout: page
 title: Pollution Monitor for the Mac
 ---
 # Download Pollution Monitor on the Mac AppStore
