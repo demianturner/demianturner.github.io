@@ -1,12 +1,11 @@
 ---
 layout: page
 icon: fas fa-info-circle
+title: About Demian Turner
 order: 5
 ---
 
-# Demian Turner
-
-**Senior iOS & macOS Engineer | Open-Source Author | Team Leader**
+## Senior iOS & macOS Engineer | Open-Source Author | Team Leader
 
 Demian Turner is a UK-based software engineer with over two decades of experience delivering high-performance desktop and mobile applications for Apple platforms. Until recently, he led a team of Swift developers at Global Relay, building compliant communications software trusted by the world’s largest financial institutions. A long-time advocate for open-source, Demian developed the Seagull PHP framework, a modular web development platform that has been downloaded over 40,000 times and used by developers around the world.
 
@@ -36,7 +35,7 @@ Demian founded Seagull Systems in London, leading the agency to deliver over 50 
 - Oversaw full lifecycle development across design, engineering, and client delivery, growing profitability year-on-year for 6 years.
 
 ### Full Career History
-https://www.linkedin.com/in/demianturner/details/experience/
+[LinkedIn Profile](https://www.linkedin.com/in/demianturner/details/experience/)
 
 ## Open Source & Community
 Demian is a long-time advocate for open-source software and active participant in developer communities. He is the creator of the **Seagull PHP web development framework**, downloaded over 40,000 times and used by a global network of developers, with over 1,000 registered contributors across 72 countries. Beyond development, he helped grow the open-source ecosystem by **organising community conferences** and **co-founding PHP-London**, one of the UK’s leading PHP user groups.
@@ -48,8 +47,8 @@ He has spoken at various industry events on topics including rapid web app devel
 ## Technical Toolbox
 
 * Languages: Swift, SwiftUI, Objective-C, PHP, MySQL, JavaScript, Python  
-* Frameworks: SwiftUI, TCA, Core Data, Seagull PHP,   
-* DevOps: GitHub Actions, Jenkins, Docker, Fastlane, TestFlight  
+* Frameworks: SwiftUI, TCA, Core Data   
+* DevOps: Jenkins, Docker, Fastlane, TestFlight, GitHub Actions
 * Platforms: macOS, iOS, watchOS, Linux
 
 ## Personal Note
