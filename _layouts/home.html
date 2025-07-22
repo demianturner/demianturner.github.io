@@ -47,33 +47,6 @@ refactor: true
   {% endfor %}
 {% endif %}
 
-<style>
-  .post-tags {
-    margin-top: 0.5rem;
-  }
-
-  .post-tag {
-    display: inline-block;
-    background-color: #f0f0f0;
-    color: #333;
-    padding: 2px 6px;
-    margin-right: 5px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    text-decoration: none;
-  }
-
-  .post-tag:hover {
-    background-color: #e0e0e0;
-  }
-
-  .post-tags .badge {
-    font-size: 0.9rem;
-    padding: 6px 12px;
-    color: #b0b0b0ff !important;
-  }
-</style>
-
 <div id="post-list" class="flex-grow-1 px-xl-1">
   {% for post in posts %}
     <article class="card-wrapper card">
