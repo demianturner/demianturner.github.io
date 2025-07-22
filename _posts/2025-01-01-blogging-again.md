@@ -1,7 +1,8 @@
 ---
 title: Nice To Be Back
 date: 2025-01-01 17:13:48 GMT
-tags: [personal]     # TAG names should always be lowercase
+categories: [Personal]
+tags: # TAG names should always be lowercase
 description: I've been missing blogging for a few years now. My son is now 8 and hoping to get back into it.
 ---
 

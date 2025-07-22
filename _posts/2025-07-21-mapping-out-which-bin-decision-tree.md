@@ -2,7 +2,8 @@
 layout: post
 title: Mapping Out Which Bin Decision Tree
 date: 2025-07-21 10:25 BST
-tags: [apps, whichbin]
+categories: [WhichBin]
+tags: [apps]
 ---
 
 The logical flow for the Which Bin app ended up being much more complicated than I imagined when setting out to build the app.

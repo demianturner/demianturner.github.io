@@ -1,7 +1,8 @@
 ---
 title: Introducing Which Bin Guildford — Now in Beta
 date: 2025-07-16 17:13:48 BST
-tags: [apps, whichbin]     # TAG names should always be lowercase
+categories: [WhichBin]
+tags: [apps]     # TAG names should always be lowercase
 description: Which Bin iOS Launch
 ---
 
