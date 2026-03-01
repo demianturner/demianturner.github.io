@@ -1,32 +1,25 @@
 /* ============================================================
    MinkNote — style.css
-   Single stylesheet: tokens → base → nav → hero → sections
-                      → feature grid → footer → animations
+   Light mode. Playfair Display headlines, Inter body.
    ============================================================ */
 
-/* --- Google Fonts: Nunito as SN Pro stand-in ---
-   To use SN Pro instead:
-     1. Download SNPro-Regular.woff2 + SNPro-Italic.woff2 from
-        https://github.com/supernotes/sn-pro/releases
-     2. Place them in assets/fonts/
-     3. Uncomment the @font-face blocks below
-     4. Remove the Google Fonts <link> tags in index.html
+/*
+  To use SN Pro instead of Nunito/Google Fonts:
+    1. Download SNPro-Regular.woff2 + SNPro-Italic.woff2 from
+       https://github.com/supernotes/sn-pro/releases
+    2. Place in assets/fonts/
+    3. Uncomment below, remove the two Google Fonts <link> tags in index.html
 */
-
 /*
 @font-face {
   font-family: "SN Pro";
   src: url("../fonts/SNPro-Regular.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
+  font-weight: 100 900; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "SN Pro";
   src: url("../fonts/SNPro-Italic.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
+  font-weight: 100 900; font-style: italic; font-display: swap;
 }
 */
 
@@ -40,44 +33,47 @@ img, video             { display: block; max-width: 100%; }
 a                      { color: inherit; text-decoration: none; }
 ul, ol                 { list-style: none; }
 button                 { cursor: pointer; border: none; background: none; font: inherit; color: inherit; }
-input, textarea        { font: inherit; }
 
 /* ============================================================
    TOKENS
    ============================================================ */
 :root {
-  /* Font */
-  --font: "SN Pro", "Nunito", system-ui, -apple-system, sans-serif;
+  /* Fonts:
+     --font-head  → Playfair Display (high-contrast serif, "Think Different" feel)
+     --font-body  → Inter (clean, neutral, legible)
+     SN Pro will slot into --font-body when ready. */
+  --font-head: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", "SN Pro", system-ui, -apple-system, sans-serif;
 
-  /* Palette */
-  --bg:          #0d0d10;
-  --surface:     #141418;
-  --surface-2:   #1c1c22;
-  --surface-3:   #252530;
-  --border:      rgba(255, 255, 255, 0.07);
-  --border-hi:   rgba(255, 255, 255, 0.13);
+  /* Light palette */
+  --bg:          #fafaf8;
+  --surface:     #ffffff;
+  --surface-2:   #f4f3ef;
+  --surface-3:   #eceae4;
+  --border:      rgba(0, 0, 0, 0.08);
+  --border-hi:   rgba(0, 0, 0, 0.14);
 
-  --text:        #f0eff4;
-  --text-muted:  #85849a;
-  --text-dim:    #58576e;
+  --text:        #1a1917;
+  --text-muted:  #6b6a66;
+  --text-dim:    #a09e99;
 
-  /* Apple Blue — signals macOS native */
+  /* Accent — Apple Blue */
   --accent:      #0A84FF;
   --accent-hi:   #3a9fff;
-  --accent-glow: rgba(10, 132, 255, 0.18);
+  --accent-glow: rgba(10, 132, 255, 0.15);
 
   /* Type scale */
-  --t-xs:   0.75rem;    /* 12px */
-  --t-sm:   0.875rem;   /* 14px */
-  --t-base: 1rem;       /* 16px */
-  --t-lg:   1.125rem;   /* 18px */
-  --t-xl:   1.25rem;    /* 20px */
-  --t-2xl:  1.5rem;     /* 24px */
-  --t-3xl:  1.875rem;   /* 30px */
-  --t-4xl:  2.25rem;    /* 36px */
-  --t-5xl:  3rem;       /* 48px */
-  --t-6xl:  3.75rem;    /* 60px */
-  --t-7xl:  4.5rem;     /* 72px */
+  --t-xs:   0.75rem;
+  --t-sm:   0.875rem;
+  --t-base: 1rem;
+  --t-lg:   1.125rem;
+  --t-xl:   1.25rem;
+  --t-2xl:  1.5rem;
+  --t-3xl:  1.875rem;
+  --t-4xl:  2.25rem;
+  --t-5xl:  3rem;
+  --t-6xl:  3.75rem;
+  --t-7xl:  4.5rem;
 
   /* Space scale */
   --s1:  0.25rem;   --s2:  0.5rem;    --s3:  0.75rem;
@@ -86,14 +82,10 @@ input, textarea        { font: inherit; }
   --s14: 3.5rem;    --s16: 4rem;      --s20: 5rem;
   --s24: 6rem;      --s28: 7rem;      --s32: 8rem;
 
-  /* Border radii */
-  --r-sm:  6px;
-  --r-md:  12px;
-  --r-lg:  18px;
-  --r-xl:  24px;
-  --r-2xl: 32px;
+  /* Radii */
+  --r-sm:  6px;   --r-md: 12px;
+  --r-lg:  18px;  --r-xl: 24px;  --r-2xl: 32px;
 
-  /* Nav height (used for hero padding offset) */
   --nav-h: 64px;
 }
 
@@ -103,7 +95,7 @@ input, textarea        { font: inherit; }
 body {
   background-color: var(--bg);
   color: var(--text);
-  font-family: var(--font);
+  font-family: var(--font-body);
   font-size: var(--t-base);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -111,10 +103,19 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
-  font-weight: 800;
-  letter-spacing: -0.025em;
+/* Serif only for big headings */
+h1, h2 {
+  font-family: var(--font-head);
+  font-weight: 700;
   line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+h3, h4 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  line-height: 1.2;
   color: var(--text);
 }
 
@@ -141,7 +142,7 @@ h1, h2, h3, h4 {
 }
 
 .site-nav.is-scrolled {
-  background: rgba(13, 13, 16, 0.84);
+  background: rgba(250, 250, 248, 0.88);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   border-color: var(--border);
@@ -157,11 +158,11 @@ h1, h2, h3, h4 {
   padding: 0 var(--s6);
 }
 
-/* Logo */
 .nav-logo {
   display: flex;
   align-items: center;
   gap: var(--s2);
+  font-family: var(--font-body);
   font-size: var(--t-lg);
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -171,7 +172,6 @@ h1, h2, h3, h4 {
 
 .nav-logo svg { flex-shrink: 0; }
 
-/* Links */
 .nav-links {
   display: flex;
   align-items: center;
@@ -184,10 +184,8 @@ h1, h2, h3, h4 {
   color: var(--text-muted);
   transition: color 0.2s;
 }
-
 .nav-links a:hover { color: var(--text); }
 
-/* Mobile hamburger (hidden on desktop) */
 .nav-menu-btn {
   display: none;
   flex-direction: column;
@@ -213,43 +211,33 @@ h1, h2, h3, h4 {
 .hero {
   position: relative;
   padding-top: calc(var(--nav-h) + var(--s24));
-  padding-bottom: 0;
+  padding-bottom: var(--s20);
   text-align: center;
   overflow: hidden;
-}
-
-/* Radial glow that emanates from top-center behind the heading */
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -5%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1000px;
-  height: 700px;
+  /* Gentle radial wash — very subtle on light bg */
   background: radial-gradient(
-    ellipse at top,
-    rgba(10, 132, 255, 0.11) 0%,
-    transparent 65%
-  );
-  pointer-events: none;
+    ellipse 900px 500px at 50% 0%,
+    rgba(10, 132, 255, 0.05) 0%,
+    transparent 70%
+  ), var(--bg);
 }
 
-/* Platform badge */
 .platform-badge {
   display: inline-flex;
   align-items: center;
   gap: var(--s2);
-  background: var(--surface-2);
+  background: var(--surface);
   border: 1px solid var(--border-hi);
   border-radius: 100px;
   padding: 5px var(--s4) 5px 10px;
+  font-family: var(--font-body);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: var(--s6);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
 }
 
 .platform-badge svg {
@@ -258,19 +246,19 @@ h1, h2, h3, h4 {
   fill: var(--text-muted);
 }
 
-/* Hero headline */
 .hero-title {
+  font-family: var(--font-head);
   font-size: clamp(var(--t-5xl), 7.5vw, var(--t-7xl));
-  font-weight: 900;
-  letter-spacing: -0.045em;
-  line-height: 1.04;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.06;
   color: var(--text);
   max-width: 840px;
   margin: 0 auto var(--s6);
 }
 
-/* Subtext */
 .hero-sub {
+  font-family: var(--font-body);
   font-size: clamp(var(--t-base), 2.2vw, var(--t-xl));
   color: var(--text-muted);
   max-width: 500px;
@@ -279,7 +267,6 @@ h1, h2, h3, h4 {
   font-weight: 400;
 }
 
-/* CTA row */
 .hero-cta {
   display: flex;
   align-items: center;
@@ -294,8 +281,9 @@ h1, h2, h3, h4 {
   display: inline-flex;
   align-items: center;
   gap: var(--s2);
-  padding: 0.65em 1.4em;
+  padding: 0.68em 1.5em;
   border-radius: var(--r-lg);
+  font-family: var(--font-body);
   font-size: var(--t-sm);
   font-weight: 700;
   transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
@@ -309,59 +297,37 @@ h1, h2, h3, h4 {
 .btn-primary:hover {
   background: var(--accent-hi);
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px var(--accent-glow);
+  box-shadow: 0 8px 24px var(--accent-glow);
 }
 
 .btn-ghost {
-  background: var(--surface-2);
+  background: var(--surface);
   color: var(--text);
   border: 1px solid var(--border-hi);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 }
 .btn-ghost:hover {
-  background: var(--surface-3);
+  background: var(--surface-2);
   transform: translateY(-2px);
 }
 
-/* Hero screenshot */
+/* ── Hero screenshot ── */
 .hero-img-wrap {
   position: relative;
-  display: inline-block;
-  max-width: 880px;
-  width: 100%;
+  display: block;
+  /* Match the natural resized image width; scales down proportionally on
+     smaller viewports via width: 100% on the img — never squashed */
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-/* Glow halo behind the screenshot */
-.hero-img-wrap::before {
-  content: '';
-  position: absolute;
-  inset: -8% -6%;
-  background: radial-gradient(
-    ellipse,
-    rgba(10, 132, 255, 0.16) 0%,
-    transparent 65%
-  );
-  pointer-events: none;
-  z-index: 0;
-}
-
 .hero-img-wrap img {
-  position: relative;
-  z-index: 1;
+  display: block;
+  /* Scale down on narrow screens, never upscale past natural size */
   width: 100%;
-  border-radius: var(--r-xl) var(--r-xl) 0 0;
-  filter: drop-shadow(0 28px 60px rgba(0, 0, 0, 0.75));
-}
-
-/* Gradient fade at the bottom so the screenshot bleeds into the page */
-.hero-img-wrap::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 180px;
-  background: linear-gradient(to bottom, transparent 0%, var(--bg) 100%);
-  pointer-events: none;
-  z-index: 2;
+  height: auto;
+  /* No border-radius — the macOS window shadow is already in the RGBA file */
+  /* No filter drop-shadow — the native macOS shadow in the PNG is sufficient */
 }
 
 /* ============================================================
@@ -369,7 +335,6 @@ h1, h2, h3, h4 {
    ============================================================ */
 .feature-section {
   padding: var(--s32) 0;
-  position: relative;
 }
 
 .split {
@@ -379,9 +344,6 @@ h1, h2, h3, h4 {
   align-items: center;
 }
 
-/* For reversed layout: put visual first in HTML, text second */
-/* No CSS tricks needed — HTML order does the work */
-
 .split-content {
   display: flex;
   flex-direction: column;
@@ -390,6 +352,7 @@ h1, h2, h3, h4 {
 
 .eyebrow {
   display: inline-block;
+  font-family: var(--font-body);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -399,8 +362,6 @@ h1, h2, h3, h4 {
 
 .split-content h2 {
   font-size: clamp(var(--t-3xl), 4vw, var(--t-5xl));
-  letter-spacing: -0.035em;
-  line-height: 1.09;
 }
 
 .split-content > p {
@@ -443,12 +404,10 @@ h1, h2, h3, h4 {
   overflow: hidden;
   aspect-ratio: 4 / 3;
   box-shadow:
-    0 2px 4px rgba(0,0,0,0.3),
-    0 20px 50px rgba(0,0,0,0.5);
-  position: relative;
+    0 1px 3px rgba(0,0,0,0.06),
+    0 12px 40px rgba(0,0,0,0.10);
 }
 
-/* macOS traffic-light chrome strip */
 .chrome-bar {
   display: flex;
   align-items: center;
@@ -456,7 +415,6 @@ h1, h2, h3, h4 {
   padding: var(--s3) var(--s5);
   background: var(--surface-2);
   border-bottom: 1px solid var(--border);
-  flex-shrink: 0;
 }
 
 .chrome-dot {
@@ -468,7 +426,6 @@ h1, h2, h3, h4 {
 .chrome-dot:nth-child(2) { background: #ffbd2e; }
 .chrome-dot:nth-child(3) { background: #28c840; }
 
-/* Skeleton / placeholder body */
 .app-body {
   padding: var(--s6) var(--s5);
   display: flex;
@@ -479,7 +436,7 @@ h1, h2, h3, h4 {
 .win-icon {
   width: 46px;
   height: 46px;
-  background: rgba(10, 132, 255, 0.12);
+  background: rgba(10, 132, 255, 0.09);
   border-radius: var(--r-md);
   display: flex;
   align-items: center;
@@ -497,7 +454,7 @@ h1, h2, h3, h4 {
   stroke-linejoin: round;
 }
 
-/* Animated skeleton bars */
+/* Skeleton bars — light shimmer */
 .sk {
   border-radius: var(--r-sm);
   height: 13px;
@@ -522,7 +479,6 @@ h1, h2, h3, h4 {
   100% { background-position: -200% 0; }
 }
 
-/* Subtle section separator */
 .section-divider {
   height: 1px;
   background: linear-gradient(
@@ -540,11 +496,13 @@ h1, h2, h3, h4 {
    ============================================================ */
 .grid-section {
   padding: var(--s20) 0 var(--s32);
+  /* Slightly off-white tinted panel, like the screenshot */
+  background: var(--surface-2);
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: var(--s16);
+  margin-bottom: var(--s14);
 }
 
 .section-header .eyebrow {
@@ -552,9 +510,9 @@ h1, h2, h3, h4 {
 }
 
 .section-header h2 {
-  font-size: clamp(var(--t-3xl), 4vw, var(--t-5xl));
-  letter-spacing: -0.035em;
+  font-size: clamp(var(--t-3xl), 4.5vw, var(--t-6xl));
   margin-bottom: var(--s4);
+  letter-spacing: -0.01em;
 }
 
 .section-header p {
@@ -565,64 +523,63 @@ h1, h2, h3, h4 {
   line-height: 1.7;
 }
 
+/* 4-column dense grid */
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--s5);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s4);
   margin-bottom: var(--s10);
 }
 
 .feature-card {
   background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--r-xl);
-  padding: var(--s6);
-  transition:
-    transform 0.2s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
+  border-radius: var(--r-lg);
+  padding: var(--s5);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(10, 132, 255, 0.28);
-  box-shadow:
-    0 14px 36px rgba(0, 0, 0, 0.35),
-    0 0 0 1px rgba(10, 132, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10), 0 12px 28px rgba(0,0,0,0.07);
 }
 
+/* Circular coloured icon — colour set inline per card */
 .card-icon {
-  width: 44px;
-  height: 44px;
-  background: rgba(10, 132, 255, 0.1);
-  border-radius: var(--r-md);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--s5);
+  margin-bottom: var(--s4);
+  /* Background/stroke colour overridden inline per card */
+  background: #E3F2FD;
 }
 
 .card-icon svg {
-  width: 20px;
-  height: 20px;
-  stroke: var(--accent);
+  width: 22px;
+  height: 22px;
   fill: none;
-  stroke-width: 1.8;
+  stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+  /* Stroke colour overridden inline per card */
+  stroke: #1565C0;
 }
 
 .feature-card h3 {
-  font-size: var(--t-base);
+  font-size: var(--t-sm);
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.005em;
   margin-bottom: var(--s2);
+  line-height: 1.3;
 }
 
 .feature-card p {
-  font-size: var(--t-sm);
+  font-size: var(--t-xs);
   color: var(--text-muted);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .grid-footer {
@@ -630,18 +587,18 @@ h1, h2, h3, h4 {
 }
 
 .link-arrow {
+  font-family: var(--font-body);
   font-size: var(--t-sm);
-  font-weight: 700;
-  color: var(--accent);
+  font-weight: 600;
+  color: var(--text-muted);
   display: inline-flex;
   align-items: center;
   gap: var(--s2);
-  transition: gap 0.2s ease, color 0.2s ease;
+  transition: color 0.2s ease, gap 0.2s ease;
 }
-
 .link-arrow:hover {
-  gap: var(--s4);
-  color: var(--accent-hi);
+  color: var(--text);
+  gap: var(--s3);
 }
 
 /* ============================================================
@@ -650,6 +607,7 @@ h1, h2, h3, h4 {
 .site-footer {
   padding: var(--s16) 0 var(--s12);
   border-top: 1px solid var(--border);
+  background: var(--bg);
 }
 
 .footer-inner {
@@ -665,16 +623,14 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   gap: var(--s2);
+  font-family: var(--font-body);
   font-size: var(--t-base);
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--text);
 }
 
-.footer-links {
-  display: flex;
-  gap: var(--s6);
-}
+.footer-links { display: flex; gap: var(--s6); }
 
 .footer-links a {
   font-size: var(--t-sm);
@@ -682,7 +638,6 @@ h1, h2, h3, h4 {
   color: var(--text-dim);
   transition: color 0.2s;
 }
-
 .footer-links a:hover { color: var(--text-muted); }
 
 .footer-copy {
@@ -692,7 +647,7 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================================
-   AOS — timing override for snappier feel
+   AOS timing
    ============================================================ */
 [data-aos] {
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
@@ -701,30 +656,26 @@ h1, h2, h3, h4 {
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+@media (max-width: 1020px) {
+  .feature-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
 @media (max-width: 920px) {
-  .split {
-    grid-template-columns: 1fr;
-    gap: var(--s10);
-  }
-  .feature-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .split { grid-template-columns: 1fr; gap: var(--s10); }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
   :root { --nav-h: 56px; }
 
-  .hero {
-    padding-top: calc(var(--nav-h) + var(--s16));
-  }
+  .hero { padding-top: calc(var(--nav-h) + var(--s16)); }
 
-  /* Mobile nav — links hidden until toggled */
   .nav-links {
     display: none;
     position: absolute;
     top: 100%;
     left: 0; right: 0;
-    background: rgba(13, 13, 16, 0.97);
+    background: rgba(250, 250, 248, 0.97);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
@@ -733,21 +684,13 @@ h1, h2, h3, h4 {
     padding: var(--s4) var(--s6) var(--s6);
     gap: var(--s5);
   }
-
   .nav-links.is-open { display: flex; }
-
-  .nav-links a {
-    font-size: var(--t-base);
-    padding: var(--s2) 0;
-  }
-
+  .nav-links a { font-size: var(--t-base); padding: var(--s2) 0; }
   .nav-menu-btn { display: flex; }
 
-  .hero-title { letter-spacing: -0.035em; }
+  .hero-title { letter-spacing: -0.015em; }
   .hero-cta   { gap: var(--s3); }
-
   .feature-section { padding: var(--s20) 0; }
-  .feature-grid    { grid-template-columns: 1fr; }
-
-  .footer-inner { flex-direction: column; align-items: flex-start; }
+  .feature-grid    { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner    { flex-direction: column; align-items: flex-start; }
 }
