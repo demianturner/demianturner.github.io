@@ -1,0 +1,8 @@
+{%- comment -%}
+  Render post description on listing cards, with safe fallback to excerpt/content.
+{%- endcomment -%}
+
+{%- assign max_length = include.max_length | default: 200 -%}
+{%- assign source_text = post.description | default: post.excerpt | default: post.content -%}
+
+{{- source_text | markdownify | strip_html | strip | truncate: max_length | escape -}}
