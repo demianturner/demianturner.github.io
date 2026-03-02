@@ -102,12 +102,13 @@
       padding: var(--s6);
       box-shadow:
         0 1px 3px rgba(0,0,0,0.05),
-        0 4px 14px rgba(0,0,0,0.04);
+        0 4px 14px rgba(0,0,0,0.04),
+        inset 0 3px 0 0 transparent;   /* accent bar slot — invisible at rest */
       /* Entrance: cards fade+rise in when page loads */
       animation: cardIn 0.5s ease-out both;
       transition:
-        transform 0.22s cubic-bezier(0.16,1,0.3,1),
-        box-shadow 0.22s ease;
+        transform    0.22s cubic-bezier(0.16,1,0.3,1),
+        box-shadow   0.22s ease;
       text-decoration: none;
       color: inherit;
       display: flex;
@@ -147,23 +148,9 @@
       transform: translateY(-5px);
       box-shadow:
         0 8px 20px rgba(0,0,0,0.09),
-        0 24px 48px rgba(0,0,0,0.07);
+        0 24px 48px rgba(0,0,0,0.07),
+        inset 0 3px 0 0 var(--accent);  /* accent bar — clipped cleanly by border-radius */
     }
-
-    /* Subtle blue accent bar that appears on hover at the top */
-    .feat-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--accent);
-      border-radius: var(--r-xl) var(--r-xl) 0 0;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.25s cubic-bezier(0.16,1,0.3,1);
-    }
-
-    .feat-card:hover::before { transform: scaleX(1); }
 
     .feat-card--wide { grid-column: span 2; }
 
