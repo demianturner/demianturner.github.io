@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changelog — MinkNote</title>
+  <meta name="description" content="MinkNote release notes — every update from the first TestFlight build to today." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    /* ============================================================
+       CHANGELOG — page-local styles
+       ============================================================ */
+
+    /* ── Page header ── */
+    .cl-header {
+      padding-top: calc(var(--nav-h) + var(--s20));
+      padding-bottom: var(--s12);
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .cl-header h1 {
+      font-size: clamp(var(--t-4xl), 6vw, var(--t-6xl));
+      margin: var(--s3) 0 var(--s4);
+      letter-spacing: -0.02em;
+    }
+    .cl-header p {
+      font-size: var(--t-lg);
+      color: var(--text-muted);
+      max-width: 420px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── Body panel ── */
+    .cl-body {
+      background: var(--surface-2);
+      padding: var(--s12) 0 var(--s32);
+    }
+
+    /* ── Two-column layout ── */
+    .cl-layout {
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      gap: var(--s8);
+      align-items: start;
+    }
+
+    /* ── Release list ── */
+    .cl-main {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s5);
+    }
+
+    /* ── Release card ── */
+    .cl-release {
+      background: var(--surface);
+      border-radius: var(--r-xl);
+      padding: var(--s8) var(--s10);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 4px 16px rgba(0,0,0,0.04);
+      scroll-margin-top: calc(var(--nav-h) + var(--s6));
+    }
+
+    /* ── Release top row: star + version + date ── */
+    .cl-release-top {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--s4);
+      margin-bottom: var(--s5);
+    }
+    .cl-star {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      color: var(--text-dim);
+      margin-top: 5px;
+    }
+    .cl-version {
+      font-family: var(--font-body);
+      font-size: var(--t-2xl);
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .cl-date {
+      display: block;
+      font-size: var(--t-sm);
+      color: var(--text-dim);
+      margin-top: var(--s1);
+      font-weight: 500;
+    }
+
+    /* ── Intro blurb ── */
+    .cl-intro {
+      font-size: var(--t-sm);
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: var(--s5);
+      border-left: 3px solid var(--accent);
+      padding-left: var(--s5);
+    }
+
+    /* ── Section (Improvements / Bug Fixes) ── */
+    .cl-section { margin-top: var(--s5); }
+    .cl-section:first-of-type { margin-top: 0; }
+
+    .cl-section-head {
+      display: flex;
+      align-items: center;
+      gap: var(--s3);
+      margin-bottom: var(--s4);
+    }
+    .cl-section-head h3 {
+      font-family: var(--font-body);
+      font-size: var(--t-base);
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    /* ── Badges ── */
+    .cl-badge {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 6px;
+      padding: 3px 8px;
+      flex-shrink: 0;
+    }
+    .cl-badge--new { background: #dcfce7; color: #15803d; }
+    .cl-badge--fix { background: #fef3c7; color: #b45309; }
+
+    /* ── Bullet list ── */
+    .cl-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s3);
+      padding-left: var(--s3);
+    }
+    .cl-list li {
+      font-size: var(--t-sm);
+      color: var(--text-muted);
+      line-height: 1.75;
+      position: relative;
+      padding-left: var(--s5);
+    }
+    .cl-list > li::before {
+      content: '·';
+      position: absolute;
+      left: var(--s2);
+      color: var(--text-dim);
+      font-size: 1.3em;
+      line-height: 1.4;
+    }
+    /* Nested sub-items */
+    .cl-list ul {
+      margin-top: var(--s2);
+      padding-left: var(--s5);
+      display: flex;
+      flex-direction: column;
+      gap: var(--s2);
+    }
+    .cl-list ul li { padding-left: var(--s4); }
+    .cl-list ul li::before {
+      content: '–';
+      font-size: 1em;
+      line-height: 1.75;
+      left: 0;
+    }
+
+    /* kbd / code in lists */
+    .cl-list kbd, .cl-list code {
+      background: var(--surface-2);
+      border: 1px solid var(--border-hi);
+      border-radius: var(--r-sm);
+      padding: 1px 6px;
+      font-size: 0.82em;
+      font-family: ui-monospace, "SF Mono", monospace;
+      color: var(--text);
+      white-space: nowrap;
+    }
+    .cl-list strong { color: var(--text); font-weight: 700; }
+    .cl-list em     { font-style: italic; }
+
+    /* ── Tech-note callout ── */
+    .cl-tech-note {
+      margin-top: var(--s5);
+      background: var(--surface-2);
+      border-radius: var(--r-md);
+      padding: var(--s4) var(--s5);
+      font-size: var(--t-xs);
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+    .cl-tech-note strong { color: var(--text); font-weight: 700; }
+
+    /* ── First-build simple note ── */
+    .cl-first-note {
+      font-size: var(--t-sm);
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: var(--s2);
+    }
+
+    /* ── Sidebar ── */
+    .cl-sidebar {
+      position: sticky;
+      top: calc(var(--nav-h) + var(--s6));
+    }
+    .cl-toc {
+      background: var(--surface);
+      border-radius: var(--r-xl);
+      padding: var(--s5) var(--s5);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 4px 16px rgba(0,0,0,0.04);
+    }
+    .cl-toc-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: var(--s3);
+      padding: 0 var(--s2);
+    }
+    .cl-toc ul {
+      display: flex;
+      flex-direction: column;
+    }
+    .cl-toc a {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: var(--s2);
+      padding: 6px var(--s2);
+      border-radius: var(--r-sm);
+      font-size: var(--t-sm);
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: background 0.15s, color 0.15s;
+      text-decoration: none;
+    }
+    .cl-toc a:hover {
+      background: var(--surface-2);
+      color: var(--text);
+    }
+    .cl-toc a.is-active { color: var(--accent); }
+    .cl-toc-date {
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--text-dim);
+      white-space: nowrap;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 860px) {
+      .cl-layout { grid-template-columns: 1fr; }
+      .cl-sidebar { position: static; order: -1; }
+    }
+    @media (max-width: 640px) {
+      .cl-release { padding: var(--s6); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════
+       NAV
+  ════════════════════════════════════════════════ -->
+  <nav class="site-nav" id="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="MinkNote home">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="28" height="28" rx="8" fill="#0A84FF"/>
+          <path d="M7 20V9l5 7 5-7v11" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M19 9v11" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        MinkNote
+      </a>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="changelog.html" aria-current="page">Changelog</a></li>
+      </ul>
+      <button class="nav-menu-btn" id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ════════════════════════════════════════════
+       PAGE HEADER
+  ════════════════════════════════════════════════ -->
+  <header class="cl-header">
+    <div class="container">
+      <span class="eyebrow">Release history</span>
+      <h1>Changelog</h1>
+      <p>Every update to MinkNote, from the first TestFlight build to today.</p>
+    </div>
+  </header>
+
+
+  <!-- ════════════════════════════════════════════
+       BODY
+  ════════════════════════════════════════════════ -->
+  <div class="cl-body">
+    <div class="container">
+      <div class="cl-layout">
+
+        <!-- ════════ MAIN CONTENT ════════ -->
+        <main class="cl-main">
+
+          <!-- ── 1.1 (1016) ── -->
+          <article class="cl-release" id="v1016">
+            <div class="cl-release-top">
+              <svg class="cl-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <div>
+                <h2 class="cl-version">1.1 (1016)</h2>
+                <time class="cl-date" datetime="2026-03-03">March 3, 2026</time>
+              </div>
+            </div>
+            <p class="cl-intro">I'm really excited about this release — there are a few workflow improvements I think you're going to love.</p>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--new">NEW</span>
+                <h3>Improvements</h3>
+              </div>
+              <ul class="cl-list">
+                <li><strong>Keyboard navigation between all 3 panes</strong>: use <kbd>⌃⌥←</kbd> and <kbd>⌃⌥→</kbd> to move focus between journals, notes, and the note editor (in MD mode)</li>
+                <li><strong>New note creation flow</strong>: press <kbd>⌘N</kbd>, enter the note title and immediately start typing</li>
+                <li>Support for <strong>multiple note windows</strong>: double-click a note or press <kbd>⌘↓</kbd> and your note opens in a new window</li>
+                <li>Support added for Log or Journal (date-based) entries</li>
+                <li>Right-click a note to show Frontmatter</li>
+                <li>Improved support for Apple Notes exports (shows filename as title when note contains no Markdown)</li>
+                <li>Keyboard shortcut added for deleting notes: <kbd>⌘⌫</kbd></li>
+                <li>Added 2 new HowTo notes</li>
+              </ul>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--fix">FIX</span>
+                <h3>Bug Fixes</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Notes with duplicate filenames no longer disappear</li>
+                <li>Many minor fixes</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ── 1.1 (991) ── -->
+          <article class="cl-release" id="v991">
+            <div class="cl-release-top">
+              <svg class="cl-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <div>
+                <h2 class="cl-version">1.1 (991)</h2>
+                <time class="cl-date" datetime="2026-02-23">February 23, 2026</time>
+              </div>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--new">NEW</span>
+                <h3>Improvements</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Double-click to open a note in a new window — supports many windows simultaneously</li>
+                <li>Preview mode no longer needed; links now work directly in WYSIWYG mode</li>
+              </ul>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--fix">FIX</span>
+                <h3>Bug Fixes</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Filenames containing periods no longer lose the file extension</li>
+                <li>Duplicate article UUID no longer crashes the app</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ── 1.1 (943) ── -->
+          <article class="cl-release" id="v943">
+            <div class="cl-release-top">
+              <svg class="cl-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <div>
+                <h2 class="cl-version">1.1 (943)</h2>
+                <time class="cl-date" datetime="2026-02-04">February 4, 2026</time>
+              </div>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--new">NEW</span>
+                <h3>Improvements</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Improved the text formatting toolbar (see the <em>Aa</em> button next to Tags or use <kbd>⌘⇧Y</kbd>)</li>
+                <li>Improved the Getting Started docs</li>
+                <li>Added option to add Frontmatter to a note that doesn't have it (right-click in note list)</li>
+                <li>Added a Note menu to the macOS status bar</li>
+                <li>Added ability to clear specified recent projects</li>
+                <li>Moved "Hide Frontmatter" option to Prefs &rsaquo; Files</li>
+              </ul>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--fix">FIX</span>
+                <h3>Bug Fixes</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Fixed issue where the Getting Started docs were not showing after launching the app for the first time</li>
+                <li>Fixed issue where a note's tag and favourite info might not appear in the sidebar after restarting — previously required "Rebuild Index"; now handled automatically</li>
+                <li>Fixed issue where the last selected note was not always reloading after changing projects</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ── 1.1 (889) ── -->
+          <article class="cl-release" id="v889">
+            <div class="cl-release-top">
+              <svg class="cl-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <div>
+                <h2 class="cl-version">1.1 (889)</h2>
+                <time class="cl-date" datetime="2026-01-30">January 30, 2026</time>
+              </div>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--new">NEW</span>
+                <h3>Improvements</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Lots of options for customising your journal — right-click and choose <strong>Journal Properties</strong> in the sidebar</li>
+                <li>New <strong>Projects</strong> tab in Preferences with an improved UI for switching between projects</li>
+                <li>Double-click to expand or collapse journals and folders</li>
+                <li>Note selection state preserved when changing projects</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ── 1.1 (817) ── -->
+          <article class="cl-release" id="v817">
+            <div class="cl-release-top">
+              <svg class="cl-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <div>
+                <h2 class="cl-version">1.1 (817)</h2>
+                <time class="cl-date" datetime="2026-01-30">January 30, 2026</time>
+              </div>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--new">NEW</span>
+                <h3>Improvements</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Note search field hidden by default</li>
+                <li>Edit modes simplified — use <kbd>⌘E</kbd> to cycle between Markdown and WYSIWYG</li>
+                <li>Note identifiers now use a standard format</li>
+                <li>Performance improvements</li>
+                <li>Toggle Favourite status with <kbd>⌘⇧L</kbd></li>
+                <li>Double-click to toggle journal and folder expansion</li>
+                <li>Improved Preferences</li>
+              </ul>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--fix">FIX</span>
+                <h3>Bug Fixes</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Search results layout improved</li>
+                <li>Fixed notes scrolling to the bottom when being edited</li>
+                <li>Fixed data loading when switching to a new project</li>
+                <li>Fixed double appearance of expansion carets for sidebar sections (Sequoia)</li>
+                <li>Fixed jumping tag sort button</li>
+                <li>Fixed "last selected note" behaviour</li>
+                <li>Fixed journal selection when toggling "Show sample notes" (thanks JhnWyclf)</li>
+                <li>Ensured note list updates after note deletion from the Tags section</li>
+              </ul>
+            </div>
+            <div class="cl-tech-note">
+              <strong>Tech note:</strong> Earlier versions used a different format for internal note identifiers. These have now been standardised for long-term stability. If needed, the app will prompt you to do a one-click update. This is a one-time adjustment during the beta period and does not change your notes.
+            </div>
+          </article>
+
+          <!-- ── 1.1 (716) ── -->
+          <article class="cl-release" id="v716">
+            <div class="cl-release-top">
+              <svg class="cl-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <div>
+                <h2 class="cl-version">1.1 (716)</h2>
+                <time class="cl-date" datetime="2026-01-20">January 20, 2026</time>
+              </div>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--new">NEW</span>
+                <h3>Improvements</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Tag management is here:
+                  <ul>
+                    <li>Click any tag in the sidebar to filter all notes</li>
+                    <li>Auto-complete when adding tags</li>
+                  </ul>
+                </li>
+                <li>Favourites:
+                  <ul>
+                    <li>Right-click a note to mark as favourite</li>
+                  </ul>
+                </li>
+                <li>Improvements in project switching</li>
+                <li>Sidebar sections are now collapsible</li>
+              </ul>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--fix">FIX</span>
+                <h3>Bug Fixes</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Markdown is now rendered properly in search results</li>
+                <li>Fixed an issue where it was sometimes impossible to click in the note list search field</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ── 1.1 (611) ── -->
+          <article class="cl-release" id="v611">
+            <div class="cl-release-top">
+              <svg class="cl-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <div>
+                <h2 class="cl-version">1.1 (611)</h2>
+                <time class="cl-date" datetime="2026-01-10">January 10, 2026</time>
+              </div>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--new">NEW</span>
+                <h3>Improvements</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Upgrades detected and latest onboarding docs displayed automatically</li>
+                <li>Added feedback button</li>
+                <li><kbd>⌘F</kbd> now triggers Find in current note; <kbd>⌘⌥F</kbd> filters notes in the current journal; <kbd>⌘⇧F</kbd> remains global search across all notes</li>
+                <li>Added <kbd>⌘T</kbd> to open the Edit Tags dialog</li>
+                <li>Added new preference to override Dark Mode (thanks RockyCarotta)</li>
+                <li>Note list now sortable by title, date created, or date modified</li>
+                <li>Note's character count changed to word count</li>
+              </ul>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--fix">FIX</span>
+                <h3>Bug Fixes</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Fixed glitchy behaviour with the new note/journal dialogue</li>
+                <li>Dark Mode: fixed glitch where the editor would not update</li>
+                <li>Fixed button truncation in note header (thanks RockyCarotta)</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ── 1.1 (530) ── -->
+          <article class="cl-release" id="v530">
+            <div class="cl-release-top">
+              <svg class="cl-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <div>
+                <h2 class="cl-version">1.1 (530)</h2>
+                <time class="cl-date" datetime="2025-12-30">December 30, 2025</time>
+              </div>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--new">NEW</span>
+                <h3>Improvements</h3>
+              </div>
+              <ul class="cl-list">
+                <li>New journal now selected automatically after creation</li>
+                <li>Getting Started journal always appears first</li>
+                <li>Added new preference to hide the formatting toolbar (thanks harkonnen85)</li>
+                <li>Use <kbd>⌘1</kbd> to toggle sidebar visibility</li>
+                <li>Tag editor can handle more and longer tags</li>
+              </ul>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--fix">FIX</span>
+                <h3>Bug Fixes</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Fixed note count for large collections (&gt;10k notes)</li>
+                <li>Fixed case where Frontmatter would sometimes get deleted</li>
+                <li>Character count no longer includes Frontmatter</li>
+                <li>Addressed excessive escaping when switching between WYSIWYG and Markdown modes</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ── 1.1 (488) ── -->
+          <article class="cl-release" id="v488">
+            <div class="cl-release-top">
+              <svg class="cl-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <div>
+                <h2 class="cl-version">1.1 (488)</h2>
+                <time class="cl-date" datetime="2025-12-22">December 22, 2025</time>
+              </div>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--new">NEW</span>
+                <h3>Improvements</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Improved behaviour of the Save button</li>
+              </ul>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--fix">FIX</span>
+                <h3>Bug Fixes</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Editor pane no longer reloads when a note title changes</li>
+                <li>Fixed note editor pane requiring 2 clicks to focus</li>
+                <li>Note card now syncs with note editor updates</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ── 1.1 (480) ── -->
+          <article class="cl-release" id="v480">
+            <div class="cl-release-top">
+              <svg class="cl-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <div>
+                <h2 class="cl-version">1.1 (480)</h2>
+                <time class="cl-date" datetime="2025-12-21">December 21, 2025</time>
+              </div>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--fix">FIX</span>
+                <h3>Bug Fixes</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Some toolbar icons were not appearing on Sequoia</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ── 1.1 (478) ── -->
+          <article class="cl-release" id="v478">
+            <div class="cl-release-top">
+              <svg class="cl-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <div>
+                <h2 class="cl-version">1.1 (478)</h2>
+                <time class="cl-date" datetime="2025-12-19">December 19, 2025</time>
+              </div>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--new">NEW</span>
+                <h3>Improvements</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Added new toolbar buttons for toggling Edit mode and Preview</li>
+                <li>Keyboard navigation improved</li>
+                <li>"Show sample documents" can now be toggled in Preferences</li>
+                <li>Each note now clearly identifies the journal it belongs to</li>
+                <li>Added "All Notes" section in sidebar to easily view the last updated notes across all journals</li>
+                <li>Added Journals menu</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ── 1.1 (394) ── -->
+          <article class="cl-release" id="v394">
+            <div class="cl-release-top">
+              <svg class="cl-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <div>
+                <h2 class="cl-version">1.1 (394)</h2>
+                <time class="cl-date" datetime="2025-12-11">December 11, 2025</time>
+              </div>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--new">NEW</span>
+                <h3>Improvements</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Preferences upgraded to a standard Prefs window</li>
+                <li>Hide Frontmatter by default for a more user-friendly editing experience</li>
+                <li>Global search field is now focused by default</li>
+              </ul>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--fix">FIX</span>
+                <h3>Bug Fixes</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Fixed keyboard shortcuts for new journal and note</li>
+                <li>Global search field now focuses by default</li>
+                <li>Case no longer matters in journal alphabetical ordering</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ── 1.1 (376) ── -->
+          <article class="cl-release" id="v376">
+            <div class="cl-release-top">
+              <svg class="cl-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <div>
+                <h2 class="cl-version">1.1 (376)</h2>
+                <time class="cl-date" datetime="2025-12-09">December 9, 2025</time>
+              </div>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--new">NEW</span>
+                <h3>Improvements</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Improved performance when loading a large number of notes</li>
+                <li>New tag editor</li>
+                <li>Better support for editing tags in Frontmatter</li>
+                <li>Remembers the last selected note after relaunch</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ── 1.1 (369) ── -->
+          <article class="cl-release" id="v369">
+            <div class="cl-release-top">
+              <svg class="cl-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <div>
+                <h2 class="cl-version">1.1 (369)</h2>
+                <time class="cl-date" datetime="2025-12-08">December 8, 2025</time>
+              </div>
+            </div>
+            <div class="cl-section">
+              <div class="cl-section-head">
+                <span class="cl-badge cl-badge--new">NEW</span>
+                <h3>Improvements</h3>
+              </div>
+              <ul class="cl-list">
+                <li>Improved performance when loading a large number of notes</li>
+                <li>Better editing of tags in Frontmatter</li>
+                <li>Remembers the last selected note after relaunch</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ── 1.1 (265) ── -->
+          <article class="cl-release" id="v265">
+            <div class="cl-release-top">
+              <svg class="cl-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <div>
+                <h2 class="cl-version">1.1 (265)</h2>
+                <time class="cl-date" datetime="2025-11-27">November 27, 2025</time>
+              </div>
+            </div>
+            <p class="cl-first-note">First build sent to TestFlight. 🎉</p>
+          </article>
+
+        </main><!-- /.cl-main -->
+
+
+        <!-- ════════ SIDEBAR ════════ -->
+        <aside class="cl-sidebar">
+          <nav class="cl-toc" aria-label="Jump to version">
+            <p class="cl-toc-label">Versions</p>
+            <ul>
+              <li><a href="#v1016">1.1 (1016) <span class="cl-toc-date">Mar 3, 2026</span></a></li>
+              <li><a href="#v991">1.1 (991) <span class="cl-toc-date">Feb 23, 2026</span></a></li>
+              <li><a href="#v943">1.1 (943) <span class="cl-toc-date">Feb 4, 2026</span></a></li>
+              <li><a href="#v889">1.1 (889) <span class="cl-toc-date">Jan 30, 2026</span></a></li>
+              <li><a href="#v817">1.1 (817) <span class="cl-toc-date">Jan 30, 2026</span></a></li>
+              <li><a href="#v716">1.1 (716) <span class="cl-toc-date">Jan 20, 2026</span></a></li>
+              <li><a href="#v611">1.1 (611) <span class="cl-toc-date">Jan 10, 2026</span></a></li>
+              <li><a href="#v530">1.1 (530) <span class="cl-toc-date">Dec 30, 2025</span></a></li>
+              <li><a href="#v488">1.1 (488) <span class="cl-toc-date">Dec 22, 2025</span></a></li>
+              <li><a href="#v480">1.1 (480) <span class="cl-toc-date">Dec 21, 2025</span></a></li>
+              <li><a href="#v478">1.1 (478) <span class="cl-toc-date">Dec 19, 2025</span></a></li>
+              <li><a href="#v394">1.1 (394) <span class="cl-toc-date">Dec 11, 2025</span></a></li>
+              <li><a href="#v376">1.1 (376) <span class="cl-toc-date">Dec 9, 2025</span></a></li>
+              <li><a href="#v369">1.1 (369) <span class="cl-toc-date">Dec 8, 2025</span></a></li>
+              <li><a href="#v265">1.1 (265) <span class="cl-toc-date">Nov 27, 2025</span></a></li>
+            </ul>
+          </nav>
+        </aside>
+
+      </div><!-- /.cl-layout -->
+    </div><!-- /.container -->
+  </div><!-- /.cl-body -->
+
+
+  <!-- ════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="index.html" class="footer-logo" aria-label="MinkNote home">
+          <svg width="22" height="22" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <rect width="28" height="28" rx="8" fill="#0A84FF"/>
+            <path d="M7 20V9l5 7 5-7v11" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19 9v11" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          MinkNote
+        </a>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="changelog.html">Changelog</a>
+          <a href="features.html">Features</a>
+          <a href="pricing.html">Pricing</a>
+        </nav>
+      </div>
+      <p class="footer-copy">&copy; 2026 MinkNote. Built natively for macOS.</p>
+    </div>
+  </footer>
+
+  <!-- Site JS (nav scroll-shrink + hamburger) -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Sidebar scroll-spy -->
+  <script>
+    (function () {
+      const links = document.querySelectorAll('.cl-toc a');
+      const targets = Array.from(links).map(a => document.querySelector(a.getAttribute('href')));
+      const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 64;
+
+      function onScroll() {
+        let current = targets[0];
+        targets.forEach(t => {
+          if (t && t.getBoundingClientRect().top <= navH + 32) current = t;
+        });
+        links.forEach(a => {
+          a.classList.toggle('is-active', a.getAttribute('href') === '#' + current?.id);
+        });
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
+
+</body>
+</html>
