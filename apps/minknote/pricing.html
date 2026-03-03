@@ -355,40 +355,15 @@
       margin: 0 auto var(--s10);
       line-height: 1.7;
     }
-    .appstore-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--s4);
-      background: #1a1917;
-      color: white;
-      padding: var(--s4) var(--s8);
-      border-radius: var(--r-md);
-      text-decoration: none;
-      transition: background 0.15s, transform 0.12s, box-shadow 0.15s;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    .appstore-badge-link {
+      display: inline-block;
+      transition: opacity 0.15s, transform 0.12s;
     }
-    .appstore-btn:hover {
-      background: #000;
+    .appstore-badge-link:hover {
+      opacity: 0.85;
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.24);
     }
-    .appstore-btn:active { transform: scale(0.98); }
-    .appstore-btn-text {
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-    }
-    .appstore-btn-text .sub {
-      font-size: 10px;
-      font-weight: 500;
-      opacity: 0.7;
-      letter-spacing: 0.02em;
-    }
-    .appstore-btn-text .main {
-      font-size: var(--t-lg);
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
+    .appstore-badge-link:active { transform: scale(0.98); }
     .appstore-note {
       margin-top: var(--s5);
       font-size: var(--t-sm);
@@ -536,7 +511,7 @@
         </div>
 
         <a href="#download" class="plan-cta plan-cta--pro">
-          <svg width="14" height="14" viewBox="0 0 814 1000" fill="white" aria-hidden="true" style="flex-shrink:0"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.4-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 523 0 443.7 0 364.6c0-207.5 143.8-317.5 285.3-317.5 75.6 0 138.6 49.4 184.8 49.4 44.1 0 113.4-52.5 198.3-52.5 31.9 0 108.2 2.8 172.3 72.8zm-183-134.5c36.3-43.5 61.5-104.9 61.5-166.3 0-8.5-.7-17.1-2.1-24.4-58.4 2.1-127.2 38.9-169.5 87.9-33.5 38.1-62.5 99.5-62.5 160.9 0 9.2 1.4 18.4 2.1 21.2 3.5.7 9.2 1.4 14.9 1.4 51.4 0 117.7-35.4 155.6-80.7z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="white" aria-hidden="true" style="flex-shrink:0"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
           Get Pro on the App Store
         </a>
 
@@ -749,14 +724,8 @@
       <h2>Your notes.<br />Your files. Your Mac.</h2>
       <p>Free to download. No account required. Your data stays on your machine.</p>
 
-      <a href="https://apps.apple.com/app/minknote" class="appstore-btn" target="_blank" rel="noopener">
-        <svg width="28" height="28" viewBox="0 0 814 1000" fill="white" aria-hidden="true">
-          <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.4-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 523 0 443.7 0 364.6c0-207.5 143.8-317.5 285.3-317.5 75.6 0 138.6 49.4 184.8 49.4 44.1 0 113.4-52.5 198.3-52.5 31.9 0 108.2 2.8 172.3 72.8zm-183-134.5c36.3-43.5 61.5-104.9 61.5-166.3 0-8.5-.7-17.1-2.1-24.4-58.4 2.1-127.2 38.9-169.5 87.9-33.5 38.1-62.5 99.5-62.5 160.9 0 9.2 1.4 18.4 2.1 21.2 3.5.7 9.2 1.4 14.9 1.4 51.4 0 117.7-35.4 155.6-80.7z"/>
-        </svg>
-        <div class="appstore-btn-text">
-          <span class="sub">Download on the</span>
-          <span class="main">Mac App Store</span>
-        </div>
+      <a href="https://apps.apple.com/app/minknote" class="appstore-badge-link" target="_blank" rel="noopener">
+        <img src="images/mac_badge.svg" alt="Download on the Mac App Store" height="48" />
       </a>
 
       <p class="appstore-note">macOS 14 Sonoma or later &nbsp;&middot;&nbsp; Free download</p>
@@ -777,9 +746,9 @@
           MinkNote
         </a>
         <nav class="footer-links" aria-label="Footer navigation">
-          <a href="changelog.html">Changelog</a>
           <a href="features.html">Features</a>
           <a href="pricing.html">Pricing</a>
+          <a href="changelog.html">Changelog</a>
         </nav>
       </div>
       <p class="footer-copy">&copy; 2026 MinkNote. Built natively for macOS.</p>
