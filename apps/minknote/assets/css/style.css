@@ -788,6 +788,16 @@ details[open] > .faq-question { color: var(--text); }
 }
 
 /* ============================================================
+   PAGE HEADER — shared across features.html, pricing.html etc.
+   ============================================================ */
+.page-header {
+  padding-top: calc(var(--nav-h) + var(--s20));
+  padding-bottom: var(--s14);
+  text-align: center;
+  background: var(--bg);
+}
+
+/* ============================================================
    AOS timing
    ============================================================ */
 [data-aos] {

@@ -1,0 +1,365 @@
+/* ============================================================
+   PRICING PAGE — styles
+   ============================================================ */
+
+/* ── Page header ── */
+.pricing-header h1 {
+  font-size: clamp(var(--t-4xl), 6vw, var(--t-6xl));
+  margin: var(--s3) 0 var(--s5);
+  letter-spacing: -0.025em;
+}
+.pricing-header p {
+  font-size: var(--t-lg);
+  color: var(--text-muted);
+  max-width: 420px;
+  margin: 0 auto var(--s10);
+  line-height: 1.7;
+}
+
+/* ── Billing toggle ── */
+.billing-toggle {
+  display: inline-flex;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 4px;
+  gap: 2px;
+}
+.billing-toggle button {
+  padding: var(--s2) var(--s5);
+  border-radius: 100px;
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  position: relative;
+}
+.billing-toggle button.active {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+}
+.billing-toggle button .save-badge {
+  position: absolute;
+  top: -8px;
+  right: -6px;
+  background: #34C759;
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 1px 5px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+/* ── Plan cards ── */
+.pricing-cards {
+  background: var(--surface-2);
+  padding: var(--s12) 0 var(--s16);
+}
+.pricing-cards-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 var(--s6);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s6);
+  align-items: stretch;
+}
+
+.plan-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: var(--s10);
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+.plan-card--pro {
+  border-color: var(--accent);
+  border-width: 2px;
+  box-shadow: 0 0 0 4px var(--accent-glow);
+}
+
+.plan-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-glow);
+  padding: var(--s1) var(--s3);
+  border-radius: 100px;
+  margin-bottom: var(--s5);
+}
+.plan-badge--free {
+  color: var(--text-muted);
+  background: var(--surface-2);
+}
+
+.plan-name {
+  font-family: var(--font-body);
+  font-size: var(--t-2xl);
+  font-weight: 800;
+  margin-bottom: var(--s3);
+}
+
+.plan-tagline {
+  font-size: var(--t-sm);
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--s8);
+  min-height: 2.6em;
+}
+
+/* Price display */
+.plan-price-wrap {
+  margin-bottom: var(--s8);
+  min-height: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s2);
+}
+.plan-price .currency {
+  font-size: var(--t-xl);
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+.plan-price .amount {
+  font-size: clamp(var(--t-4xl), 5vw, var(--t-5xl));
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.plan-price .period {
+  font-size: var(--t-sm);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.plan-price-note {
+  font-size: var(--t-xs);
+  color: var(--text-dim);
+  margin-top: var(--s2);
+}
+.plan-price-note strong {
+  color: #34C759;
+  font-weight: 700;
+}
+
+/* CTA buttons */
+.plan-cta {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: var(--s4) var(--s6);
+  border-radius: var(--r-md);
+  font-size: var(--t-base);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s, transform 0.12s;
+  margin-bottom: var(--s8);
+}
+.plan-cta:active { transform: scale(0.98); }
+.plan-cta--free {
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.plan-cta--free:hover {
+  background: var(--surface-3);
+}
+.plan-cta--pro {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 4px 14px rgba(10,132,255,0.30);
+}
+.plan-cta--pro:hover {
+  background: var(--accent-hi);
+  box-shadow: 0 6px 20px rgba(10,132,255,0.38);
+}
+
+/* Feature list inside card */
+.plan-features {
+  border-top: 1px solid var(--border);
+  padding-top: var(--s6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+.plan-feat-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s3);
+  font-size: var(--t-sm);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.plan-feat-item svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.plan-feat-item strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ── Comparison table ── */
+.pricing-compare {
+  padding: var(--s20) 0 var(--s24);
+  background: var(--bg);
+}
+.pricing-compare h2 {
+  text-align: center;
+  font-size: clamp(var(--t-3xl), 4vw, var(--t-4xl));
+  margin-bottom: var(--s14);
+  letter-spacing: -0.02em;
+}
+.compare-table {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 var(--s6);
+  width: 100%;
+}
+.compare-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+.compare-table thead th {
+  background: var(--surface-3);
+  padding: var(--s5) var(--s6);
+  text-align: center;
+  font-size: var(--t-sm);
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+.compare-table thead th:first-child {
+  text-align: left;
+  font-size: var(--t-base);
+  color: var(--text);
+}
+.compare-table thead th.col-pro {
+  color: var(--accent);
+}
+.compare-table tbody tr {
+  border-top: 1px solid var(--border);
+}
+.compare-table tbody tr:first-child {
+  border-top: none;
+}
+.compare-table tbody tr:hover td {
+  background: var(--surface-2);
+}
+.compare-table td {
+  padding: var(--s4) var(--s6);
+  font-size: var(--t-sm);
+  vertical-align: middle;
+  transition: background 0.12s;
+}
+.compare-table td:first-child {
+  font-size: var(--t-base);
+  color: var(--text);
+}
+.compare-table td:not(:first-child) {
+  text-align: center;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+.check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: #34C759;
+  border-radius: 7px;
+}
+.check-icon svg {
+  width: 14px;
+  height: 14px;
+  stroke: white;
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.dash-icon {
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background: var(--border-hi);
+  border-radius: 2px;
+  vertical-align: middle;
+}
+.compare-table .row-group td {
+  padding-top: var(--s6);
+  padding-bottom: var(--s2);
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  background: var(--surface-2);
+}
+
+/* ── App Store CTA ── */
+.appstore-cta {
+  background: var(--surface-2);
+  border-top: 1px solid var(--border);
+  padding: var(--s20) 0;
+  text-align: center;
+}
+.appstore-cta .eyebrow {
+  margin-bottom: var(--s5);
+}
+.appstore-cta h2 {
+  font-size: clamp(var(--t-3xl), 5vw, var(--t-5xl));
+  letter-spacing: -0.025em;
+  margin-bottom: var(--s5);
+}
+.appstore-cta p {
+  font-size: var(--t-lg);
+  color: var(--text-muted);
+  max-width: 400px;
+  margin: 0 auto var(--s10);
+  line-height: 1.7;
+}
+.appstore-badge-link {
+  display: inline-block;
+  transition: opacity 0.15s, transform 0.12s;
+}
+.appstore-badge-link:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+.appstore-badge-link:active { transform: scale(0.98); }
+.appstore-note {
+  margin-top: var(--s5);
+  font-size: var(--t-sm);
+  color: var(--text-dim);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .pricing-cards-inner {
+    grid-template-columns: 1fr;
+  }
+  .compare-table td, .compare-table th {
+    padding: var(--s3) var(--s4);
+  }
+}
