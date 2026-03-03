@@ -127,11 +127,12 @@
   color: var(--text-dim);
 }
 
-/* ── Prev/Next arrows ── */
+/* ── Prev/Next arrows — fixed to viewport so they never jump ── */
 
 .fd-nav-arrow {
-  position: absolute;
-  top: calc(50% - 24px);
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -142,9 +143,9 @@
   justify-content: center;
   text-decoration: none;
   color: var(--text-muted);
-  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  z-index: 10;
+  z-index: 100;
 }
 
 .fd-nav-arrow:hover {
@@ -152,6 +153,14 @@
   color: white;
   border-color: var(--accent);
   box-shadow: 0 4px 14px rgba(10,132,255,0.28);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.fd-nav-arrow.is-pressed {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  transform: translateY(-50%) scale(0.92);
 }
 
 .fd-nav-arrow svg {
@@ -164,8 +173,8 @@
   stroke-linejoin: round;
 }
 
-.fd-nav-prev { left: max(var(--s4), calc(50% - 480px - 60px)); }
-.fd-nav-next { right: max(var(--s4), calc(50% - 480px - 60px)); }
+.fd-nav-prev { left: var(--s5); }
+.fd-nav-next { right: var(--s5); }
 
 .fd-nav-arrow .fd-nav-label {
   position: absolute;
@@ -179,6 +188,7 @@
   white-space: nowrap;
   opacity: 0;
   transition: opacity 0.15s;
+  pointer-events: none;
 }
 
 .fd-nav-arrow:hover .fd-nav-label { opacity: 1; }
@@ -300,8 +310,8 @@ a.feature-card:hover {
 }
 
 @media (max-width: 600px) {
-  .fd-nav-prev { left: var(--s3); }
-  .fd-nav-next { right: var(--s3); }
+  .fd-nav-prev { left: var(--s2); }
+  .fd-nav-next { right: var(--s2); }
   .fd-nav-arrow { width: 36px; height: 36px; }
   .fd-nav-arrow svg { width: 15px; height: 15px; }
 }

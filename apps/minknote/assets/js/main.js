@@ -64,7 +64,34 @@
     });
   }
 
-  /* ── ③ Active nav link (highlight current page) ── */
+  /* ── ③ Feature detail keyboard navigation (← / →) ── */
+  (function () {
+    var prevLink = document.querySelector('.fd-nav-prev');
+    var nextLink = document.querySelector('.fd-nav-next');
+    if (!prevLink && !nextLink) return;
+
+    function flash(el) {
+      if (!el) return;
+      el.classList.add('is-pressed');
+      setTimeout(function () { el.classList.remove('is-pressed'); }, 180);
+    }
+
+    document.addEventListener('keydown', function (e) {
+      // Don't fire when typing in an input or textarea
+      var tag = document.activeElement && document.activeElement.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+
+      if (e.key === 'ArrowLeft' && prevLink) {
+        flash(prevLink);
+        setTimeout(function () { window.location.href = prevLink.href; }, 160);
+      } else if (e.key === 'ArrowRight' && nextLink) {
+        flash(nextLink);
+        setTimeout(function () { window.location.href = nextLink.href; }, 160);
+      }
+    });
+  }());
+
+  /* ── ④ Active nav link (highlight current page) ── */
   (function () {
     const page = location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav-links a').forEach(function (a) {
