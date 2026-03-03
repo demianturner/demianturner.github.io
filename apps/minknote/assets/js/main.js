@@ -64,4 +64,16 @@
     });
   }
 
+  /* ── ③ Active nav link (highlight current page) ── */
+  (function () {
+    const page = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      const href = a.getAttribute('href').split('/').pop();
+      if (href === page) {
+        a.style.color      = 'var(--text)';
+        a.style.fontWeight = '700';
+      }
+    });
+  }());
+
 })();

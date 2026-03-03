@@ -35,6 +35,7 @@
 
   <!-- Site stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="assets/js/partials.js"></script>
   <link rel="stylesheet" href="assets/css/feature-detail.css" />
 </head>
 <body>
@@ -42,35 +43,8 @@
   <!-- ════════════════════════════════════════════
        NAV
   ════════════════════════════════════════════════ -->
-  <nav class="site-nav" id="site-nav">
-    <div class="nav-inner">
-
-      <!-- Wordmark logo (replace SVG with your own icon when ready) -->
-      <a href="index.html" class="nav-logo" aria-label="MinkNote home">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="28" height="28" rx="8" fill="#0A84FF"/>
-          <path d="M7 20V9l5 7 5-7v11" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M19 9v11" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
-        </svg>
-        MinkNote
-      </a>
-
-      <!-- Main links -->
-      <ul class="nav-links" id="nav-links" role="list">
-        <li><a href="features.html">Features</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="changelog.html">Changelog</a></li>
-      </ul>
-
-      <!-- Mobile hamburger -->
-      <button class="nav-menu-btn" id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-    </div>
-  </nav>
+  <!-- NAV -->
+  <mn-nav></mn-nav>
 
 
   <!-- ════════════════════════════════════════════
@@ -547,29 +521,8 @@
   <!-- ════════════════════════════════════════════
        FOOTER
   ════════════════════════════════════════════════ -->
-  <footer class="site-footer">
-    <div class="container">
-
-      <div class="footer-inner">
-        <a href="index.html" class="footer-logo" aria-label="MinkNote home">
-          <svg width="22" height="22" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-            <rect width="28" height="28" rx="8" fill="#0A84FF"/>
-            <path d="M7 20V9l5 7 5-7v11" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M19 9v11" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
-          </svg>
-          MinkNote
-        </a>
-        <nav class="footer-links" aria-label="Footer navigation">
-          <a href="features.html">Features</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="changelog.html">Changelog</a>
-        </nav>
-      </div>
-
-      <p class="footer-copy">&copy; 2026 MinkNote. Built natively for macOS.</p>
-
-    </div>
-  </footer>
+  <!-- FOOTER -->
+  <mn-footer></mn-footer>
 
 
   <!-- AOS -->
