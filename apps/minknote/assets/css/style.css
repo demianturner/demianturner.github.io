@@ -619,6 +619,21 @@ h3, h4 {
   text-align: center;
 }
 
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s14);
+}
+
+.cta-mink {
+  height: 220px;
+  width: auto;
+  flex-shrink: 0;
+  filter: invert(1);
+  opacity: 0.1;
+}
+
 .cta-banner h2 {
   color: #ffffff;
   font-size: clamp(var(--t-3xl), 4.5vw, var(--t-5xl));
@@ -844,4 +859,5 @@ details[open] > .faq-question { color: var(--text); }
   .feature-section { padding: var(--s20) 0; }
   .feature-grid    { grid-template-columns: repeat(2, 1fr); }
   .footer-inner    { flex-direction: column; align-items: flex-start; }
+  .cta-mink        { display: none; }
 }
