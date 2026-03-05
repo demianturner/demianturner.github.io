@@ -43,6 +43,7 @@
     '        <a href="' + R + 'features.html">Features</a>',
     '        <a href="' + R + 'pricing.html">Pricing</a>',
     '        <a href="' + R + 'changelog.html">Changelog</a>',
+    '        <a href="' + R + 'privacy.html">Privacy</a>',
     '      </nav>',
     '    </div>',
     '    <p class="footer-copy">&copy; 2026 MinkNote. Built natively for macOS.</p>',
