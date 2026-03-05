@@ -22,6 +22,7 @@
     '      <li><a href="' + R + 'features.html">Features</a></li>',
     '      <li><a href="' + R + 'pricing.html">Pricing</a></li>',
     '      <li><a href="' + R + 'changelog.html">Changelog</a></li>',
+    '      <li><a href="' + R + 'roadmap.html">Roadmap</a></li>',
     '    </ul>',
     '    <button class="nav-menu-btn" id="menu-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">',
     '      <span></span><span></span><span></span>',

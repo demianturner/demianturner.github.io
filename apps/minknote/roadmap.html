@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roadmap — MinkNote</title>
+  <meta name="description" content="MinkNote roadmap — a read-only view of completed and planned work." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="assets/js/partials.js"></script>
+
+  <style>
+    .rm-header {
+      padding-top: calc(var(--nav-h) + var(--s20));
+      padding-bottom: var(--s12);
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .rm-header h1 {
+      font-size: clamp(var(--t-4xl), 6vw, var(--t-6xl));
+      margin: var(--s3) 0 var(--s4);
+      letter-spacing: -0.02em;
+    }
+    .rm-header p {
+      font-size: var(--t-lg);
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .rm-readonly {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s2);
+      margin-top: var(--s5);
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-hi);
+      background: var(--surface);
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .rm-body {
+      background: var(--surface-2);
+      padding: var(--s12) 0 var(--s32);
+    }
+    .rm-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: var(--s8);
+      align-items: start;
+    }
+    .rm-main {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s5);
+    }
+
+    .rm-card {
+      background: var(--surface);
+      border-radius: var(--r-xl);
+      padding: var(--s8) var(--s10);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 16px rgba(0, 0, 0, 0.04);
+      scroll-margin-top: calc(var(--nav-h) + var(--s6));
+    }
+    .rm-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: var(--s4);
+      margin-bottom: var(--s5);
+      padding-bottom: var(--s4);
+      border-bottom: 1px solid var(--border);
+    }
+    .rm-card-head h2 {
+      font-family: var(--font-body);
+      font-size: var(--t-2xl);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .rm-progress {
+      white-space: nowrap;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      padding: 4px 10px;
+      color: var(--text-muted);
+      background: var(--surface-2);
+    }
+    .rm-progress--good {
+      color: #166534;
+      background: #dcfce7;
+    }
+    .rm-progress--none {
+      color: #1e3a8a;
+      background: #dbeafe;
+    }
+
+    .rm-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s3);
+    }
+    .rm-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--s3);
+      font-size: var(--t-sm);
+      line-height: 1.75;
+      color: var(--text-muted);
+    }
+    .rm-item > span:last-child {
+      flex: 1;
+    }
+    .rm-mark {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .rm-item.is-done {
+      color: var(--text);
+    }
+    .rm-item.is-done .rm-mark {
+      background: #dcfce7;
+      border: 1px solid #86efac;
+      color: #15803d;
+    }
+    .rm-item.is-done .rm-mark::before {
+      content: '\2713';
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 800;
+    }
+    .rm-item.is-planned .rm-mark {
+      background: var(--surface);
+      border: 1px solid var(--border-hi);
+    }
+    .rm-item.is-planned .rm-mark::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--text-dim);
+    }
+
+    .rm-sidebar {
+      position: sticky;
+      top: calc(var(--nav-h) + var(--s6));
+    }
+    .rm-panel {
+      background: var(--surface);
+      border-radius: var(--r-xl);
+      padding: var(--s5);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+    .rm-panel + .rm-panel {
+      margin-top: var(--s4);
+    }
+    .rm-panel-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: var(--s2);
+    }
+    .rm-total {
+      font-family: var(--font-body);
+      font-size: var(--t-4xl);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: var(--text);
+    }
+    .rm-meta {
+      margin-top: var(--s2);
+      font-size: var(--t-xs);
+      color: var(--text-dim);
+      line-height: 1.6;
+    }
+    .rm-bar {
+      margin-top: var(--s4);
+      height: 8px;
+      border-radius: 999px;
+      background: var(--surface-2);
+      overflow: hidden;
+    }
+    .rm-bar-fill {
+      height: 100%;
+      width: 16.28%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-hi));
+    }
+
+    .rm-toc ul {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .rm-toc a {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: var(--s2);
+      padding: 7px var(--s2);
+      border-radius: var(--r-sm);
+      font-size: var(--t-sm);
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: background 0.15s, color 0.15s;
+      text-decoration: none;
+    }
+    .rm-toc a:hover {
+      background: var(--surface-2);
+      color: var(--text);
+    }
+    .rm-toc a.is-active {
+      color: var(--accent);
+    }
+    .rm-count {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-dim);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 980px) {
+      .rm-layout {
+        grid-template-columns: 1fr;
+      }
+      .rm-sidebar {
+        position: static;
+        order: -1;
+      }
+    }
+    @media (max-width: 640px) {
+      .rm-card {
+        padding: var(--s6);
+      }
+      .rm-card-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <mn-nav></mn-nav>
+
+  <header class="rm-header">
+    <div class="container">
+      <span class="eyebrow">Product direction</span>
+      <h1>Roadmap</h1>
+      <p>This page is a read-only view of the roadmap checklist.</p>
+      <p class="rm-readonly">Read-only</p>
+    </div>
+  </header>
+
+  <div class="rm-body">
+    <div class="container">
+      <div class="rm-layout">
+        <main class="rm-main">
+
+          <section class="rm-card" id="core-editing-authoring">
+            <div class="rm-card-head">
+              <h2>Core Editing &amp; Authoring</h2>
+              <span class="rm-progress rm-progress--good">3 / 13 done</span>
+            </div>
+            <ul class="rm-list" role="list">
+              <li class="rm-item is-done"><span class="rm-mark" aria-hidden="true"></span><span>Search within a selected note Preview/WYSIWYG</span></li>
+              <li class="rm-item is-done"><span class="rm-mark" aria-hidden="true"></span><span>Full tag search and filter notes by tag</span></li>
+              <li class="rm-item is-done"><span class="rm-mark" aria-hidden="true"></span><span>Add notes to Favourites</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Pinning notes to top</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Right-hand panel with document sections (outline)</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Ability to move tasks up/down with arrow keys</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Drag PDFs into notes</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Source code highlighting</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Links between notes</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Ability to collapse header sections of text</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Right-hand panel with "stats": word count, reading time, file created/modified</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Audio dictation</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Handwriting iPad Pencil integration</span></li>
+            </ul>
+          </section>
+
+          <section class="rm-card" id="ui-ux-personalisation">
+            <div class="rm-card-head">
+              <h2>UI / UX &amp; Personalisation</h2>
+              <span class="rm-progress rm-progress--good">3 / 16 done</span>
+            </div>
+            <ul class="rm-list" role="list">
+              <li class="rm-item is-done"><span class="rm-mark" aria-hidden="true"></span><span>Ability to hide formatting toolbar in Prefs</span></li>
+              <li class="rm-item is-done"><span class="rm-mark" aria-hidden="true"></span><span>Customise Journal icons: set colour, icon, sync selection colour</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Add items to Filter section in sidebar (Inbox, Trash, etc.)</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Custom ordering of journals</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Highlight keywords in search results</span></li>
+              <li class="rm-item is-done"><span class="rm-mark" aria-hidden="true"></span><span>Ability to double-click on a note to open it up in a new window.</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Upgrade search to jump bar so you can see recent searches</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Customisable App icon</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Filter note list by tags, tasks, images, etc</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Onboarding flow</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Ability to show images/documents/files in folders</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Previews for embedded content like YouTube links</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Switch themes</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Drag images from one note to another in note list</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Drag files onto note list or a particular journal to create notes</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Support Mermaid diagrams</span></li>
+            </ul>
+          </section>
+
+          <section class="rm-card" id="syncing-platforms-privacy">
+            <div class="rm-card-head">
+              <h2>Syncing, Platforms &amp; Privacy</h2>
+              <span class="rm-progress rm-progress--good">1 / 3 done</span>
+            </div>
+            <ul class="rm-list" role="list">
+              <li class="rm-item is-done"><span class="rm-mark" aria-hidden="true"></span><span>Full multi-vault support</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>iOS client with sync</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Private notes with biometric support</span></li>
+            </ul>
+          </section>
+
+          <section class="rm-card" id="sharing-web">
+            <div class="rm-card-head">
+              <h2>Sharing &amp; Web</h2>
+              <span class="rm-progress rm-progress--none">0 / 5 done</span>
+            </div>
+            <ul class="rm-list" role="list">
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Export PDF</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Export HTML</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Share Extension</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Web Clipper</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Share or publish notes</span></li>
+            </ul>
+          </section>
+
+          <section class="rm-card" id="search-ai-smart-features">
+            <div class="rm-card-head">
+              <h2>Search, AI &amp; Smart Features</h2>
+              <span class="rm-progress rm-progress--none">0 / 5 done</span>
+            </div>
+            <ul class="rm-list" role="list">
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>AI Integration: with offline model for max privacy, chat with your notes, etc</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Gamify with badges ("you linked 10 notes")</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Search text in images</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Note versioning</span></li>
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Assign location to note</span></li>
+            </ul>
+          </section>
+
+          <section class="rm-card" id="templates-organisation">
+            <div class="rm-card-head">
+              <h2>Templates &amp; Organisation</h2>
+              <span class="rm-progress rm-progress--none">0 / 1 done</span>
+            </div>
+            <ul class="rm-list" role="list">
+              <li class="rm-item is-planned"><span class="rm-mark" aria-hidden="true"></span><span>Generate posts from predefined templates</span></li>
+            </ul>
+          </section>
+
+        </main>
+
+        <aside class="rm-sidebar">
+          <div class="rm-panel">
+            <p class="rm-panel-label">Overall progress</p>
+            <p class="rm-total">7 / 43</p>
+            <p class="rm-meta">Completed checklist items</p>
+            <div class="rm-bar" aria-hidden="true">
+              <div class="rm-bar-fill"></div>
+            </div>
+            <p class="rm-meta">Source: roadmap.md</p>
+          </div>
+
+          <nav class="rm-panel rm-toc" aria-label="Jump to roadmap section">
+            <p class="rm-panel-label">Sections</p>
+            <ul>
+              <li><a href="#core-editing-authoring"><span>Core Editing &amp; Authoring</span><span class="rm-count">3/13</span></a></li>
+              <li><a href="#ui-ux-personalisation"><span>UI / UX &amp; Personalisation</span><span class="rm-count">3/16</span></a></li>
+              <li><a href="#syncing-platforms-privacy"><span>Syncing, Platforms &amp; Privacy</span><span class="rm-count">1/3</span></a></li>
+              <li><a href="#sharing-web"><span>Sharing &amp; Web</span><span class="rm-count">0/5</span></a></li>
+              <li><a href="#search-ai-smart-features"><span>Search, AI &amp; Smart Features</span><span class="rm-count">0/5</span></a></li>
+              <li><a href="#templates-organisation"><span>Templates &amp; Organisation</span><span class="rm-count">0/1</span></a></li>
+            </ul>
+          </nav>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <mn-footer></mn-footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      const links = document.querySelectorAll('.rm-toc a');
+      const targets = Array.from(links).map(function (link) {
+        return document.querySelector(link.getAttribute('href'));
+      });
+      const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'), 10) || 64;
+
+      function onScroll() {
+        let current = targets[0];
+        targets.forEach(function (target) {
+          if (target && target.getBoundingClientRect().top <= navH + 32) {
+            current = target;
+          }
+        });
+
+        links.forEach(function (link) {
+          link.classList.toggle('is-active', link.getAttribute('href') === '#' + (current && current.id));
+        });
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }());
+  </script>
+</body>
+</html>
