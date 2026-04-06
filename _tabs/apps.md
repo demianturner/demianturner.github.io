@@ -4,28 +4,26 @@ icon: fas fa-brands fa-apple
 order: 1
 ---
 
-| Which Bin | Kids Birthdays | Crypto Calculator  | Pollution Monitor
-| --- | --- | --- | --- | 
-| [![][image-3]{: w="175" h="175" }][3] | [![Kids Birthdays][image-7]][4]   | [![Crypto Calculator][image-1]][1]   | [![][image-2]][2] 
-| Utilities | Lifestyle | Finance | Environment | 
-| Platform: iOS  |Platform: iOS | Platform: macOS | Platform: macOS  | 
-| Release: Jul 15, 2025 | Release: Sep 14, 2020 | Release: Feb 6, 2018 | Release: Jan 20, 2017  |
+| MinkNote | Which Bin | Kids Birthdays | Crypto Calculator |
+| --- | --- | --- | --- |
+| [![][image-8]{: w="175" h="175" }][5] | [![][image-3]{: w="175" h="175" }][3] | [![][image-7]{: w="175" h="175" }][4] | [![][image-1]{: w="135" h="135" }][1] |
+| Productivity | Utilities | Lifestyle | Finance |
+| Platform: macOS | Platform: iOS | Platform: iOS | Platform: macOS |
+| Release: Nov 27, 2025 | Release: Jul 15, 2025 | Release: Sep 14, 2020 | Release: Feb 6, 2018 |
 
-<br /> <br />
-
-| Doris  | Read Later | My High Street
-| --- | --- | --- | 
-|![][image-4]| ![][image-5] | ![][image-6] | 
-| Productivity | Productivity | Shopping | 
-| Platform: iOS | Platform: iOS  | Platform: iOS  |
-| Release date: Dec 20, 2009 | Release date: Mar 6, 2009  | Release date: May 26, 2009 |
-| _Retired_ | _Retired_ | _Retired_ |
-
+| Pollution Monitor | Doris | Read Later | My High Street |
+| --- | --- | --- | --- |
+| [![][image-2]{: w="175" h="175" }][2] | ![][image-4]{: w="135" h="135" } | ![][image-5]{: w="135" h="135" } | ![][image-6]{: w="135" h="135" } |
+| Environment | Productivity | Productivity | Shopping |
+| Platform: macOS | Platform: iOS | Platform: iOS | Platform: iOS |
+| Release: Jan 20, 2017 | Release date: Dec 20, 2009 | Release date: Mar 6, 2009 | Release date: May 26, 2009 |
+|  | *Retired* | *Retired* | *Retired* |
 
 [1]:	/apps/crypto-calculator
 [2]:	/apps/pollution-monitor
 [3]:	/apps/whichbin
 [4]:	/apps/kids-birthdays
+[5]:	/apps/minknote
 
 [image-1]:	/apps/crypto-calculator/images/icon_256x256.png
 [image-2]:	/apps/pollution-monitor/images/512.png
@@ -34,3 +32,4 @@ order: 1
 [image-5]:	/apps/read-later/images/read-later.png
 [image-6]:	/apps/my-high-street/images/mhs.png
 [image-7]:	/apps/kids-birthdays/images/kids-birthdays-logo-256.png
+[image-8]:	/apps/minknote/images/icon_minknote.png
