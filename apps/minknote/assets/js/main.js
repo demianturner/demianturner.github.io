@@ -134,13 +134,61 @@
     var prev = overlay.querySelector('.fd-lightbox-prev');
     var next = overlay.querySelector('.fd-lightbox-next');
 
-    if (prevLink) {
-      prev.href = prevLink.href;
-      prev.hidden = false;
+    function setLightboxNav(previousHref, nextHref) {
+      if (previousHref) {
+        prev.href = previousHref;
+        prev.hidden = false;
+      } else {
+        prev.removeAttribute('href');
+        prev.hidden = true;
+      }
+
+      if (nextHref) {
+        next.href = nextHref;
+        next.hidden = false;
+      } else {
+        next.removeAttribute('href');
+        next.hidden = true;
+      }
     }
-    if (nextLink) {
-      next.href = nextLink.href;
-      next.hidden = false;
+
+    setLightboxNav(prevLink && prevLink.href, nextLink && nextLink.href);
+
+    function updateLightboxImage(src, alt, previousHref, nextHref) {
+      image.src = src;
+      image.alt = alt || '';
+      setLightboxNav(previousHref, nextHref);
+    }
+
+    function navigateLightbox(url) {
+      if (!url) return;
+
+      fetch(url)
+        .then(function (response) {
+          if (!response.ok) throw new Error('Unable to load screenshot page');
+          return response.text();
+        })
+        .then(function (html) {
+          var parser = new DOMParser();
+          var doc = parser.parseFromString(html, 'text/html');
+          var screenshot = doc.querySelector('.fd-screen-image');
+          if (!screenshot) throw new Error('No screenshot found');
+
+          var pageUrl = new URL(url, window.location.href);
+          var screenshotSrc = new URL(screenshot.getAttribute('src'), pageUrl).href;
+          var previous = doc.querySelector('.fd-nav-prev');
+          var following = doc.querySelector('.fd-nav-next');
+
+          updateLightboxImage(
+            screenshotSrc,
+            screenshot.getAttribute('alt') || '',
+            previous ? new URL(previous.getAttribute('href'), pageUrl).href : '',
+            following ? new URL(following.getAttribute('href'), pageUrl).href : ''
+          );
+        })
+        .catch(function () {
+          // Stay in the lightbox if a neighbouring page cannot be loaded.
+        });
     }
 
     function closeLightbox() {
@@ -155,8 +203,12 @@
       screenshot.setAttribute('aria-label', 'Open screenshot full size');
 
       function openLightbox() {
-        image.src = screenshot.currentSrc || screenshot.src;
-        image.alt = screenshot.alt || '';
+        updateLightboxImage(
+          screenshot.currentSrc || screenshot.src,
+          screenshot.alt || '',
+          prevLink && prevLink.href,
+          nextLink && nextLink.href
+        );
         overlay.classList.add('is-open');
         document.body.classList.add('fd-lightbox-open');
         closeBtn.focus();
@@ -172,6 +224,14 @@
     });
 
     closeBtn.addEventListener('click', closeLightbox);
+    prev.addEventListener('click', function (event) {
+      event.preventDefault();
+      navigateLightbox(prev.href);
+    });
+    next.addEventListener('click', function (event) {
+      event.preventDefault();
+      navigateLightbox(next.href);
+    });
     overlay.addEventListener('click', function (event) {
       if (event.target === overlay) closeLightbox();
     });
@@ -182,10 +242,10 @@
         closeLightbox();
       } else if (event.key === 'ArrowLeft' && prev.href) {
         event.preventDefault();
-        window.location.href = prev.href;
+        navigateLightbox(prev.href);
       } else if (event.key === 'ArrowRight' && next.href) {
         event.preventDefault();
-        window.location.href = next.href;
+        navigateLightbox(next.href);
       }
     });
   }());
