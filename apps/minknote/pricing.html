@@ -31,7 +31,7 @@
         <button class="active" data-period="monthly" onclick="setPeriod('monthly')">Monthly</button>
         <button data-period="yearly" onclick="setPeriod('yearly')">
           Yearly
-          <span class="save-badge">Save 58%</span>
+          <span class="save-badge">Save 44%</span>
         </button>
         <button data-period="lifetime" onclick="setPeriod('lifetime')">Lifetime</button>
       </div>
@@ -113,23 +113,23 @@
 
         <div class="plan-price-wrap">
           <!-- Monthly -->
-          <div class="plan-price" data-price="monthly">
+          <div class="plan-price" data-price="monthly" data-amount="2.99">
             <span class="currency">$</span>
-            <span class="amount">4.99</span>
+            <span class="amount">2.99</span>
             <span class="period">/ month</span>
           </div>
           <p class="plan-price-note" data-price="monthly" aria-hidden="true">&nbsp;</p>
           <!-- Yearly -->
-          <div class="plan-price" data-price="yearly" style="display:none">
+          <div class="plan-price" data-price="yearly" data-amount="19.99" style="display:none">
             <span class="currency">$</span>
-            <span class="amount">2.08</span>
+            <span class="amount">1.67</span>
             <span class="period">/ month</span>
           </div>
-          <p class="plan-price-note" data-price="yearly" style="display:none"><strong>Early Supporter</strong> price · $24.99 billed annually</p>
+          <p class="plan-price-note" data-price="yearly" style="display:none"><strong>Early Supporter</strong> price · <span data-yearly-billed-amount>$19.99</span> billed annually</p>
           <!-- Lifetime -->
-          <div class="plan-price" data-price="lifetime" style="display:none">
+          <div class="plan-price" data-price="lifetime" data-amount="49.99" style="display:none">
             <span class="currency">$</span>
-            <span class="amount">79.99</span>
+            <span class="amount">49.99</span>
             <span class="period">one-time</span>
           </div>
           <p class="plan-price-note" data-price="lifetime" style="display:none"><strong>Early Supporter</strong> pricing · pay once, own forever</p>
@@ -358,6 +358,19 @@
   <script>
     AOS.init({ duration: 600, once: true, offset: 40 });
 
+    function formatPrice(amount) {
+      return amount.toFixed(2);
+    }
+
+    function syncPricingDisplay() {
+      const monthlyPrice = Number(document.querySelector('.plan-card--pro .plan-price[data-price="monthly"]').dataset.amount);
+      const yearlyPrice = Number(document.querySelector('.plan-card--pro .plan-price[data-price="yearly"]').dataset.amount);
+
+      document.querySelector('.plan-card--pro .plan-price[data-price="yearly"] .amount').textContent = formatPrice(yearlyPrice / 12);
+      document.querySelector('[data-yearly-billed-amount]').textContent = `$${formatPrice(yearlyPrice)}`;
+      document.querySelector('.save-badge').textContent = `Save ${Math.round((1 - yearlyPrice / (monthlyPrice * 12)) * 100)}%`;
+    }
+
     // Billing period toggle
     function setPeriod(period) {
       // Update button states
@@ -373,6 +386,8 @@
         document.querySelector('[data-price="monthly"]').style.display = '';
       }
     }
+
+    syncPricingDisplay();
   </script>
 
 </body>
