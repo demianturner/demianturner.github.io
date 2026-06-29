@@ -9,16 +9,18 @@
 
   /* Detect path prefix: features/ pages are one directory down */
   var R = /\/features\//.test(window.location.pathname) ? '../' : '';
+  var HOME_HREF = R + 'index.html';
 
   /* ── Nav ─────────────────────────────────────────────────── */
   var NAV_HTML = [
     '<nav class="site-nav" id="site-nav">',
     '  <div class="nav-inner">',
-    '    <a href="' + R + 'index.html" class="nav-logo" aria-label="MinkNote home">',
+    '    <a href="' + HOME_HREF + '" class="nav-logo" aria-label="MinkNote home">',
     '      <img src="' + R + 'images/mink-small.png" height="36" alt="" aria-hidden="true" style="width:auto;display:block;">',
     '      MinkNote',
     '    </a>',
     '    <ul class="nav-links" id="nav-links" role="list">',
+    '      <li><a href="' + HOME_HREF + '">Home</a></li>',
     '      <li><a href="' + R + 'features.html">Features</a></li>',
     '      <li><a href="' + R + 'pricing.html">Pricing</a></li>',
     '      <li><a href="' + R + 'changelog.html">Changelog</a></li>',
@@ -36,11 +38,12 @@
     '<footer class="site-footer">',
     '  <div class="container">',
     '    <div class="footer-inner">',
-    '      <a href="' + R + 'index.html" class="footer-logo" aria-label="MinkNote home">',
+    '      <a href="' + HOME_HREF + '" class="footer-logo" aria-label="MinkNote home">',
     '        <img src="' + R + 'images/mink-small.png" height="28" alt="" aria-hidden="true" style="width:auto;display:block;">',
     '        MinkNote',
     '      </a>',
     '      <nav class="footer-links" aria-label="Footer navigation">',
+    '        <a href="' + HOME_HREF + '">Home</a>',
     '        <a href="' + R + 'features.html">Features</a>',
     '        <a href="' + R + 'pricing.html">Pricing</a>',
     '        <a href="' + R + 'changelog.html">Changelog</a>',
