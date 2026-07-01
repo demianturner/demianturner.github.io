@@ -427,6 +427,53 @@ h3, h4 {
     0 12px 40px rgba(0,0,0,0.10);
 }
 
+.app-window-shell {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--r-xl);
+  border: 1px solid var(--border);
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.10),
+    0 22px 55px rgba(0,0,0,0.20);
+  overflow: visible;
+}
+
+.app-window-shell > .app-window {
+  box-shadow: none;
+  border: none;
+  border-radius: inherit;
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+.app-window--video {
+  display: grid;
+  position: relative;
+}
+
+.app-window--video::after {
+  content: '';
+  grid-area: 1 / 1;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px var(--border);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.app-window-video {
+  display: block;
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  border-radius: inherit;
+  background: var(--surface);
+}
+
 .chrome-bar {
   display: flex;
   align-items: center;
