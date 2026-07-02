@@ -130,10 +130,11 @@
   gap: var(--s2);
 }
 .plan-price .currency {
-  font-size: var(--t-xl);
-  font-weight: 700;
+  font-size: clamp(var(--t-3xl), 4vw, var(--t-4xl));
+  font-weight: 800;
   color: var(--text-muted);
-  margin-top: 6px;
+  line-height: 1;
+  align-self: center;
 }
 .plan-price .amount {
   font-size: clamp(var(--t-4xl), 5vw, var(--t-5xl));
