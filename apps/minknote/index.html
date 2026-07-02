@@ -234,27 +234,26 @@
 
         <!-- Visual — right -->
         <div class="split-visual" data-aos="fade-left" data-aos-delay="120" data-aos-duration="700">
-          <div class="app-window">
-            <div class="chrome-bar">
-              <div class="chrome-dot"></div>
-              <div class="chrome-dot"></div>
-              <div class="chrome-dot"></div>
-            </div>
-            <div class="app-body">
-              <div class="win-icon">
-                <!-- Lightning / speed icon -->
-                <svg viewBox="0 0 24 24">
-                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                </svg>
-              </div>
-              <div class="sk sk-h sk-xl"></div>
-              <div class="sk sk-lg" style="animation-delay:0.1s"></div>
-              <div class="sk sk-sm" style="animation-delay:0.2s"></div>
-              <div class="sk sk-lg" style="animation-delay:0.05s"></div>
-              <div class="sk sk-md" style="animation-delay:0.15s"></div>
-              <div class="sk sk-lg" style="animation-delay:0.25s"></div>
-              <div class="sk sk-sm" style="animation-delay:0.1s"></div>
-              <div class="sk sk-md" style="animation-delay:0.3s"></div>
+          <div class="app-window-shell">
+            <div class="app-window app-window--video">
+              <video
+                class="app-window-video"
+                src="assets/video/home-3.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                width="1408"
+                height="1080"
+                controlslist="nodownload nofullscreen noplaybackrate noremoteplayback"
+                disablepictureinpicture
+                disableRemotePlayback
+                aria-label="MinkNote simple organisation preview"
+              >
+                <source src="assets/video/home-3.mp4" type="video/mp4">
+                Video preview: MinkNote simple organisation
+              </video>
             </div>
           </div>
         </div>
