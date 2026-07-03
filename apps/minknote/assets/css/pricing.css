@@ -285,19 +285,21 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
-  background: #34C759;
-  border-radius: 7px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  color: #15803d;
 }
 .check-icon svg {
-  width: 14px;
-  height: 14px;
-  stroke: white;
-  fill: none;
-  stroke-width: 2.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  display: none;
+}
+.check-icon::before {
+  content: '\2713';
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 800;
 }
 .dash-icon {
   display: inline-block;
