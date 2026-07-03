@@ -41,14 +41,14 @@
 }
 .billing-toggle button .save-badge {
   position: absolute;
-  top: -8px;
-  right: -6px;
+  top: -19px;
+  right: -8px;
   background: #34C759;
   color: white;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.03em;
-  padding: 1px 5px;
+  padding: 2px 7px;
   border-radius: 100px;
   white-space: nowrap;
 }
