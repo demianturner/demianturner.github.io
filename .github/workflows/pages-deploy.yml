@@ -31,9 +31,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          # submodules: true
-          # If using the 'assets' git submodule from Chirpy Starter, uncomment above
-          # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
+          submodules: true
+          # Requires repo Settings → Pages → Source: GitHub Actions (not "Deploy from branch").
+          # Legacy branch deploy cannot build jekyll-theme-chirpy and serves raw index.html front matter.
 
       - name: Setup Pages
         id: pages
