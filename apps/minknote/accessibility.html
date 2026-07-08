@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibility — MinkNote</title>
+  <meta name="description" content="MinkNote supports Dark Mode and Reduced Motion to make writing comfortable for more people." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/generic.css" />
+  <script src="/assets/js/mixpanel.js"></script>
+  <script src="assets/js/partials.js"></script>
+</head>
+<body>
+
+  <mn-nav></mn-nav>
+
+  <!-- ════════════════════════════════════════════
+       PAGE HEADER
+  ════════════════════════════════════════════════ -->
+  <header class="page-header privacy-header">
+    <div class="container">
+      <span class="eyebrow">Accessibility</span>
+      <h1>Accessibility Support</h1>
+      <p class="privacy-updated">Last updated: July 2026</p>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════
+       ACCESSIBILITY BODY
+  ════════════════════════════════════════════════ -->
+  <main class="privacy-body container">
+
+    <!-- Summary box -->
+    <div class="privacy-summary">
+      <h2>At a glance</h2>
+      <ul>
+        <li>Dark Mode applies a dark colour scheme across screens, menus, and controls to reduce eye strain.</li>
+        <li>Reduced Motion modifies or reduces certain animations that may cause motion sickness or discomfort.</li>
+        <li>Both features are available throughout common writing and navigation tasks in the app.</li>
+      </ul>
+    </div>
+
+    <!-- 1 -->
+    <h2>Dark Mode</h2>
+    <p>
+      MinkNote applies a dark colour scheme to the screens, menus, and controls to reduce eye strain.
+      The app follows your Mac's system appearance by default, or you can choose Light or Dark mode
+      independently in <strong>Preferences &gt; Appearance</strong>.
+    </p>
+    <p>
+      Dark Mode covers the main app shell, sidebar, editor, preferences, and other common surfaces
+      you use while writing and organising notes.
+    </p>
+
+    <hr />
+
+    <!-- 2 -->
+    <h2>Reduced Motion</h2>
+    <p>
+      MinkNote modifies or reduces certain types of animation that may cause motion sickness or
+      discomfort. You can enable a <strong>Reduce Motion</strong> toggle in
+      <strong>Preferences &gt; Appearance &gt; Display Options</strong>.
+    </p>
+    <p>
+      The in-app toggle is off by default. Effective reduced motion is active when either
+      <strong>macOS Reduce Motion</strong> is enabled in System Settings, or the in-app toggle
+      is turned on. If macOS Reduce Motion is already enabled, the in-app toggle may appear to
+      have no effect because reduced motion is already active.
+    </p>
+    <p>
+      When reduced motion is active, the app removes slide, scale, and spring-heavy motion from
+      a handful of UI interactions. In some places it still allows a subtle fade, so the change
+      is intentionally understated rather than dramatic.
+    </p>
+    <p>
+      You may notice reduced motion in these areas:
+    </p>
+    <ul>
+      <li>
+        <strong>Note list filter and search</strong>
+        <span>Opening and closing the filter panel uses a fade or immediate change instead of a slide from the top.</span>
+      </li>
+      <li>
+        <strong>Global Search</strong>
+        <span>Moving through results with the arrow keys jumps the list without animated scrolling.</span>
+      </li>
+      <li>
+        <strong>Editor formatting toolbar</strong>
+        <span>Showing and hiding the toolbar uses a fade or immediate change instead of sliding up from the bottom.</span>
+      </li>
+      <li>
+        <strong>Sidebar tags section</strong>
+        <span>The ellipsis menu on the Tags header appears without a springy hover animation.</span>
+      </li>
+      <li>
+        <strong>First-launch onboarding</strong>
+        <span>The welcome overlay uses a fade only, without scale animation.</span>
+      </li>
+    </ul>
+    <p>
+      Because the implementation is subtle, reduced motion may not feel obvious during casual use.
+      It is designed to be valid and non-intrusive - you may need to try the interactions above
+      to see the difference.
+    </p>
+
+    <hr />
+
+    <div class="privacy-contact">
+      <p>
+        <strong>Questions?</strong> If you have feedback about accessibility in MinkNote, please
+        reach out at
+        <a href="mailto:demian+minknote@muse23.com">demian+minknote@muse23.com</a>.
+      </p>
+    </div>
+
+  </main>
+
+  <mn-footer></mn-footer>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

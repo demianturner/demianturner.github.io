@@ -48,6 +48,7 @@
     '        <a href="' + R + 'pricing.html">Pricing</a>',
     '        <a href="' + R + 'changelog.html">Changelog</a>',
     '        <a href="' + R + 'privacy.html">Privacy</a>',
+    '        <a href="' + R + 'accessibility.html">Accessibility</a>',
     '        <a href="mailto:demian+minknote@muse23.com">Contact</a>',
     '      </nav>',
     '    </div>',
