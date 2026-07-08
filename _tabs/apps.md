@@ -1,6 +1,7 @@
 ---
 layout: page
 icon: fas fa-brands fa-apple
+title: Apps
 order: 1
 ---
 
