@@ -65,4 +65,7 @@
   }
 })(document, window.mixpanel || []);
 
-mixpanel.init("8607aec36b20b0cf2b89c52eb8ceec9c", { autocapture: true });
+mixpanel.init("8607aec36b20b0cf2b89c52eb8ceec9c", { 
+  api_host: 'https://api-eu.mixpanel.com',
+  autocapture: true 
+});
