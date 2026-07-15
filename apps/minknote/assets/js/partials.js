@@ -49,7 +49,7 @@
     '        <a href="' + R + 'changelog.html">Changelog</a>',
     '        <a href="' + R + 'privacy.html">Privacy</a>',
     '        <a href="' + R + 'accessibility.html">Accessibility</a>',
-    '        <a href="mailto:demian+minknote@muse23.com">Contact</a>',
+    '        <a href="mailto:minknote@muse23.com">Contact</a>',
     '      </nav>',
     '    </div>',
     '    <p class="footer-copy">&copy; 2026 MinkNote. Built natively for macOS.</p>',
