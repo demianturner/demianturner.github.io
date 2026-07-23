@@ -11,7 +11,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="JustJam | Play Along with Any Song" />
   <meta property="og:description" content="Split any YouTube Music song into individual stems you can solo, mute, and play along with on your Mac. Local AI, fully offline, no uploads." />
-  <meta property="og:image" content="https://demianturner.com/apps/just-jam/images/app-dark.png" />
+  <meta property="og:image" content="https://muse23.com/apps/justjam/images/logo-hero.png" />
 
   <!-- Fonts: Space Grotesk (display) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,6 +36,8 @@
       --text-faint:    #6b7385;
       --yellow:        #f5c518;   /* signal yellow */
       --yellow-soft:   rgba(245, 197, 24, 0.12);
+      --pink:          #D60B66;   /* logo magenta-pink */
+      --burgundy:      #630538;   /* logo shadow burgundy */
       --violet:        #8b7cf6;
       --teal:          #4fd1c5;
       --coral:         #f97066;
@@ -97,14 +99,14 @@
     }
 
     .btn-ghost {
-      background: var(--bg-raised-2);
+      background: transparent;
       color: var(--text);
-      border: 1px solid var(--border-strong);
+      border: 1.5px solid var(--pink);
     }
     .btn-ghost:hover {
       transform: translateY(-2px);
-      border-color: rgba(245, 197, 24, 0.5);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      border-color: var(--pink);
+      box-shadow: 0 8px 32px rgba(214, 11, 102, 0.3);
     }
 
     /* ── Nav ─────────────────────────────────── */
@@ -158,29 +160,14 @@
       color: var(--text-dim);
     }
     .nav-links a:hover { color: var(--text); }
-    .nav-cta {
-      font-family: var(--font-display);
-      font-weight: 600;
-      font-size: 14px;
-      color: #14120a;
-      background: var(--yellow);
-      padding: 9px 20px;
-      border-radius: var(--radius-pill);
-      transition: box-shadow 0.2s ease, transform 0.15s ease;
-    }
-    .nav-cta:hover {
-      color: #14120a;
-      transform: translateY(-1px);
-      box-shadow: 0 6px 24px rgba(245, 197, 24, 0.35);
-    }
     @media (max-width: 640px) {
-      .nav-links a:not(.nav-cta) { display: none; }
+      .nav-links { display: none; }
     }
 
     /* ── Hero ────────────────────────────────── */
     .hero {
       position: relative;
-      padding: 96px 0 48px;
+      padding: 0 0 48px;
       text-align: center;
     }
     /* ambient glow */
@@ -201,39 +188,21 @@
     }
     .hero > .container { position: relative; }
 
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--yellow);
-      background: var(--yellow-soft);
-      border: 1px solid rgba(245, 197, 24, 0.25);
-      border-radius: var(--radius-pill);
-      padding: 8px 18px;
-      margin-bottom: 32px;
-    }
-    .hero-badge .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--yellow);
-      animation: pulse 2s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(245,197,24,0.5); }
-      50%      { opacity: 0.6; box-shadow: 0 0 0 6px rgba(245,197,24,0); }
+    /* big sunburst logo (cropped from approved mockup-8) */
+    .hero-logo {
+      display: block;
+      width: min(620px, 92%);
+      height: auto;
+      margin: -24px auto 8px; /* pull up past the crop's feathered edge */
     }
 
     .hero h1 {
-      font-size: clamp(44px, 7.5vw, 84px);
+      font-family: var(--font-body); /* Inter, matching mockup */
+      font-size: clamp(38px, 5.5vw, 72px);
       font-weight: 700;
-      line-height: 1.04;
-      max-width: 15ch;
-      margin: 0 auto 24px;
+      letter-spacing: -0.025em;
+      line-height: 1.08;
+      margin: 0 auto 28px;
     }
     .hero h1 .accent { color: var(--yellow); }
 
@@ -241,7 +210,7 @@
       font-size: clamp(18px, 2.4vw, 21px);
       color: var(--text-dim);
       max-width: 56ch;
-      margin: 0 auto 40px;
+      margin: 0 auto 56px;
     }
     .hero-sub strong { color: var(--text); font-weight: 600; }
 
@@ -250,44 +219,17 @@
       justify-content: center;
       gap: 16px;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+      margin-bottom: 28px;
     }
     .hero-note {
       font-size: 14px;
       color: var(--text-faint);
     }
 
-    /* ── Animated waveform strip ─────────────── */
-    .waveform {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 5px;
-      height: 56px;
-      margin: 48px auto 0;
-      max-width: 560px;
-      -webkit-mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
-      mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
-    }
-    .waveform span {
-      width: 4px;
-      border-radius: 3px;
-      background: var(--yellow);
-      opacity: 0.85;
-      animation: bounce 1.3s ease-in-out infinite;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: scaleY(0.35); }
-      50%      { transform: scaleY(1); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .waveform span, .hero-badge .dot { animation: none; }
-    }
-
     /* ── Staggered hero screenshots ──────────── */
     .hero-visual {
       position: relative;
-      margin: 40px auto 0;
+      margin: 72px auto 0;
       max-width: 1000px;
       /* room for the offset card */
       padding: 24px 0 96px;
@@ -651,7 +593,6 @@
         <a href="#how">How it works</a>
         <a href="#features">Features</a>
         <a href="#private">Privacy</a>
-        <a class="nav-cta" href="#waitlist">Join waitlist</a>
       </div>
     </div>
   </nav>
@@ -659,7 +600,7 @@
   <!-- ════════════════════════ HERO ════════════════════════ -->
   <header class="hero">
     <div class="container">
-      <div class="hero-badge"><span class="dot"></span> Native macOS &middot; Coming soon</div>
+      <img class="hero-logo" src="images/logo-hero.png" alt="JustJam — a sunburst-yellow logo with an orange-brown semi-hollow guitar and chunky JUST JAM lettering" width="810" height="700" />
 
       <h1>Play along with <span class="accent">any song</span></h1>
 
@@ -676,16 +617,11 @@
         </a>
         <!-- TODO: replace href with the actual prototype demo URL -->
         <a class="btn btn-ghost" href="#demo">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 3.2v9.6c0 .8.9 1.3 1.6.9l7.6-4.8c.6-.4.6-1.4 0-1.8L5.6 2.3c-.7-.4-1.6.1-1.6.9z" fill="#f5c518"/></svg>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 3.2v9.6c0 .8.9 1.3 1.6.9l7.6-4.8c.6-.4.6-1.4 0-1.8L5.6 2.3c-.7-.4-1.6.1-1.6.9z" fill="#D60B66"/></svg>
           Prototype demo
         </a>
       </div>
       <p class="hero-note">Free while in beta &middot; No cloud account required</p>
-
-      <!-- animated waveform -->
-      <div class="waveform" aria-hidden="true">
-        <span style="height:30%;animation-delay:0s"></span><span style="height:55%;animation-delay:.1s"></span><span style="height:80%;animation-delay:.2s"></span><span style="height:45%;animation-delay:.3s"></span><span style="height:95%;animation-delay:.4s"></span><span style="height:60%;animation-delay:.5s"></span><span style="height:35%;animation-delay:.6s"></span><span style="height:75%;animation-delay:.7s"></span><span style="height:100%;animation-delay:.8s"></span><span style="height:50%;animation-delay:.9s"></span><span style="height:85%;animation-delay:1s"></span><span style="height:40%;animation-delay:1.1s"></span><span style="height:70%;animation-delay:1.2s"></span><span style="height:90%;animation-delay:.15s"></span><span style="height:55%;animation-delay:.35s"></span><span style="height:30%;animation-delay:.55s"></span><span style="height:65%;animation-delay:.75s"></span><span style="height:95%;animation-delay:.95s"></span><span style="height:45%;animation-delay:.25s"></span><span style="height:80%;animation-delay:.45s"></span><span style="height:60%;animation-delay:.65s"></span><span style="height:35%;animation-delay:.85s"></span><span style="height:75%;animation-delay:1.05s"></span><span style="height:50%;animation-delay:.05s"></span>
-      </div>
 
       <!-- staggered app screenshots: light behind, dark superimposed -->
       <div class="hero-visual" id="demo">
@@ -879,7 +815,7 @@
         </a>
         <!-- TODO: replace href with the actual prototype demo URL -->
         <a class="btn btn-ghost reveal" href="#demo">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 3.2v9.6c0 .8.9 1.3 1.6.9l7.6-4.8c.6-.4.6-1.4 0-1.8L5.6 2.3c-.7-.4-1.6.1-1.6.9z" fill="#f5c518"/></svg>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 3.2v9.6c0 .8.9 1.3 1.6.9l7.6-4.8c.6-.4.6-1.4 0-1.8L5.6 2.3c-.7-.4-1.6.1-1.6.9z" fill="#D60B66"/></svg>
           Prototype demo
         </a>
       </div>
