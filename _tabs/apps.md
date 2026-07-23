@@ -14,7 +14,7 @@ order: 1
 
 | Crypto Calculator | Pollution Monitor | Doris | Read Later |
 | --- | --- | --- | --- |
-| [![][image-1]{: w="135" h="135" }][1] | [![][image-2]{: w="90" h="90" }][2] | ![][image-4]{: w="135" h="135" } | ![][image-5]{: w="135" h="135" } |
+| [![][image-1]{: w="135" h="135" }][1] | [![][image-2]{: w="135" h="135" }][2] | ![][image-4]{: w="135" h="135" } | ![][image-5]{: w="135" h="135" } |
 | Finance | Environment | Productivity | Productivity |
 | Platform: macOS | Platform: macOS | Platform: iOS | Platform: iOS |
 | Release: Feb 6, 2018 | Release: Jan 20, 2017 | Release date: Dec 20, 2009 | Release date: Mar 6, 2009 |
