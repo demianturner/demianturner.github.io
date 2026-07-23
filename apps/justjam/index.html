@@ -68,7 +68,10 @@
       margin: 0 auto;
     }
 
-    h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; }
+    h1, h2, h3 {
+      font-family: var(--font-body);
+      letter-spacing: -0.025em;
+    }
 
     a { color: inherit; text-decoration: none; }
 
@@ -197,7 +200,6 @@
     }
 
     .hero h1 {
-      font-family: var(--font-body); /* Inter, matching mockup */
       font-size: clamp(38px, 5.5vw, 72px);
       font-weight: 700;
       letter-spacing: -0.025em;
@@ -332,6 +334,7 @@
     }
     .about-card p .hl { color: var(--yellow); }
     .about-card p .dim { color: var(--text-dim); }
+    .about-card p + p { margin-top: 1.25em; }
 
     /* ── How it works ────────────────────────── */
     .steps {
@@ -642,6 +645,8 @@
         <p>
           JustJam is built for musicians who want to <span class="hl">learn songs faster</span>,
           practice more deeply, and play along with every part.
+        </p>
+        <p>
           Split a YouTube Music song into controllable stems on your Mac using a
           <span class="hl">local AI model you download once</span>, then keep working
           <span class="hl">fully offline</span> with your private music collection
