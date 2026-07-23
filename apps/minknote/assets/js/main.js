@@ -250,4 +250,61 @@
     });
   }());
 
+  /* ── ⑥ Demo video modal ── */
+  (function () {
+    var trigger = document.querySelector('.watch-demo-trigger');
+    if (!trigger) return;
+
+    var youtubeUrl = trigger.href;
+    var videoId = '9tzgwwZOvaE';
+    var embedUrl = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
+
+    var overlay = document.createElement('div');
+    overlay.className = 'demo-video-modal';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-label', 'MinkNote demo video');
+    overlay.innerHTML = [
+      '<div class="demo-video-dialog">',
+      '  <button type="button" class="demo-video-close" aria-label="Close demo video">&times;</button>',
+      '  <div class="demo-video-wrap">',
+      '    <iframe title="MinkNote demo on YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+      '  </div>',
+      '  <div class="demo-video-actions">',
+      '    <a href="' + youtubeUrl + '" class="btn btn-primary demo-video-youtube" target="_blank" rel="noopener">Watch on YouTube</a>',
+      '  </div>',
+      '</div>'
+    ].join('');
+    document.body.appendChild(overlay);
+
+    var closeBtn = overlay.querySelector('.demo-video-close');
+    var iframe = overlay.querySelector('iframe');
+
+    function openModal() {
+      iframe.src = embedUrl;
+      overlay.classList.add('is-open');
+      document.body.classList.add('demo-video-open');
+      closeBtn.focus();
+    }
+
+    function closeModal() {
+      overlay.classList.remove('is-open');
+      document.body.classList.remove('demo-video-open');
+      iframe.removeAttribute('src');
+    }
+
+    trigger.addEventListener('click', function (event) {
+      event.preventDefault();
+      openModal();
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function (event) {
+      if (event.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && overlay.classList.contains('is-open')) closeModal();
+    });
+  }());
+
 })();
