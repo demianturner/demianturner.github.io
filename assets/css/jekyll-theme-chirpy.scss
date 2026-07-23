@@ -33,3 +33,14 @@
     padding: 6px 12px;
     color: #b0b0b0ff !important;
   }
+
+  /* Apps page: keep stacked tables column-aligned */
+  .content .table-wrapper table {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .content .table-wrapper table img {
+    max-width: 100%;
+    height: auto;
+  }
