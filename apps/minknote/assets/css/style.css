@@ -86,6 +86,8 @@ button                 { cursor: pointer; border: none; background: none; font: 
   --r-sm:  6px;   --r-md: 12px;
   --r-lg:  18px;  --r-xl: 24px;  --r-2xl: 32px;
 
+  --site-banner-h: 0px;
+  --nav-base-h: 64px;
   --nav-h: 64px;
 }
 
@@ -128,9 +130,51 @@ h3, h4 {
 /* ============================================================
    NAV
    ============================================================ */
-.site-nav {
+.site-banner {
   position: fixed;
   top: 0; left: 0; right: 0;
+  z-index: 260;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.28rem;
+  padding: 8px var(--s6);
+  background: #e92327;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.35;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.site-banner-title {
+  min-width: 0;
+  font-weight: 800;
+}
+
+.site-banner-copy {
+  min-width: 0;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.site-banner:hover,
+.site-banner:focus-visible {
+  background: #d91f23;
+}
+
+.site-banner:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.86);
+  outline-offset: -5px;
+}
+
+.site-nav {
+  position: fixed;
+  top: var(--site-banner-h); left: 0; right: 0;
   z-index: 200;
   padding: var(--s4) 0;
   transition: background 0.35s ease,
@@ -895,9 +939,25 @@ details[open] > .faq-question { color: var(--text); }
 }
 
 @media (max-width: 640px) {
-  :root { --nav-h: 56px; }
+  :root {
+    --nav-base-h: 56px;
+    --nav-h: 56px;
+  }
 
   .hero { padding-top: calc(var(--nav-h) + var(--s16)); }
+
+  .site-banner {
+    align-items: center;
+    gap: 0.2rem;
+    min-height: 50px;
+    padding: 7px var(--s4);
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .site-banner-title {
+    flex-basis: 100%;
+  }
 
   .nav-links {
     display: none;
