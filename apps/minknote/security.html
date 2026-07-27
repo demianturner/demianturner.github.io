@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security — MinkNote</title>
+  <meta name="description" content="MinkNote keeps security plain and reviewable through reviewed dependencies, locally bundled editor code, App Store review, and Codex Security scans." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/generic.css" />
+  <script src="/assets/js/mixpanel.js"></script>
+  <script src="assets/js/partials.js"></script>
+</head>
+<body>
+
+  <mn-nav></mn-nav>
+
+  <!-- ════════════════════════════════════════════
+       PAGE HEADER
+  ════════════════════════════════════════════════ -->
+  <header class="page-header privacy-header">
+    <div class="container">
+      <span class="eyebrow">Security</span>
+      <h1>Security, kept plain and reviewable.</h1>
+      <p class="privacy-updated">Last reviewed: July 2026</p>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════
+       SECURITY BODY
+  ════════════════════════════════════════════════ -->
+  <main class="privacy-body container">
+
+    <!-- Summary box -->
+    <div class="privacy-summary">
+      <h2>At a glance</h2>
+      <ul>
+        <li>MinkNote releases are checked through reviewed dependencies, Apple's App Store process, and Codex Security scanning.</li>
+        <li>The editor code is bundled with the app and loaded locally, rather than fetched from a CDN at runtime.</li>
+        <li>The app uses macOS sandboxing and security-scoped access for user-selected folders.</li>
+      </ul>
+    </div>
+
+    <p>
+      MinkNote is a native Mac app built with a careful release process. Every
+      release is checked through reviewed dependencies, Apple's App Store process,
+      and Codex Security scanning.
+    </p>
+
+    <hr />
+
+    <!-- 1 -->
+    <h2>Dependencies stay reviewable</h2>
+    <p>
+      MinkNote keeps its dependency surface small. Release builds use Swift Package
+      Manager's resolved package file, so third-party Swift libraries are tied to
+      specific versions and source commits when a release is prepared.
+    </p>
+    <p>
+      Before a library update ships, the change is reviewed deliberately: upstream
+      release notes, source diffs, transitive dependencies, affected tests, and
+      security scan results are all part of the release check.
+    </p>
+    <p>
+      MinkNote uses
+      <a href="https://github.com/pointfreeco/swift-composable-architecture">The Composable Architecture</a>
+      for predictable state management, explicit side effects, and testable feature
+      logic. TCA is a widely adopted Swift library with more than 14k GitHub stars
+      as of July 27, 2026. That public adoption is useful context, but it is not
+      treated as a security guarantee; MinkNote still reviews dependency updates
+      before release.
+    </p>
+
+    <hr />
+
+    <!-- 2 -->
+    <h2>Editor code is bundled locally</h2>
+    <p>
+      MinkNote's rich Markdown editor is built with
+      <a href="https://github.com/nhn/tui.editor">TOAST UI Editor</a>, a mature
+      open-source editor with more than 18k GitHub stars as of July 27, 2026.
+    </p>
+    <p>
+      The editor code is bundled with the app and loaded locally inside a WKWebView.
+      MinkNote does not fetch the editor from a CDN at runtime, and the app source
+      does not rely on a Node or npm runtime.
+    </p>
+
+    <hr />
+
+    <!-- 3 -->
+    <h2>App Store review adds another layer</h2>
+    <p>
+      MinkNote is distributed through Apple's App Store process. Apple reviews apps
+      and app updates against privacy, security, and safety requirements, including
+      checks around sensitive data access.
+    </p>
+    <p>
+      MinkNote also uses macOS sandboxing and security-scoped access for
+      user-selected folders. You choose where your notes live, and the app stores
+      that permission using the standard macOS access model.
+    </p>
+    <p>
+      Useful Apple references:
+    </p>
+    <ul>
+      <li>
+        <a href="https://developer.apple.com/app-store/review/guidelines/">Apple App Review Guidelines</a>
+      </li>
+      <li>
+        <a href="https://support.apple.com/guide/security/about-app-store-security-secb8f887a15/web">About App Store security</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <!-- 4 -->
+    <h2>Every release gets a security scan</h2>
+    <p>
+      Before each release, MinkNote runs a Codex Security scan on the repository
+      and reviews any findings before shipping. Important dependency updates and
+      release branches can also receive targeted diff scans.
+    </p>
+    <p>
+      Codex Security helps inspect source code, reason about the codebase's threat
+      model, validate plausible vulnerabilities, and produce remediation guidance
+      for human review. It does not replace manual judgment, but it gives each
+      release a consistent security pass before it reaches users.
+    </p>
+    <p>
+      Useful Codex Security references:
+    </p>
+    <ul>
+      <li>
+        <a href="https://help.openai.com/en/articles/20001107-codex-security">OpenAI Help Center: Codex Security</a>
+      </li>
+      <li>
+        <a href="https://learn.chatgpt.com/docs/security/plugin">Codex Security plugin quickstart</a>
+      </li>
+    </ul>
+
+  </main>
+
+  <mn-footer></mn-footer>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
