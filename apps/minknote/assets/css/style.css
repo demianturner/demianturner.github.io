@@ -254,7 +254,8 @@ h3, h4 {
    ============================================================ */
 .hero {
   position: relative;
-  padding-top: calc(var(--nav-h) + var(--s24));
+  /* Align platform badge top with Product Hunt badge bottom (s2 offset + 54px badge) */
+  padding-top: calc(var(--nav-h) + var(--s2) + 54px);
   padding-bottom: 0;            /* screen-bg panel closes the section */
   text-align: center;
   overflow: hidden;
@@ -264,6 +265,35 @@ h3, h4 {
     rgba(10, 132, 255, 0.05) 0%,
     transparent 70%
   ), var(--bg);
+}
+
+/* Product Hunt badge — sits under nav, right-aligned with Roadmap */
+.hero-ph {
+  position: absolute;
+  top: calc(var(--nav-h) + var(--s2));
+  left: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.hero-ph-inner {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 var(--s6);
+}
+
+.hero-ph-inner a {
+  pointer-events: auto;
+  line-height: 0;
+}
+
+.hero-ph-inner img {
+  display: block;
+  width: 250px;
+  height: 54px;
 }
 
 /* Full-width beige panel that frames the hero screenshot —
@@ -326,7 +356,7 @@ h3, h4 {
   align-items: center;
   justify-content: center;
   gap: var(--s3);
-  margin-bottom: var(--s16);
+  margin-bottom: var(--s8);
   flex-wrap: wrap;
 }
 
@@ -1011,7 +1041,8 @@ details[open] > .faq-question { color: var(--text); }
     --nav-h: 56px;
   }
 
-  .hero { padding-top: calc(var(--nav-h) + var(--s16)); }
+  .hero { padding-top: calc(var(--nav-h) + var(--s8)); }
+  .hero-ph { display: none; }
 
   .site-banner {
     align-items: center;
