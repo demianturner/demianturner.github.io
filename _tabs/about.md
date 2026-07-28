@@ -4,9 +4,13 @@ icon: fas fa-info-circle
 order: 5
 ---
 
-## Demian Turner: Senior iOS & macOS Engineer | Team Lead
+## Demian Turner: Senior iOS & macOS Engineer/Team Lead
 
-Demian Turner is a UK-based software engineer with over two decades of experience delivering high-performance desktop and mobile applications for Apple platforms. Until recently, he led a team of Swift developers at Global Relay, building compliant communications software trusted by the world’s largest financial institutions. A long-time advocate for open-source, Demian developed the Seagull PHP framework, a modular web development platform that has been downloaded over 40,000 times and used by developers around the world.
+Demian Turner is a UK-based software engineer with over two decades of experience delivering high-performance desktop and mobile applications for Apple platforms. 
+
+Until recently, he led a team of Swift developers at Global Relay, building compliant communications software trusted by the world’s largest financial institutions. 
+
+A long-time advocate for open-source, Demian developed the Seagull PHP framework, a modular web development platform that was downloaded over 40k times and used by developers around the world.
 
 ## Professional Snapshot
 
