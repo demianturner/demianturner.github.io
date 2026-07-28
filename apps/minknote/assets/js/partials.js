@@ -86,7 +86,7 @@
     '          MinkNote',
     '        </a>',
     '        <p class="footer-tagline">Privacy focused macOS Notes app.</p>',
-    '        <a href="https://buildlist.io" class="footer-badge" target="_blank" rel="noopener">',
+    '        <a href="https://buildlist.io/?ref=a556a4d3-d811-4c5e-8066-26d8d457e3c6" class="footer-badge" target="_blank" rel="noopener">',
     '          <img src="https://buildlist.io/badge-dark.svg" alt="Featured on Buildlist" height="40" style="height:40px;width:auto;">',
     '        </a>',
     '      </div>',
