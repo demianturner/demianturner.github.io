@@ -876,7 +876,7 @@ details[open] > .faq-question { color: var(--text); }
 .footer-inner {
   display: grid;
   grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.6fr);
-  align-items: start;
+  align-items: stretch;
   justify-content: space-between;
   gap: var(--s12);
   margin-bottom: var(--s10);
@@ -910,6 +910,16 @@ details[open] > .faq-question { color: var(--text); }
   line-height: 1.08;
   color: var(--surface);
   max-width: 360px;
+}
+
+.footer-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.footer-badge img {
+  display: block;
 }
 
 .footer-link-groups {
