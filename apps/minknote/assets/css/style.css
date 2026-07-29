@@ -374,9 +374,31 @@ h3, h4 {
   white-space: nowrap;
 }
 
+.hero-cta .btn {
+  box-sizing: border-box;
+  min-height: 43px;
+}
+
+.btn-icon {
+  flex-shrink: 0;
+  display: block;
+}
+
+.btn-icon-apple {
+  width: 18px;
+  height: 21px;
+  object-fit: contain;
+}
+
+.btn-icon-play {
+  width: 20px;
+  height: 20px;
+}
+
 .btn-primary {
   background: var(--accent);
   color: #fff;
+  border: 1px solid transparent;
 }
 .btn-primary:hover {
   background: var(--accent-hi);
