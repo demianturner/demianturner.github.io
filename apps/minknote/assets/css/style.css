@@ -376,7 +376,10 @@ h3, h4 {
 
 .hero-cta .btn {
   box-sizing: border-box;
+  height: 43px;
   min-height: 43px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .btn-icon {
