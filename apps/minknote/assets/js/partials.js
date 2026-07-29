@@ -62,7 +62,6 @@
     '      MinkNote',
     '    </a>',
     '    <ul class="nav-links" id="nav-links" role="list">',
-    '      <li><a href="' + HOME_HREF + '">Home</a></li>',
     '      <li><a href="' + R + 'features.html">Features</a></li>',
     '      <li><a href="' + R + 'pricing.html">Pricing</a></li>',
     '      <li><a href="' + R + 'changelog.html">Changelog</a></li>',
