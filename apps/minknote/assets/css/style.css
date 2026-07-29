@@ -464,6 +464,10 @@ h3, h4 {
   max-width: 400px;
 }
 
+.split-cta {
+  align-self: center;
+}
+
 .feature-list {
   display: flex;
   flex-direction: column;
