@@ -509,7 +509,7 @@ h3, h4 {
 }
 
 .split-cta {
-  align-self: center;
+  align-self: flex-start;
 }
 
 .feature-list {
