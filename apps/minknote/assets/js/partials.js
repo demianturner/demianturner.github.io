@@ -14,7 +14,7 @@
   var SITE_BANNER = {
     enabled: true,
     startsAt: '2026-07-27T00:00:00+01:00',
-    endsAt: '2026-07-31T23:59:59+01:00',
+    endsAt: '2026-07-30T17:27:00+01:00',
     href: 'https://indieappsales.com#app-45EF1B39-0B84-4E7D-9C1D-3F4092B8ED5A',
     label: 'Indie App Sales 2026: Save 50% for 3 months if you subscribe today'
   };
