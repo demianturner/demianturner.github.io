@@ -19,7 +19,7 @@ title: Muse23 # the main title
 tagline: Indie software development # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  Muse23 builds indie native apps for Mac and iOS — notes, utilities, and tools designed with care.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -38,11 +38,9 @@ social:
   email: demian@muse23.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    - https://www.linkedin.com/in/username
+    - https://twitter.com/demianturner
+    - https://github.com/demianturner
+    - https://www.linkedin.com/in/demianturner
 
 # Site Verification Settings
 webmaster_verifications:
