@@ -100,7 +100,7 @@ avatar: https://avatars.githubusercontent.com/u/136587?s=400&amp;u=7303a2e9f775a
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: # string, local or CORS resources
+social_preview_image: /assets/img/favicons/web-app-manifest-512x512.png
 
 plugins:
   - jekyll-compose
