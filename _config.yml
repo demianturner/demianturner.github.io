@@ -100,6 +100,7 @@ avatar: https://avatars.githubusercontent.com/u/136587?s=400&amp;u=7303a2e9f775a
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
+# Prefer front-matter defaults below (includes width/height). Kept as Chirpy fallback.
 social_preview_image: /assets/img/favicons/web-app-manifest-512x512.png
 
 plugins:
@@ -173,6 +174,13 @@ collections:
     sort_by: order
 
 defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /assets/img/favicons/web-app-manifest-512x512.png
+        width: 512
+        height: 512
   - scope:
       path: "" # An empty string here means all files in the project
       type: posts
