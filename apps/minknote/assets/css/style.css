@@ -512,6 +512,13 @@ h3, h4 {
   align-self: flex-start;
 }
 
+.split-cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  flex-wrap: wrap;
+}
+
 .feature-list {
   display: flex;
   flex-direction: column;
