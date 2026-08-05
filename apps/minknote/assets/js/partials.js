@@ -103,6 +103,7 @@
     '        </div>',
     '        <div class="footer-link-group">',
     '          <h2>Company</h2>',
+    '          <a href="/about/">About</a>',
     '          <a href="https://buildlist.io/contact">Contact</a>',
     '          <a href="' + R + 'security.html">Security</a>',
     '        </div>',
