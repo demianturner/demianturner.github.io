@@ -2,7 +2,7 @@
 layout: page
 title: Kids Birthdays for the iOS
 ---
-# Download Kids Birthdays on the AppStore
+## Download Kids Birthdays on the AppStore
 [![Download Kids Birthdays on the App Store][image-1]][1] 
 
 ## About the App
