@@ -9,7 +9,7 @@
 
   /* Detect path prefix: features/ pages are one directory down */
   var R = /\/features\//.test(window.location.pathname) ? '../' : '';
-  var HOME_HREF = R + 'index.html';
+  var HOME_HREF = '/apps/minknote/';
 
   var SITE_BANNER = {
     enabled: true,
