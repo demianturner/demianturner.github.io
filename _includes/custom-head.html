@@ -1,2 +1,9 @@
 <!-- Site-wide analytics (see assets/js/mixpanel.js) -->
 <script src="/assets/js/mixpanel.js"></script>
+
+{% unless page.image %}
+  {% if site.social_preview_image %}
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  {% endif %}
+{% endunless %}
