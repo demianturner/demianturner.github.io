@@ -3,10 +3,10 @@ layout: page
 title: Pollution Monitor for the Mac
 ---
 # Download Pollution Monitor on the Mac AppStore
-[![][image-1]][1] [![][image-2]][2]
+[![Download Pollution Monitor on the Mac App Store][image-1]][1] [![Download Pollution Monitor on the App Store China][image-2]][2]
 
 ## About the App
-![][image-3]
+![Pollution Monitor app icon][image-3]
 
 **Pollution Monitor** is a Mac app that provides live pollution readings for almost 4000 cities around the globe, right in your status bar.
 
@@ -16,8 +16,8 @@ title: Pollution Monitor for the Mac
 > All data provided by the [World Air Quality Index Project][3] and additional info about the selected city's Environmental Protection Agency available via web link from app.
 
 ## Screenshots
-![][image-4]
-![][image-5]
+![Pollution Monitor menu bar showing live air quality for a selected city][image-4]
+![Pollution Monitor city list and pollution readings on macOS][image-5]
 
 ## Changelog
 See the [changelog][4]

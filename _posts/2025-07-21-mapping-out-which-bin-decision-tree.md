@@ -10,7 +10,7 @@ The logical flow for the Which Bin app ended up being much more complicated than
 
 This flowchart captures all the decision branches users can take, from first launch through ongoing app usage, including edge cases like permission denial, GPS timeout, location validation, and error recovery scenarios.
 
-![][image-1]
+![Flowchart of the Which Bin app decision tree from launch through onboarding, location validation, and main navigation][image-1]
 
 ## Key Decision Points & User Paths:
 

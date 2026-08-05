@@ -7,7 +7,7 @@ Crypto Tools Pro is a handy menu bar app to convert between fiat currencies and 
 
 
 ## Features - Pro Version
-[![][image-1]][1]
+[![Download Crypto Tools Pro on the Mac App Store][image-1]][1]
 
 - Live conversion between hundreds of crypto and fiat currencies
 - Real-time price and news feeds
@@ -20,16 +20,16 @@ Crypto Tools Pro is a handy menu bar app to convert between fiat currencies and 
 - Adjust converted results to update inputs
 
 ## Features - Free Version
-[![][image-2]][2]
+[![Download Crypto Tools on the Mac App Store][image-2]][2]
 
 Free version is limited to 6 currencies, upgrade to Pro to access everything.
 
 ## About the App
-![][image-3]
+![Crypto Tools app icon][image-3]
 
 ## Screenshots
-![][image-4]
-![][image-5]
+![Crypto Tools menu bar converting between cryptocurrency and fiat][image-4]
+![Crypto Tools currency list and live price feed on macOS][image-5]
 
 ## Credits
 The developer wishes to express thanks for the availability of the following libraries/resources:

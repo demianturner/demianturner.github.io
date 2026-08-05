@@ -3,10 +3,10 @@ layout: page
 title: Kids Birthdays for the iOS
 ---
 # Download Kids Birthdays on the AppStore
-[![][image-1]][1] 
+[![Download Kids Birthdays on the App Store][image-1]][1] 
 
 ## About the App
-![][image-2]
+![Kids Birthdays app icon][image-2]
 
 **Never forget your friends’ kids' birthdays.** 
 
@@ -33,7 +33,7 @@ You have the option to save all birthdays to iCloud - enter the data once and it
 
 | **Overview** | **Parents**  | **Kids** | ** Birthdays **
 | --- | --- | --- | --- | 
-| ![][image-4] | ![][image-5] | ![][image-6] | ![][image-7] | 
+| ![Kids Birthdays overview screen][image-4] | ![Kids Birthdays parents screen][image-5] | ![Kids Birthdays kids list screen][image-6] | ![Kids Birthdays timeline of upcoming birthdays][image-7] | 
 
 
 ## CONTACT

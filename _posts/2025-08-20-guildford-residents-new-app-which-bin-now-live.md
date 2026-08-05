@@ -5,7 +5,7 @@ date: 2025-08-20 14:34 +0100
 categories: [WhichBin]
 tags: [apps]
 ---
-![][image-1]
+![Which Bin promo showing the Guildford bin collection schedule on iPhone][image-1]
 If you live in **Guildford Borough**, there’s a new **free iOS app** that helps you stay on top of your bin collections.  
 No more missed days or last-minute scrambles — it shows exactly which bins to put out each week.
 

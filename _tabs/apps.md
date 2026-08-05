@@ -7,14 +7,14 @@ order: 1
 
 | MinkNote | JustJam | Which Bin | Kids Birthdays |
 | --- | --- | --- | --- |
-| [![][image-8]{: w="175" h="175" }][5] | [![][image-9]{: w="115" h="115" }][6] | [![][image-3]{: w="175" h="175" }][3] | [![][image-7]{: w="175" h="175" }][4] |
+| [![MinkNote app icon][image-8]{: w="175" h="175" }][5] | [![JustJam app icon][image-9]{: w="115" h="115" }][6] | [![Which Bin app icon][image-3]{: w="175" h="175" }][3] | [![Kids Birthdays app icon][image-7]{: w="175" h="175" }][4] |
 | Productivity | Music | Utilities | Lifestyle |
 | Platform: macOS | Platform: macOS | Platform: iOS | Platform: iOS |
 | Release: Jul 22, 2026 | Release: TBD | Release: Jul 15, 2025 | Release: Sep 14, 2020 |
 
 | Crypto Calculator | Pollution Monitor | Doris | Read Later |
 | --- | --- | --- | --- |
-| [![][image-1]{: w="135" h="135" }][1] | [![][image-2]{: w="135" h="135" }][2] | ![][image-4]{: w="135" h="135" } | ![][image-5]{: w="135" h="135" } |
+| [![Crypto Calculator app icon][image-1]{: w="135" h="135" }][1] | [![Pollution Monitor app icon][image-2]{: w="135" h="135" }][2] | ![Doris app icon][image-4]{: w="135" h="135" } | ![Read Later app icon][image-5]{: w="135" h="135" } |
 | Finance | Environment | Productivity | Productivity |
 | Platform: macOS | Platform: macOS | Platform: iOS | Platform: iOS |
 | Release: Feb 6, 2018 | Release: Jan 20, 2017 | Release date: Dec 20, 2009 | Release date: Mar 6, 2009 |
@@ -22,7 +22,7 @@ order: 1
 
 | My High Street |
 | --- |
-| ![][image-6]{: w="135" h="135" } |
+| ![My High Street app icon][image-6]{: w="135" h="135" } |
 | Shopping |
 | Platform: iOS |
 | Release date: May 26, 2009 |
