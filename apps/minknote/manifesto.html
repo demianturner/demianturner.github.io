@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manifesto — MinkNote</title>
+  <meta name="description" content="The MinkNote manifesto defines the values and product principles that guide the app: privacy, ownership, durability, security, and clear tools." />
+  <meta name="keywords" content="macOS notes app, Markdown notes, private notes, native app, keyboard shortcuts, note taking" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Muse23" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/generic.css" />
+  <script src="/assets/js/mixpanel.js"></script>
+  <script src="assets/js/partials.js"></script>
+</head>
+<body>
+
+  <mn-nav></mn-nav>
+
+  <!-- ════════════════════════════════════════════
+       PAGE HEADER
+  ════════════════════════════════════════════════ -->
+  <header class="page-header privacy-header">
+    <div class="container">
+      <span class="eyebrow">Values</span>
+      <h1>MinkNote Manifesto</h1>
+      <p class="privacy-updated">Project charter</p>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════
+       MANIFESTO BODY
+  ════════════════════════════════════════════════ -->
+  <main class="privacy-body container">
+
+    <p>
+      This manifesto is the project charter for MinkNote. The values define what
+      stays stable, the principles guide day-to-day tradeoffs, and the implementation
+      choices describe how MinkNote delivers on them today.
+    </p>
+
+    <hr />
+
+    <h2>Enduring values</h2>
+    <ul>
+      <li>
+        <strong>Writing is a tool for thinking.</strong>
+        <span>MinkNote gives people a quiet place to explore ideas, remember clearly, and make sense of their lives without getting in the way.</span>
+      </li>
+      <li>
+        <strong>Your notes belong to you.</strong>
+        <span>People keep what they write, access it for the long term, and leave with it whenever they choose.</span>
+      </li>
+      <li>
+        <strong>Privacy is a default, not an upsell.</strong>
+        <span>Trust comes from restraint, clear behavior, and local control, as documented in <a href="privacy.html">Privacy</a>.</span>
+      </li>
+      <li>
+        <strong>Durable ownership matters more than short-term convenience.</strong>
+        <span>Notes remain readable and useful years from now, even outside MinkNote.</span>
+      </li>
+      <li>
+        <strong>Security is part of trust.</strong>
+        <span>MinkNote keeps security plain and reviewable through careful dependency choices, platform protections, and release checks documented in <a href="security.html">Security</a>.</span>
+      </li>
+      <li>
+        <strong>Clear tools are better than ambitious systems.</strong>
+        <span>MinkNote favours understandable behaviour over feature accumulation and vague promises of productivity.</span>
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Product principles</h2>
+    <ul>
+      <li>
+        <strong>Native UX over cross-platform compromise.</strong>
+        <span>The app feels fast, coherent, and at home on macOS.</span>
+      </li>
+      <li>
+        <strong>Local-first is the baseline.</strong>
+        <span>Core writing and organisation work on local files, without requiring a service or account.</span>
+      </li>
+      <li>
+        <strong>Plain files, no vendor lock-in.</strong>
+        <span>Storage stays readable, portable, and easy to inspect with other tools.</span>
+      </li>
+      <li>
+        <strong>Unlimited creation.</strong>
+        <span>The product never discourages people from writing more, keeping more, or building a long body of work.</span>
+      </li>
+      <li>
+        <strong>Findability is part of ownership.</strong>
+        <span>Notes are only useful if they can be found again, so search and organisation remain dependable.</span>
+      </li>
+      <li>
+        <strong>Complexity needs proof.</strong>
+        <span>New features earn their place by reducing friction or improving clarity, not by sounding powerful.</span>
+      </li>
+      <li>
+        <strong>Be precise about what the product does.</strong>
+        <span>MinkNote avoids aspirational claims that are not reflected in the actual experience.</span>
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Current implementation choices</h2>
+    <ul>
+      <li>MinkNote is a native macOS app.</li>
+      <li>Notes are stored as plain Markdown files on the local filesystem.</li>
+      <li>Core use does not depend on a proprietary cloud or locked database format.</li>
+      <li>Analytics are anonymous, optional, opt-in, and disabled by default.</li>
+      <li>After the free trial, users keep read-only access to their notes until they purchase Pro.</li>
+      <li>Pro is available as a monthly, yearly, or lifetime purchase.</li>
+    </ul>
+
+  </main>
+
+  <mn-footer></mn-footer>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
