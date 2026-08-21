@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibility Support — MinkNote</title>
+  <meta name="description" content="MinkNote respects accessibility choices that matter during long writing sessions. You can use the app in a dark interface, reduce motion-heavy transitions, and rely on labels and icons instead of colour alone." />
+  <meta name="keywords" content="macOS notes app, Markdown notes, private notes, native app, keyboard shortcuts, note taking" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Muse23" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="/assets/js/mixpanel.js"></script>
+  <script src="../assets/js/partials.js"></script>
+  <link rel="stylesheet" href="../assets/css/feature-detail.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <mn-nav></mn-nav>
+
+
+  <!-- PAGE HEADER -->
+  <header class="fd-header">
+    <div class="container">
+
+      <div class="fd-eyebrow-row">
+        <div class="fd-icon" style="background:#E8F0FE">
+          <svg viewBox="0 0 24 24" style="stroke:#1A73E8"><circle cx="12" cy="4" r="2"/><path d="M6 9h12"/><path d="M12 9v5"/><path d="M8 21l4-7 4 7"/></svg>
+        </div>
+        <span class="eyebrow" style="margin-bottom:0">Comfortable to Use</span>
+      </div>
+
+      <h1>Accessibility Support</h1>
+      <p class="fd-subtitle">MinkNote respects accessibility choices that matter during long writing sessions. You can use the app in a dark interface, reduce motion-heavy transitions, and rely on labels and icons instead of colour alone when reading selection states or values.</p>
+
+    </div>
+  </header>
+
+
+  <!-- SCREENSHOT + NAV ARROWS -->
+  <div class="fd-visual-band">
+
+    <a href="refined-appearance-interface.html" class="fd-nav-arrow fd-nav-prev" aria-label="Previous: Refined Appearance &amp; Interface">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </a>
+
+    <div class="fd-screenshot">
+      <div class="fd-screen-wrap">
+        <img class="fd-screen-image" loading="lazy" width="1952" height="976" src="screenshots/webp/accessibility-support.webp" alt="MinkNote accessibility support including dark interface, reduced motion, and cues that do not rely on colour alone." />
+      </div>
+    </div>
+
+    <a href="works-with-your-cloud-folders.html" class="fd-nav-arrow fd-nav-next" aria-label="Next: Works with Your Cloud Folders">
+      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+
+  </div>
+
+
+  <!-- LONG DESCRIPTION -->
+  <section class="fd-body">
+    <div class="container">
+      <div class="fd-prose">
+
+        <a href="../features.html" class="fd-back">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+          All features
+        </a>
+
+        <p>MinkNote is designed to feel calm and predictable on your Mac. Dark interface support helps keep the writing space comfortable in low light or for users with light sensitivity, while still covering the common parts of the app you use to browse, search, organise, and edit notes.</p>
+
+        <p>For users who prefer less movement, MinkNote can reduce motion-heavy effects across the interface. Sliding, scaling, and spring-style animations give way to quieter behaviour, and the app also respects the system Reduce Motion setting when it is enabled.</p>
+
+        <p>Important states are not communicated by colour alone. Journal colours, selected items, and interface controls are supported by text, icons, or familiar macOS control states, making the app easier to scan for people with common forms of colour blindness.</p>
+
+        <p>These details keep accessibility part of the everyday experience rather than a separate mode. MinkNote remains simple, readable, and steady, so more people can focus on their notes without working around the interface.</p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BOTTOM PREV / NEXT NAV -->
+  <nav class="fd-bottom-nav" aria-label="Feature navigation">
+    <div class="fd-bottom-nav-inner">
+
+      <a href="refined-appearance-interface.html" class="fd-bottom-link">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        <span>
+          <em>Previous</em>
+          Refined Appearance &amp; Interface
+        </span>
+      </a>
+
+      <a href="../features.html" class="fd-bottom-all">All Features</a>
+
+      <a href="works-with-your-cloud-folders.html" class="fd-bottom-link" style="text-align:right">
+        <span>
+          <em>Next</em>
+          Works with Your Cloud Folders
+        </span>
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+
+    </div>
+  </nav>
+
+
+  <!-- FOOTER -->
+  <mn-footer></mn-footer>
+
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
