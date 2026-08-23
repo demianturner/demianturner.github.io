@@ -117,6 +117,7 @@
     '          <h2>Socials</h2>',
     '          <a href="https://x.com/MinkNoteApp" target="_blank" rel="noopener">Twitter</a>',
     '          <a href="https://www.tiktok.com/@minknoteapp" target="_blank" rel="noopener">TikTok</a>',
+    '          <a href="https://www.linkedin.com/showcase/minknote/" target="_blank" rel="noopener">LinkedIn</a>',
     '        </div>',
     '      </nav>',
     '    </div>',
