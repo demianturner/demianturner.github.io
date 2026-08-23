@@ -7,8 +7,14 @@
 (function () {
   'use strict';
 
-  /* Detect path prefix: features/ pages are one directory down */
-  var R = /\/features\//.test(window.location.pathname) ? '../' : '';
+  /* Detect path prefix for nested MinkNote pages */
+  var path = window.location.pathname.replace(/\/+$/, '');
+  var nest = 0;
+  if (/\/features\//.test(path)) nest = 1;
+  if (/\/apps\/minknote\/docs\//.test(path + '/')) {
+    nest = path.replace(/^.*\/apps\/minknote\/docs/, '').split('/').filter(Boolean).length + 1;
+  }
+  var R = nest ? new Array(nest + 1).join('../') : '';
   var HOME_HREF = '/apps/minknote/';
 
   var SITE_BANNER = {
@@ -64,6 +70,7 @@
     '    <ul class="nav-links" id="nav-links" role="list">',
     '      <li><a href="' + R + 'features.html">Features</a></li>',
     '      <li><a href="' + R + 'pricing.html">Pricing</a></li>',
+    '      <li><a href="' + HOME_HREF + 'docs/">Docs</a></li>',
     '      <li><a href="' + R + 'changelog.html">Changelog</a></li>',
     '      <li><a href="' + R + 'roadmap.html">Roadmap</a></li>',
     '    </ul>',
@@ -95,6 +102,7 @@
     '          <a href="' + HOME_HREF + '">Home</a>',
     '          <a href="' + R + 'features.html">Features</a>',
     '          <a href="' + R + 'pricing.html">Pricing</a>',
+    '          <a href="' + HOME_HREF + 'docs/">Docs</a>',
     '          <a href="' + HOME_HREF + '#faq">FAQ</a>',
     '          <a href="' + R + 'accessibility.html">Accessibility</a>',
     '          <a href="' + R + 'roadmap.html">Roadmap</a>',

@@ -94,10 +94,13 @@
 
   /* ── ④ Active nav link (highlight current page) ── */
   (function () {
-    const page = location.pathname.split('/').pop() || 'index.html';
+    const path = location.pathname.replace(/\/+$/, '');
+    const page = path.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav-links a').forEach(function (a) {
-      const href = a.getAttribute('href').split('/').pop();
-      if (href === page) {
+      const href = a.getAttribute('href') || '';
+      const hrefPage = href.split('/').filter(Boolean).pop();
+      const isDocs = href.indexOf('/docs') !== -1 && path.indexOf('/docs') !== -1;
+      if (isDocs || hrefPage === page) {
         a.style.color      = 'var(--text)';
         a.style.fontWeight = '700';
       }

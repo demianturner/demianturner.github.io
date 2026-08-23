@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }} — MinkNote Docs</title>
+  <meta name="description" content="{{ page.title }} — MinkNote documentation." />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="MinkNote" />
+  <meta property="og:title" content="{{ page.title }} — MinkNote Docs" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/apps/minknote/assets/css/style.css" />
+  <link rel="stylesheet" href="/apps/minknote/assets/css/docs.css" />
+  <script src="/assets/js/mixpanel.js"></script>
+  <script src="/apps/minknote/assets/js/partials.js"></script>
+</head>
+<body class="docs-body">
+  <mn-nav></mn-nav>
+
+  <div class="docs-shell">
+    <aside class="docs-sidebar" id="docs-sidebar">
+      <p class="docs-sidebar-title">Documentation</p>
+      {% assign categories = site.data.minknote_docs.categories %}
+      {% if categories %}
+        {% for category in categories %}
+          <section class="docs-nav-group">
+            <h2>{{ category.label }}</h2>
+            <ul>
+              {% for item in category.pages %}
+                <li>
+                  <a href="{{ item.url }}"{% if page.url == item.url %} class="is-active" aria-current="page"{% endif %}>{{ item.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </section>
+        {% endfor %}
+      {% else %}
+        <p class="docs-sidebar-empty">Docs navigation will appear after the next import.</p>
+      {% endif %}
+    </aside>
+
+    <main class="docs-main">
+      <button class="docs-nav-toggle" id="docs-nav-toggle" type="button" aria-expanded="false" aria-controls="docs-sidebar">
+        Docs menu
+      </button>
+      <nav class="docs-breadcrumb" aria-label="Breadcrumb">
+        <a href="/apps/minknote/docs/">Docs</a>
+        <span aria-hidden="true">/</span>
+        <span>{{ page.category_label }}</span>
+      </nav>
+
+      <article class="docs-article">
+        <h1>{{ page.title }}</h1>
+        <div class="docs-prose">
+          {{ content }}
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <mn-footer></mn-footer>
+  <script src="/apps/minknote/assets/js/main.js"></script>
+  <script>
+    (function () {
+      var toggle = document.getElementById('docs-nav-toggle');
+      var sidebar = document.getElementById('docs-sidebar');
+      if (!toggle || !sidebar) return;
+      toggle.addEventListener('click', function () {
+        var open = sidebar.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+    }());
+  </script>
+</body>
+</html>
