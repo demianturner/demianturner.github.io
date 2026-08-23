@@ -2,7 +2,20 @@
 
 Product docs at `/apps/minknote/docs/` are generated from a MinkNote journal. Edit the source notes, then re-run the importer. Do not hand-edit the generated Markdown.
 
-The importer lives in the installed skill [minknote-docs-import](https://github.com/demianturner/minknote-skills), currently at `.cursor/skills/minknote-docs-import/`.
+The importer is the **minknote-docs-import** skill from [demianturner/minknote-skills](https://github.com/demianturner/minknote-skills), installed at `.cursor/skills/minknote-docs-import/`.
+
+## How the Docs section was added
+
+These site files were set up once. Re-running the importer does not replace them.
+
+- **`_config.yml`** — added a path default so every page under `apps/minknote/docs` uses `layout: minknote-docs`.
+- **`_data/minknote_docs.yml`** — sidebar map of categories and page URLs. The importer regenerates this file from the MinkNote journal.
+- **`_layouts/minknote-docs.html`** — custom Jekyll layout: MinkNote top nav, left docs sidebar (from the YAML map), article column, footer.
+- **`apps/minknote/assets/css/docs.css`** — docs shell, sidebar, breadcrumbs, and prose styles using existing MinkNote colours and Inter.
+- **Two JS updates**
+  - `apps/minknote/assets/js/partials.js` — inserted **Docs** after Pricing in the top nav and footer, and computed a deeper asset prefix for nested docs URLs.
+  - `apps/minknote/assets/js/main.js` — highlighted the Docs nav link on any `/docs` path.
+- **Markdown transformation via minknote-docs-import** — the [minknote-docs-import](https://github.com/demianturner/minknote-skills) skill converts the Getting Started journal into Jekyll pages: front matter, rewritten `minknote://` links, copied images, YouTube embeds, and the sidebar YAML.
 
 ## Update Getting Started
 
