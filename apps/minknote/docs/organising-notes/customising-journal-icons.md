@@ -1,10 +1,10 @@
 ---
 layout: minknote-docs
-title: "Customise Journal Icons"
-category: howto
-category_label: "HowTo"
+title: "Customising Journal Icons"
+category: organising-notes
+category_label: "Organising Notes"
 nav_order: 50
-permalink: /apps/minknote/docs/howto/customise-journal-icons/
+permalink: /apps/minknote/docs/organising-notes/customising-journal-icons/
 uuid: FA4A3AE3-1522-4CBA-9BC3-C12D953EDAF1
 generated: true
 ---
@@ -17,7 +17,7 @@ Add visual distinction to your journals with custom icons and colours, making it
 3. Choose an **icon** from the gallery
 4. Optionally select a **colour** to highlight the icon
 
-![](/apps/minknote/docs/images/howto/CleanShot_2026-02-04_at_16.22.04%402x.png)
+![](/apps/minknote/docs/images/organising-notes/CleanShot_2026-02-04_at_16.22.04%402x.png)
 
 ## Tips
 

@@ -1,10 +1,10 @@
 ---
 layout: minknote-docs
-title: "Apple Notes Export Supported"
-category: reference
-category_label: "Reference"
+title: "Exporting from Apple Notes"
+category: importing-and-exporting
+category_label: "Importing and Exporting"
 nav_order: 50
-permalink: /apps/minknote/docs/reference/apple-notes-export-supported/
+permalink: /apps/minknote/docs/importing-and-exporting/exporting-from-apple-notes/
 uuid: B775C1DA-0315-44BE-9582-B94B224ADA70
 generated: true
 ---

@@ -1,10 +1,10 @@
 ---
 layout: minknote-docs
-title: "Organise Your Thinking"
-category: howto
-category_label: "HowTo"
+title: "Organising Your Thinking"
+category: understanding-minknote
+category_label: "Understanding MinkNote"
 nav_order: 50
-permalink: /apps/minknote/docs/howto/organise-your-thinking/
+permalink: /apps/minknote/docs/understanding-minknote/organising-your-thinking/
 uuid: C86C9214-C3F1-4C18-93A9-A23727256D41
 generated: true
 ---

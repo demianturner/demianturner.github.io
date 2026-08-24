@@ -1,14 +1,13 @@
 ---
 layout: minknote-docs
-title: "Markdown Guide"
-category: reference
-category_label: "Reference"
+title: "Using Markdown"
+category: editing-and-formatting
+category_label: "Editing and Formatting"
 nav_order: 50
-permalink: /apps/minknote/docs/reference/markdown-guide/
+permalink: /apps/minknote/docs/editing-and-formatting/using-markdown/
 uuid: B23B9865-9C9D-4E73-A05B-2CFCF86151B9
 generated: true
 ---
-# h1: Markdown Guide
 ## h2 Heading
 ### h3 Heading
 #### h4 Heading
@@ -123,7 +122,7 @@ example.com (but not on Github, for example).
 
 ## Local Images
 
-![](/apps/minknote/docs/images/reference/bird.png)
+![](/apps/minknote/docs/images/editing-and-formatting/bird.png)
 
 
 ------

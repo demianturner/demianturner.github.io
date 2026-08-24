@@ -5,43 +5,58 @@ categories:
     pages:
       - title: "Welcome to MinkNote"
         url: /apps/minknote/docs/
-      - title: "Create Your First Note"
-        url: /apps/minknote/docs/create-your-first-note/
-      - title: "Search, Navigation, and Sorting"
-        url: /apps/minknote/docs/search-navigation-and-sorting/
-      - title: "Drag and Drop"
-        url: /apps/minknote/docs/drag-and-drop/
-      - title: "Preferences"
-        url: /apps/minknote/docs/preferences/
-  - id: howto
-    label: "HowTo"
+      - title: "Creating Your First Note"
+        url: /apps/minknote/docs/creating-your-first-note/
+      - title: "Searching, Navigating, and Sorting"
+        url: /apps/minknote/docs/searching-navigating-and-sorting/
+      - title: "Moving Notes and Images"
+        url: /apps/minknote/docs/moving-notes-and-images/
+      - title: "Setting Preferences"
+        url: /apps/minknote/docs/setting-preferences/
+  - id: customising-minknote
+    label: "Customising MinkNote"
     pages:
-      - title: "Change Projects"
-        url: /apps/minknote/docs/howto/change-projects/
-      - title: "Customise Journal Icons"
-        url: /apps/minknote/docs/howto/customise-journal-icons/
-      - title: "External Markdown Files"
-        url: /apps/minknote/docs/howto/external-markdown-files/
-      - title: "Format Text"
-        url: /apps/minknote/docs/howto/format-text/
+      - title: "Setting Up a Minimal UI"
+        url: /apps/minknote/docs/customising-minknote/setting-up-a-minimal-ui/
+  - id: editing-and-formatting
+    label: "Editing and Formatting"
+    pages:
+      - title: "Formatting Text"
+        url: /apps/minknote/docs/editing-and-formatting/formatting-text/
       - title: "Linking Notes"
-        url: /apps/minknote/docs/howto/linking-notes/
-      - title: "Navigate the Entire App by Keyboard"
-        url: /apps/minknote/docs/howto/navigate-the-entire-app-by-keyboard/
-      - title: "Organise Your Thinking"
-        url: /apps/minknote/docs/howto/organise-your-thinking/
-      - title: "Setup a Minimal UI"
-        url: /apps/minknote/docs/howto/setup-a-minimal-ui/
+        url: /apps/minknote/docs/editing-and-formatting/linking-notes/
+      - title: "Using Markdown"
+        url: /apps/minknote/docs/editing-and-formatting/using-markdown/
+  - id: finding-notes
+    label: "Finding Notes"
+    pages:
+      - title: "Navigating the App by Keyboard"
+        url: /apps/minknote/docs/finding-notes/navigating-the-app-by-keyboard/
+  - id: importing-and-exporting
+    label: "Importing and Exporting"
+    pages:
+      - title: "Exporting from Apple Notes"
+        url: /apps/minknote/docs/importing-and-exporting/exporting-from-apple-notes/
+      - title: "Working with External Markdown Files"
+        url: /apps/minknote/docs/importing-and-exporting/working-with-external-markdown-files/
+  - id: organising-notes
+    label: "Organising Notes"
+    pages:
+      - title: "Customising Journal Icons"
+        url: /apps/minknote/docs/organising-notes/customising-journal-icons/
   - id: reference
     label: "Reference"
     pages:
-      - title: "Apple Notes Export Supported"
-        url: /apps/minknote/docs/reference/apple-notes-export-supported/
       - title: "Features"
         url: /apps/minknote/docs/reference/features/
-      - title: "Keyboard Navigation & Shortcuts"
-        url: /apps/minknote/docs/reference/keyboard-navigation-shortcuts/
-      - title: "Markdown Guide"
-        url: /apps/minknote/docs/reference/markdown-guide/
-      - title: "MinkNote Structure"
-        url: /apps/minknote/docs/reference/minknote-structure/
+      - title: "Keyboard Shortcuts"
+        url: /apps/minknote/docs/reference/keyboard-shortcuts/
+  - id: understanding-minknote
+    label: "Understanding MinkNote"
+    pages:
+      - title: "Changing Projects"
+        url: /apps/minknote/docs/understanding-minknote/changing-projects/
+      - title: "Organising Your Thinking"
+        url: /apps/minknote/docs/understanding-minknote/organising-your-thinking/
+      - title: "Understanding MinkNote Structure"
+        url: /apps/minknote/docs/understanding-minknote/understanding-minknote-structure/

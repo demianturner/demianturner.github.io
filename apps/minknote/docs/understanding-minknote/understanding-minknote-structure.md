@@ -1,10 +1,10 @@
 ---
 layout: minknote-docs
-title: "MinkNote Structure"
-category: reference
-category_label: "Reference"
+title: "Understanding MinkNote Structure"
+category: understanding-minknote
+category_label: "Understanding MinkNote"
 nav_order: 50
-permalink: /apps/minknote/docs/reference/minknote-structure/
+permalink: /apps/minknote/docs/understanding-minknote/understanding-minknote-structure/
 uuid: 52FD42B0-73A3-40F1-AF51-00E4C3E62D7F
 generated: true
 ---

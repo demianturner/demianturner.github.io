@@ -1,10 +1,10 @@
 ---
 layout: minknote-docs
-title: "Drag and Drop"
+title: "Moving Notes and Images"
 category: getting-started
 category_label: "Getting Started"
 nav_order: 4
-permalink: /apps/minknote/docs/drag-and-drop/
+permalink: /apps/minknote/docs/moving-notes-and-images/
 uuid: D527D768-D50E-4C8C-9142-AE71FAF69492
 generated: true
 ---

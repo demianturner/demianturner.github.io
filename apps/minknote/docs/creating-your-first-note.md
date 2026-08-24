@@ -1,10 +1,10 @@
 ---
 layout: minknote-docs
-title: "Create Your First Note"
+title: "Creating Your First Note"
 category: getting-started
 category_label: "Getting Started"
 nav_order: 2
-permalink: /apps/minknote/docs/create-your-first-note/
+permalink: /apps/minknote/docs/creating-your-first-note/
 uuid: F04CA076-334A-44D2-AE61-E4A6EEE20BA6
 generated: true
 ---
@@ -16,7 +16,7 @@ After creating your first note (`⌘N`), use the toolbar (`⌘⇧Y`) to **format
 
 > A useful shortcut to remember is `⌘E`, which cycles through **Edit Modes**: *WYSIWYG* and *Markdown*.
 
-MinkNote is fully keyboard-optimised. See [Keyboard Navigation & Shortcuts](/apps/minknote/docs/reference/keyboard-navigation-shortcuts/) for a full list.
+MinkNote is fully keyboard-optimised. See [Keyboard Shortcuts](/apps/minknote/docs/reference/keyboard-shortcuts/) for a full list.
 
 ## Adding Tags
 
@@ -33,6 +33,6 @@ MinkNote offers two editor modes that you can cycle through using `⌘E`:
 * **WYSIWYG** (default) lets you format content using the toolbar, with changes reflected instantly. This is a rich text editing experience where you see exactly how your content will look.
 * **Markdown** mode is ideal if you're comfortable with Markdown syntax. It uses dynamic styling so notes look similar to WYSIWYG, while still showing the underlying Markdown for precise control. This mode is perfect for those who prefer to work directly with Markdown formatting.
 
-> See the [Markdown Guide](/apps/minknote/docs/reference/markdown-guide/) for full details.
+> See the [Markdown Guide](/apps/minknote/docs/editing-and-formatting/using-markdown/) for full details.
 
 You can also use a Side-by-Side layout (available in Preferences → Appearance), which displays Markdown and rendered output simultaneously for instant feedback while you write.

@@ -15,7 +15,7 @@ These site files were set up once. Re-running the importer does not replace them
 - **Two JS updates**
   - `apps/minknote/assets/js/partials.js` — inserted **Docs** after Pricing in the top nav and footer, and computed a deeper asset prefix for nested docs URLs.
   - `apps/minknote/assets/js/main.js` — highlighted the Docs nav link on any `/docs` path.
-- **Markdown transformation via minknote-docs-import** — the [minknote-docs-import](https://github.com/demianturner/minknote-skills) skill converts the Getting Started journal into Jekyll pages: front matter, rewritten `minknote://` links, copied images, YouTube embeds, and the sidebar YAML.
+- **Markdown transformation via minknote-docs-import** — the [minknote-docs-import](https://github.com/demianturner/minknote-skills) skill converts the Getting Started journal into Jekyll pages: front matter, rewritten `minknote://` links, copied images, YouTube embeds, and the sidebar YAML. Root notes become **Getting Started**; each top-level journal folder becomes its own sidebar section.
 
 ## Update Getting Started
 

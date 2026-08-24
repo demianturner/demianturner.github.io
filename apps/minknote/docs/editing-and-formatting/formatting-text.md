@@ -1,10 +1,10 @@
 ---
 layout: minknote-docs
-title: "Format Text"
-category: howto
-category_label: "HowTo"
+title: "Formatting Text"
+category: editing-and-formatting
+category_label: "Editing and Formatting"
 nav_order: 50
-permalink: /apps/minknote/docs/howto/format-text/
+permalink: /apps/minknote/docs/editing-and-formatting/formatting-text/
 uuid: 3EAA2637-0670-431E-9365-0DBD5D6C15A5
 generated: true
 ---
@@ -12,13 +12,13 @@ generated: true
 
 The formatting toolbar is hidden by default to reduce clutter. To reveal it, click the **Aa** button in the note toolbar:
 
-![](/apps/minknote/docs/images/howto/CleanShot_2026-02-04_at_17.07.09%402x.png)
+![](/apps/minknote/docs/images/editing-and-formatting/CleanShot_2026-02-04_at_17.07.09%402x.png)
 
 You can also toggle the toolbar using the **⌘⇧Y** keyboard shortcut.
 
 ## Available Formatting Options
 
-![](/apps/minknote/docs/images/howto/CleanShot_2026-02-04_at_17.09.43%402x.png)
+![](/apps/minknote/docs/images/editing-and-formatting/CleanShot_2026-02-04_at_17.09.43%402x.png)
 
 The formatting toolbar provides comprehensive Markdown editing capabilities:
 
@@ -51,4 +51,4 @@ This smart behaviour gives you the best of both worlds: visual editing when you 
 
 ***
 
-**Need help with Markdown syntax?** See the complete [Markdown Guide](/apps/minknote/docs/reference/markdown-guide/) for usage examples.
+**Need help with Markdown syntax?** See the complete [Markdown Guide](/apps/minknote/docs/editing-and-formatting/using-markdown/) for usage examples.

@@ -1,10 +1,10 @@
 ---
 layout: minknote-docs
-title: "Search, Navigation, and Sorting"
+title: "Searching, Navigating, and Sorting"
 category: getting-started
 category_label: "Getting Started"
 nav_order: 3
-permalink: /apps/minknote/docs/search-navigation-and-sorting/
+permalink: /apps/minknote/docs/searching-navigating-and-sorting/
 uuid: AAF76005-BAA0-43D8-B288-C3EC741F6029
 generated: true
 ---

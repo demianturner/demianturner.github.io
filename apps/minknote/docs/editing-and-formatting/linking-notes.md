@@ -1,10 +1,10 @@
 ---
 layout: minknote-docs
 title: "Linking Notes"
-category: howto
-category_label: "HowTo"
+category: editing-and-formatting
+category_label: "Editing and Formatting"
 nav_order: 50
-permalink: /apps/minknote/docs/howto/linking-notes/
+permalink: /apps/minknote/docs/editing-and-formatting/linking-notes/
 uuid: 45B96A79-B3F5-4922-A8FF-81FDE0F33C56
 generated: true
 ---
@@ -25,7 +25,7 @@ Command-K is available only when the note editor has focus.
 
 The Add Link window opens with your selected text as the link name.
 
-![](/apps/minknote/docs/images/howto/CleanShot_2026-08-23_at_22.37.10%402x.png)
+![](/apps/minknote/docs/images/editing-and-formatting/CleanShot_2026-08-23_at_22.37.10%402x.png)
 
 ## Choose a Note
 
@@ -34,7 +34,7 @@ Type in **Search entries** to find a note. MinkNote searches notes in the curren
 Select a result with the mouse, or use the Up and Down arrow keys. The results list follows your selection as you move through it. Press **Return** to choose the highlighted result.
 
 Press **Escape** to close the window without adding a link.
-![](/apps/minknote/docs/images/howto/CleanShot_2026-08-23_at_22.40.08%402x-1.png)
+![](/apps/minknote/docs/images/editing-and-formatting/CleanShot_2026-08-23_at_22.40.08%402x-1.png)
 
 ## Name the Link
 
@@ -47,7 +47,7 @@ The link name is the text that appears in your note.
 The text in your note changes only when you click **OK**. If you turn the option off again before clicking **OK**, the original selected text is restored.
 
 Click **OK** to add the link, or **Cancel** to leave the note unchanged.
-![](/apps/minknote/docs/images/howto/CleanShot_2026-08-23_at_22.45.58%402x.png)
+![](/apps/minknote/docs/images/editing-and-formatting/CleanShot_2026-08-23_at_22.45.58%402x.png)
 
 ## Copy a Note's Link
 
@@ -57,7 +57,7 @@ You can copy a link to any note that can be linked:
 2. Choose **Copy Link To Note**.
 
 MinkNote copies the note's link to the clipboard. You can paste it into another note, a message, or another app. Opening the link takes you directly to that note in MinkNote.
-![](/apps/minknote/docs/images/howto/CleanShot_2026-08-23_at_22.52.33%402x.png)
+![](/apps/minknote/docs/images/editing-and-formatting/CleanShot_2026-08-23_at_22.52.33%402x.png)
 
 ## Portable Journal Export
 

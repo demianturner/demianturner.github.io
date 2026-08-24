@@ -35,9 +35,9 @@ Use the toolbar and sidebar to:
 
 The guides below cover the essentials:
 
-* [2. Create Your First Note](/apps/minknote/docs/create-your-first-note/)
-* [3. Search, Navigation, and Sorting](/apps/minknote/docs/search-navigation-and-sorting/)
-* [4. Drag and Drop](/apps/minknote/docs/drag-and-drop/)
-* [5. Preferences](/apps/minknote/docs/preferences/)
+* [2. Creating Your First Note](/apps/minknote/docs/creating-your-first-note/)
+* [3. Searching, Navigating, and Sorting](/apps/minknote/docs/searching-navigating-and-sorting/)
+* [4. Moving Notes and Images](/apps/minknote/docs/moving-notes-and-images/)
+* [5. Setting Preferences](/apps/minknote/docs/setting-preferences/)
 
 Once you're comfortable with the app, you can hide this journal from *Preferences*.

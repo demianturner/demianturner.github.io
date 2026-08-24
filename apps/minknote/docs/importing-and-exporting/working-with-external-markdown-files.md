@@ -1,10 +1,10 @@
 ---
 layout: minknote-docs
-title: "External Markdown Files"
-category: howto
-category_label: "HowTo"
+title: "Working with External Markdown Files"
+category: importing-and-exporting
+category_label: "Importing and Exporting"
 nav_order: 50
-permalink: /apps/minknote/docs/howto/external-markdown-files/
+permalink: /apps/minknote/docs/importing-and-exporting/working-with-external-markdown-files/
 uuid: DB9E18C9-00C5-452C-84B7-3D3EA48B85F1
 generated: true
 ---
@@ -26,7 +26,7 @@ To enable full MinkNote features on an external Markdown file:
 1. Right-click on the note in the note list
 2. Select **Add Frontmatter** from the context menu
 
-![](/apps/minknote/docs/images/howto/CleanShot_2026-02-04_at_17.39.27%402x.png)
+![](/apps/minknote/docs/images/importing-and-exporting/CleanShot_2026-02-04_at_17.39.27%402x.png)
 
 Once Frontmatter is added, you can tag the file, mark it as a favourite, and use all other MinkNote features.
 

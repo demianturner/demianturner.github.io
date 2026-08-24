@@ -1,10 +1,10 @@
 ---
 layout: minknote-docs
-title: "Change Projects"
-category: howto
-category_label: "HowTo"
+title: "Changing Projects"
+category: understanding-minknote
+category_label: "Understanding MinkNote"
 nav_order: 50
-permalink: /apps/minknote/docs/howto/change-projects/
+permalink: /apps/minknote/docs/understanding-minknote/changing-projects/
 uuid: 0CEDB83B-F037-438D-81C9-E80A66C67782
 generated: true
 ---
@@ -17,11 +17,11 @@ A project is simply a folder on your Mac. Switch between projects at any time to
 * Open **Preferences** and navigate to the **Projects** tab
 * Click the **Switch Project** button
 
-![](/apps/minknote/docs/images/howto/CleanShot_2026-02-04_at_16.45.15_2%402x.png)
+![](/apps/minknote/docs/images/understanding-minknote/CleanShot_2026-02-04_at_16.45.15_2%402x.png)
 
 * Choose from your recently opened projects, or click **Browse** to select a new folder
 
-![](/apps/minknote/docs/images/howto/CleanShot_2026-02-04_at_16.48.49_2%402x.png)
+![](/apps/minknote/docs/images/understanding-minknote/CleanShot_2026-02-04_at_16.48.49_2%402x.png)
 
 ## What Gets Preserved?
 

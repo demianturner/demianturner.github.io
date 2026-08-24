@@ -1,10 +1,10 @@
 ---
 layout: minknote-docs
-title: "Keyboard Navigation & Shortcuts"
+title: "Keyboard Shortcuts"
 category: reference
 category_label: "Reference"
 nav_order: 50
-permalink: /apps/minknote/docs/reference/keyboard-navigation-shortcuts/
+permalink: /apps/minknote/docs/reference/keyboard-shortcuts/
 uuid: D2E292B9-D40A-4D2B-8610-E6A644D5E802
 generated: true
 ---
