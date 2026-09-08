@@ -5,10 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Manifesto — MinkNote</title>
   <meta name="description" content="The MinkNote manifesto defines the values and product principles that guide the app: privacy, ownership, durability, security, and clear tools." />
-  <meta name="keywords" content="macOS notes app, Markdown notes, private notes, native app, keyboard shortcuts, note taking" />
+  <meta name="keywords" content="MinkNote manifesto, product principles, local-first notes, data ownership, privacy-focused notes, Markdown notes, macOS notes app" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MinkNote Manifesto &mdash; Values &amp; Product Principles" />
+  <meta property="og:description" content="The MinkNote manifesto defines the values and product principles that guide the app: privacy, ownership, durability, security, and clear tools." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://muse23.com/apps/minknote/manifesto.html" />
   <meta property="og:site_name" content="Muse23" />
+  <meta property="og:image" content="https://muse23.com/apps/minknote/images/hero.png" />
+  <meta property="og:image:width" content="1986" />
+  <meta property="og:image:height" content="1189" />
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MinkNote Manifesto &mdash; Values &amp; Product Principles" />
+  <meta name="twitter:description" content="The MinkNote manifesto defines the values and product principles that guide the app: privacy, ownership, durability, security, and clear tools." />
+  <meta name="twitter:image" content="https://muse23.com/apps/minknote/images/hero.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,7 +43,7 @@
     <div class="container">
       <span class="eyebrow">Values</span>
       <h1>MinkNote Manifesto</h1>
-      <p class="privacy-updated">Project charter</p>
+      <p class="privacy-updated">What MinkNote stands for</p>
     </div>
   </header>
 
@@ -40,9 +53,9 @@
   <main class="privacy-body container">
 
     <p>
-      This manifesto is the project charter for MinkNote. The values define what
-      stays stable, the principles guide day-to-day tradeoffs, and the implementation
-      choices describe how MinkNote delivers on them today.
+      The values below define what stays stable, the principles guide day-to-day
+      tradeoffs, and the implementation choices describe how MinkNote delivers on
+      them today.
     </p>
 
     <hr />
@@ -55,19 +68,15 @@
       </li>
       <li>
         <strong>Your notes belong to you</strong>
-        <span>People keep what they write, access it for the long term, and leave with it whenever they choose.</span>
+        <span>People keep what they write, read it years from now even outside MinkNote, and leave with it whenever they choose. Where durability and short-term convenience conflict, durability wins.</span>
       </li>
       <li>
         <strong>Privacy is a default, not an upsell</strong>
-        <span>Trust comes from restraint, clear behavior, and local control, as documented in <a href="privacy.html">Privacy</a>.</span>
-      </li>
-      <li>
-        <strong>Durable ownership matters more than short-term convenience</strong>
-        <span>Notes remain readable and useful years from now, even outside MinkNote.</span>
+        <span>Trust comes from restraint, clear behaviour, and local control, as documented in <a href="privacy.html">Privacy</a>.</span>
       </li>
       <li>
         <strong>Security is part of trust</strong>
-        <span>MinkNote keeps security plain and reviewable through careful dependency choices, platform protections, and release checks documented in <a href="security.html">Security</a>.</span>
+        <span>MinkNote keeps security plain and reviewable through a small dependency surface, macOS sandboxing, and release checks documented in <a href="security.html">Security</a>.</span>
       </li>
       <li>
         <strong>Clear tools are better than ambitious systems</strong>
@@ -81,7 +90,7 @@
     <ul>
       <li>
         <strong>Native UX over cross-platform compromise</strong>
-        <span>The app feels fast, coherent, and at home on macOS.</span>
+        <span>MinkNote follows macOS conventions rather than working around them, even when that rules out sharing code with other platforms.</span>
       </li>
       <li>
         <strong>Local-first is the baseline</strong>
@@ -93,11 +102,11 @@
       </li>
       <li>
         <strong>Unlimited creation</strong>
-        <span>The product never discourages people from writing more, keeping more, or building a long body of work.</span>
+        <span>Notes and folders are never metered or capped, so a long body of work never costs more to keep.</span>
       </li>
       <li>
         <strong>Findability is part of ownership</strong>
-        <span>Notes are only useful if they can be found again, so search and organisation remain dependable.</span>
+        <span>Notes are only useful if they can be found again, so search reaches across an entire project, not just the note currently open.</span>
       </li>
       <li>
         <strong>Complexity needs proof</strong>
@@ -114,10 +123,9 @@
     <h2>Current implementation choices</h2>
     <ul>
       <li>MinkNote is a native macOS app.</li>
-      <li>Notes are stored as standard Markdown files on the local filesystem.</li>
-      <li>Core use does not depend on a proprietary cloud or locked database format.</li>
-      <li>Analytics are anonymous, optional, opt-in, and disabled by default.</li>
-      <li>After the free trial, users keep read-only access to their notes until they purchase Pro.</li>
+      <li>Notes are stored as standard Markdown files on the local filesystem, not in a proprietary cloud or locked database format.</li>
+      <li>Analytics are anonymous, opt-in, and off by default.</li>
+      <li>The free plan is permanent: notes stay readable, searchable and exportable, with one journal fully editable. Pro removes the editing limits.</li>
       <li>Pro is available as a monthly, yearly, or lifetime purchase.</li>
     </ul>
 
