@@ -81,7 +81,7 @@ Front matter is required for certain features to work:
 * **Tags** – you can only add tags to notes that have front matter
 * **Favourites** – marking a note as a favourite requires front matter
 
-Notes without front matter (such as plain Markdown files from other apps) will still display and edit normally, but these features will be unavailable until front matter is added.
+Notes without front matter (such as standard Markdown files from other apps) will still display and edit normally, but these features will be unavailable until front matter is added.
 
 > **Tip**
 > Front matter is a widely used convention in static site generators and note-taking apps, making your notes portable and compatible with other tools.
@@ -116,7 +116,7 @@ Tags are optional, but powerful if you like organising by topic rather than loca
 
 Favourites let you mark important notes for quick access. When you favourite a note, it is included in the **Favourites** filter in the sidebar.
 
-To favourite a note, right-click on it in the note list and select **Favorite** from the context menu.
+To favourite a note, right-click on it in the note list and select **Favourite** from the context menu.
 
 Favourites work across all journals, so you can quickly see your most important notes regardless of where they're stored.
 

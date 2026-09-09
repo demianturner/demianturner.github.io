@@ -40,7 +40,7 @@ Use `⌘⇧B` to turn the current line or selection into a bullet list.
 | **Link** | Insert link |
 | **Code Block** | Insert code block |
 
-## Context-Sensitive Behavior
+## Context-Sensitive Behaviour
 
 The formatting toolbar adapts to your current editing mode:
 

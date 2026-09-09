@@ -55,6 +55,8 @@ From anywhere in the main window:
 * `↓` in the filter field moves focus to the notes list
 * `Esc` hides the filter field
 
+Note titles that match your keyword are returned before matches in a note body.
+
 ## A Typical Workflow
 
 Imagine you're writing in a note:

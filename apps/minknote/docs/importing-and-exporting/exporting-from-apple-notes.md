@@ -10,7 +10,7 @@ generated: true
 ---
 Apple Notes export names each file from the first line in the note. Your older Apple Notes content might even be plain text since the app didn't support Markdown formatting for a long time.
 
-MinkNote supports these notes directly. They can be opened, edited, and organized without adding Markdown syntax first.
+MinkNote supports these notes directly. They can be opened, edited, and organised without adding Markdown syntax first.
 
 If your note cards look repetitive (for example, line 1 matches the filename), use:
 

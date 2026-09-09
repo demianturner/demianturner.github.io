@@ -58,7 +58,7 @@ You can then adjust the sort order to suit your workflow.
 
 ## Tags
 
-Tags provide a flexible way to organize and find notes across all your journals.
+Tags provide a flexible way to organise and find notes across all your journals.
 
 ### Browsing by Tag
 

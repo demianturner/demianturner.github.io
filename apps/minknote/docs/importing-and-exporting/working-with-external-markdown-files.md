@@ -15,7 +15,7 @@ MinkNote works seamlessly with Markdown files created in other applications. How
 When MinkNote creates a new note, it automatically adds invisible metadata at the top of the file called **Frontmatter**. This YAML-formatted block stores information such as:
 
 * Tags
-* Favorite status
+* Favourite status
 * A unique identifier
 * and more
 

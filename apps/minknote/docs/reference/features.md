@@ -24,21 +24,21 @@ generated: true
 
 * **Drag & Drop Support**: Drag images from Finder directly into notes
 * **Paste Support**: Copy/paste images from clipboard
-* **Organized Storage**: Images stored in sibling `i/` folders (e.g., `/Notes/i/image.png`)
+* **Organised Storage**: Images stored in sibling `i/` folders (e.g., `/Notes/i/image.png`)
 * **Image Relocation**: Moving notes automatically relocates associated images
 * **Duplicate Handling**: Smart filename resolution when images conflict
 
 ## Multiple Project Support
 
-* **Independent Workspaces**: Organize different groups of journals and notes in separate projects anywhere on your Mac
+* **Independent Projects**: Keep different groups of journals and notes in separate projects anywhere on your Mac
 * **Easy Switching**: Change project location anytime via Preferences → Projects → "Switch Project"
-* **Use Cases**: Keep personal journals separate from work notes, organize projects by client or topic, maintain multiple independent knowledge bases
+* **Use Cases**: Keep personal journals separate from work notes, organise projects by client or topic, maintain multiple independent knowledge bases
 
 ## Local Storage
 
 * Direct filesystem manipulation for external tool compatibility
-* Hierarchical organization (Journals → Folders → Sub-folders → Notes)
-* Standard markdown file formats (.md, .txt, .markdown)
+* Hierarchical organisation (Journals → Folders → Sub-folders → Notes)
+* Standard Markdown file formats (.md, .txt, .markdown)
 
 ## Cloud Sync
 
@@ -56,7 +56,7 @@ generated: true
 * **3-Level Deep Nesting**: Journals → Folders → Sub-folders (up to 3 levels)
 * **Context Menus**: Right-click to delete folders, journals, and notes
 
-## Note Moving & Organization
+## Note Moving & Organisation
 
 * **Drag & Drop Notes**: Drag notes between journals and folders in sidebar
 * **Image Migration**: Associated images automatically move with notes
@@ -83,7 +83,7 @@ generated: true
 ### Global Search (⌘⇧F)
 
 * Comprehensive search across **all journals and folders**
-* Searches note titles, content, tags, and authors
+* Searches note titles, content, and tags
 * Keyboard navigation: arrow keys to select, return to open
 
 ### Filter Notes (⌘⌥F)
@@ -109,10 +109,10 @@ generated: true
 ## Frontmatter Support
 
 * Full YAML metadata support in markdown files
-* Tags, authors, creation and modification dates
+* Tags, creation and modification dates
 * Custom metadata fields supported
 
-## Preferences & Customization
+## Preferences & Customisation
 
 * The app's UI is highly customisable to suit your preferences
 
