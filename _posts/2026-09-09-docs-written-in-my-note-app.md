@@ -48,5 +48,5 @@ The skill is on GitHub at [demianturner/minknote-skills](https://github.com/demi
 
 And the output is right here: [MinkNote docs](/apps/minknote/docs/).
 
-[image-1]:	/assets/img/2026-09-09-docs-written-in-my-note-app/documentation.png
+[image-1]:	/assets/img/2026-09-09-docs-written-in-my-note-app/documentation.jpg
 [image-2]:	/assets/img/2026-09-09-docs-written-in-my-note-app/agent-run.png
