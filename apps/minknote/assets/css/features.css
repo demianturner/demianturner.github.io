@@ -4,9 +4,9 @@
 
 /* ── Page header ── */
 .feat-header h1 {
-  font-size: clamp(var(--t-5xl), 7vw, var(--t-7xl));
+  font-size: clamp(var(--t-4xl), 6vw, var(--t-6xl));
   margin: var(--s3) 0 var(--s5);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 .feat-header > .container > .feat-intro {

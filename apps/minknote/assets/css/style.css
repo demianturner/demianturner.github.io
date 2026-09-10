@@ -89,6 +89,7 @@ button                 { cursor: pointer; border: none; background: none; font: 
   --site-banner-h: 0px;
   --nav-base-h: 64px;
   --nav-h: 64px;
+  --nav-content-gap: 20px;
 }
 
 /* ============================================================
@@ -254,7 +255,7 @@ h3, h4 {
    ============================================================ */
 .hero {
   position: relative;
-  padding-top: calc(var(--nav-h) + var(--s16));
+  padding-top: calc(var(--nav-h) + var(--nav-content-gap));
   padding-bottom: 0;            /* screen-bg panel closes the section */
   text-align: center;
   overflow: hidden;
@@ -1041,7 +1042,7 @@ details[open] > .faq-question { color: var(--text); }
    PAGE HEADER — shared across features.html, pricing.html etc.
    ============================================================ */
 .page-header {
-  padding-top: calc(var(--nav-h) + var(--s20));
+  padding-top: calc(var(--nav-h) + var(--nav-content-gap));
   padding-bottom: var(--s14);
   text-align: center;
   background: var(--bg);
@@ -1074,7 +1075,8 @@ details[open] > .faq-question { color: var(--text); }
     --nav-h: 56px;
   }
 
-  .hero { padding-top: calc(var(--nav-h) + var(--s8)); }
+  .hero,
+  .page-header { padding-top: calc(var(--nav-h) + var(--nav-content-gap)); }
 
   .site-banner {
     align-items: center;

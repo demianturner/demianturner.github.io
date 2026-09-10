@@ -1,7 +1,7 @@
 /* ── Feature Detail page ── */
 
 .fd-header {
-  padding-top: calc(var(--nav-h) + var(--s16));
+  padding-top: calc(var(--nav-h) + var(--nav-content-gap));
   padding-bottom: var(--s10);
   text-align: center;
   background: var(--bg);
