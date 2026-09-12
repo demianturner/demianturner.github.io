@@ -309,7 +309,30 @@ body.fd-lightbox-open {
   color: var(--text-muted);
   margin: 0 0 var(--s6);
 }
-.fd-prose p:last-child { margin-bottom: 0; }
+.fd-prose ul {
+  list-style: none;
+  margin: 0 0 var(--s6);
+  padding-left: 0;
+}
+.fd-prose li {
+  position: relative;
+  padding-left: 1.35em;
+  font-size: var(--t-lg);
+  line-height: 1.78;
+  color: var(--text-muted);
+  margin: 0 0 var(--s4);
+}
+.fd-prose li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--text);
+  font-weight: 700;
+  line-height: inherit;
+}
+.fd-prose p:last-child,
+.fd-prose ul:last-child,
+.fd-prose li:last-child { margin-bottom: 0; }
 .fd-prose strong { color: var(--text); font-weight: 600; }
 
 /* ── Bottom feature nav ── */

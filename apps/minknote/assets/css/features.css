@@ -117,6 +117,8 @@
 .feat-card:nth-child(19) { animation-delay: 0.50s; }
 .feat-card:nth-child(20) { animation-delay: 0.52s; }
 .feat-card:nth-child(21) { animation-delay: 0.54s; }
+.feat-card:nth-child(22) { animation-delay: 0.56s; }
+.feat-card:nth-child(23) { animation-delay: 0.58s; }
 
 @keyframes cardIn {
   from { opacity: 0; transform: translateY(16px); }
