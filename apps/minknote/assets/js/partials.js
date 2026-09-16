@@ -117,7 +117,7 @@
     '        <div class="footer-link-group">',
     '          <h2>Company</h2>',
     '          <a href="/about/">About</a>',
-    '          <a href="https://buildlist.io/contact">Contact</a>',
+    '          <a href="mailto:minknote@muse23.com">Contact</a>',
     '          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Terms of Service</a>',
     '        </div>',
     '        <div class="footer-link-group">',
