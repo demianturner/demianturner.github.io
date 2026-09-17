@@ -1,6 +1,6 @@
 ---
 layout: minknote-docs
-title: "Free and Pro access"
+title: "Free and Pro Access"
 category: understanding-minknote
 category_label: "Understanding MinkNote"
 nav_order: 50
@@ -42,9 +42,11 @@ Projects let you open different collections of Markdown files in MinkNote.
 
 With *Free*, additional projects are read-only. With *Pro*, you can give MinkNote full access and work with them normally.
 
+The built-in project is called **My Notes**. It always points to `~/Documents/MinkNote` and contains the **Journal** journal used by *Free*.
+
 The project switcher shows the access available for each project.
 
-![](/apps/minknote/docs/images/understanding-minknote/CleanShot_2026-09-07_at_11.04.17%402x.png)
+![](/apps/minknote/docs/images/understanding-minknote/CleanShot_2026-09-16_at_17.50.23%402x.png)
 
 ## Read-only journals and notes
 

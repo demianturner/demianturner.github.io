@@ -17,11 +17,11 @@ A project is simply a folder on your Mac. Switch between projects at any time to
 * Open **Preferences** and navigate to the **Projects** tab
 * Click the **Switch Project** button
 
-![](/apps/minknote/docs/images/understanding-minknote/CleanShot_2026-02-04_at_16.45.15_2%402x.png)
+![](/apps/minknote/docs/images/understanding-minknote/CleanShot_2026-09-17_at_12.17.02%402x.png)
 
 * Choose from your recently opened projects, or click **Browse** to select a new folder
 
-![](/apps/minknote/docs/images/understanding-minknote/CleanShot_2026-02-04_at_16.48.49_2%402x.png)
+![](/apps/minknote/docs/images/understanding-minknote/CleanShot_2026-09-17_at_12.19.41%402x.png)
 
 ## What Gets Preserved?
 

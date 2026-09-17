@@ -54,11 +54,15 @@ categories:
   - id: understanding-minknote
     label: "Understanding MinkNote"
     pages:
+      - title: "Changes Made Outside MinkNote"
+        url: /apps/minknote/docs/understanding-minknote/changes-made-outside-minknote/
       - title: "Changing Projects"
         url: /apps/minknote/docs/understanding-minknote/changing-projects/
-      - title: "Free and Pro access"
+      - title: "Free and Pro Access"
         url: /apps/minknote/docs/understanding-minknote/free-and-pro-access/
       - title: "Organising Your Thinking"
         url: /apps/minknote/docs/understanding-minknote/organising-your-thinking/
+      - title: "Repairing Folders"
+        url: /apps/minknote/docs/understanding-minknote/repairing-folders/
       - title: "Understanding MinkNote Structure"
         url: /apps/minknote/docs/understanding-minknote/understanding-minknote-structure/
