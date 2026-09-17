@@ -201,7 +201,7 @@
 
 .rm-bar-fill {
   height: 100%;
-  width: 52%;
+  width: 53%;
   background: linear-gradient(90deg, var(--accent), var(--accent-hi));
 }
 
