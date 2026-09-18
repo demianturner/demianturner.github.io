@@ -19,7 +19,7 @@ So I stopped doing the second part.
 
 ## One skill, one command
 
-I wrote an [agent skill](https://github.com/demianturner/minknote-skills) — `minknote-docs-import` — that treats the journal as the single source of truth and regenerates the site's docs section from it. It reads every note in the journal and:
+I wrote an [agent skill](https://github.com/demianturner/minknote-skills) — `publish-to-jekyll` — that treats the journal as the single source of truth and regenerates the site's docs section from it. It reads every note in the journal and:
 
 - maps folders to sidebar sections (`Editing and Formatting/` becomes a section, notes at the root become Getting Started)
 - writes the Jekyll front matter each page needs, including a stable permalink
