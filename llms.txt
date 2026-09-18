@@ -1,0 +1,37 @@
+# Muse23
+
+> Independent software studio. Native Mac and iOS apps, plus consultancy for Apple platforms.
+
+Muse23 is an independent software consultancy specialising in native apps and digital products. It also designs and ships its own indie apps. Founded by Demian Turner.
+
+Product documentation currently ships as HTML. Markdown page mirrors are not published yet.
+
+## Studio
+
+- [About Muse23](https://muse23.com/about/): consultancy, specialties, and indie apps
+- [Apps](https://muse23.com/apps/): current and retired products
+- [Demian Turner](https://muse23.com/demian-turner/): founder, Apple platforms engineer
+
+## MinkNote
+
+- [MinkNote](https://muse23.com/apps/minknote/): local-first Markdown notes and journals for Mac
+- [Docs](https://muse23.com/apps/minknote/docs/): user documentation, generated from a MinkNote journal
+- [Features](https://muse23.com/apps/minknote/features.html): product feature overview
+- [Pricing](https://muse23.com/apps/minknote/pricing.html): Free and Pro
+- [Manifesto](https://muse23.com/apps/minknote/manifesto.html): product principles
+
+## Other apps
+
+- [JustJam](https://muse23.com/apps/justjam/): split songs into stems and play along on Mac, local and offline
+- [Which Bin](https://muse23.com/apps/whichbin/): Guildford bin collection reminders for iOS
+- [Kids Birthdays](https://muse23.com/apps/kids-birthdays/): iOS app for remembering children's birthdays
+- [Crypto Calculator](https://muse23.com/apps/crypto-calculator/): Mac menu bar crypto and fiat converter
+- [Pollution Monitor](https://muse23.com/apps/pollution-monitor/): Mac menu bar air quality for thousands of cities
+
+## Optional
+
+- [Changelog](https://muse23.com/apps/minknote/changelog.html): MinkNote release notes
+- [Roadmap](https://muse23.com/apps/minknote/roadmap.html): MinkNote planned work
+- [Privacy](https://muse23.com/apps/minknote/privacy.html): MinkNote privacy policy
+- [Security](https://muse23.com/apps/minknote/security.html): MinkNote security notes
+- [Blog](https://muse23.com/): posts and notes from the studio
