@@ -119,6 +119,17 @@
   margin-bottom: var(--s6);
 }
 
+.blog-post-hero {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  margin: 0 0 var(--s6);
+  background: var(--surface-2);
+}
+
 @media (max-width: 640px) {
   .blog-card-body {
     padding: var(--s6);

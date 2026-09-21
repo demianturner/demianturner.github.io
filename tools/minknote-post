@@ -39,6 +39,7 @@ File.write(path, <<~MARKDOWN)
   date: #{time_stamp}
   description:
   hero-image:
+  show-hero:
   ---
 MARKDOWN
 

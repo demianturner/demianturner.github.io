@@ -21,6 +21,8 @@ module MinknoteBlog
       page.data["permalink"] ||= "#{URL_PREFIX}/#{slug}/"
       page.data["layout"] ||= "minknote-post"
       page.data["minknote_blog"] = true
+      page.data["hero_image"] = page.data["hero-image"] if page.data.key?("hero-image")
+      page.data["show_hero"] = page.data["show-hero"] if page.data.key?("show-hero")
     end
   end
 end

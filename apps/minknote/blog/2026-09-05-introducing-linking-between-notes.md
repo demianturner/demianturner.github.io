@@ -3,6 +3,8 @@ layout: minknote-post
 title: Introducing Linking Between Notes
 date: 2026-09-05 10:00 +0100
 description: MinkNote 1.4 lets you link text in one note to another note in the same project. Links keep working if the destination is renamed or moved.
+hero-image: introducing-linking-between-notes.jpg
+show-hero: true
 ---
 
 MinkNote 1.4 adds note linking. You can connect a phrase in one note to another note in the same project, then jump there whenever you need the rest of the picture.
