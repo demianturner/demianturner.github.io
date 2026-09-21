@@ -4,6 +4,12 @@ title: What’s New in MinkNote 1.6
 date: 2026-09-21 13:12 +0100
 description: MinkNote 1.6 makes working with your notes outside MinkNote safer and more reliable.
 ---
+
+<div class="docs-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/iywQBm588Kw" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+</div>
+
+
 MinkNote 1.6 makes working with your notes outside MinkNote safer and more reliable.
 
 Because MinkNote stores your notes as ordinary Markdown files, they have never been locked inside the app. You can open them in another editor, work with them from the command line, use them with AI tools, or keep them in iCloud Drive.
