@@ -229,7 +229,9 @@ h3, h4 {
   color: var(--text-muted);
   transition: color 0.2s;
 }
-.nav-links a:hover { color: var(--text); }
+.nav-links a:hover,
+.nav-links a.is-current { color: var(--text); }
+.nav-links a.is-current { font-weight: 700; }
 
 .nav-menu-btn {
   display: none;

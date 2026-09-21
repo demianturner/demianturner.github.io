@@ -13,6 +13,7 @@
 
   /* ── ① Scroll-shrink / frosted glass ── */
   function handleScroll() {
+    if (!nav) return;
     nav.classList.toggle('is-scrolled', window.scrollY > 36);
   }
 
@@ -100,7 +101,8 @@
       const href = a.getAttribute('href') || '';
       const hrefPage = href.split('/').filter(Boolean).pop();
       const isDocs = href.indexOf('/docs') !== -1 && path.indexOf('/docs') !== -1;
-      if (isDocs || hrefPage === page) {
+      const isBlog = href.indexOf('/blog') !== -1 && path.indexOf('/blog') !== -1;
+      if (isDocs || isBlog || hrefPage === page) {
         a.style.color      = 'var(--text)';
         a.style.fontWeight = '700';
       }

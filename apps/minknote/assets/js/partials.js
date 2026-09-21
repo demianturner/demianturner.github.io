@@ -19,6 +19,19 @@
   }
   var R = nest ? new Array(nest + 1).join('../') : '';
   var HOME_HREF = '/apps/minknote/';
+  var page = path.split('/').filter(Boolean).pop() || 'index.html';
+
+  function navAttrs(href) {
+    var hrefPath = href.replace(/\/+$/, '');
+    var hrefPage = hrefPath.split('/').filter(Boolean).pop();
+    var current = false;
+    if (hrefPath.indexOf('/docs') !== -1) current = path.indexOf('/docs') !== -1;
+    else if (hrefPath.indexOf('/blog') !== -1) current = /\/blog(\/|$)/.test(path);
+    else current = hrefPage === page;
+    return current
+      ? ' class="is-current" aria-current="page" style="color:var(--text);font-weight:700"'
+      : '';
+  }
 
   var SITE_BANNER = {
     enabled: true,
@@ -71,12 +84,12 @@
     '      MinkNote',
     '    </a>',
     '    <ul class="nav-links" id="nav-links" role="list">',
-    '      <li><a href="' + R + 'features.html">Features</a></li>',
-    '      <li><a href="' + R + 'pricing.html">Pricing</a></li>',
-    '      <li><a href="' + HOME_HREF + 'blog/">Blog</a></li>',
-    '      <li><a href="' + HOME_HREF + 'docs/">Docs</a></li>',
-    '      <li><a href="' + R + 'changelog.html">Changelog</a></li>',
-    '      <li><a href="' + R + 'roadmap.html">Roadmap</a></li>',
+    '      <li><a href="' + R + 'features.html"' + navAttrs(R + 'features.html') + '>Features</a></li>',
+    '      <li><a href="' + R + 'pricing.html"' + navAttrs(R + 'pricing.html') + '>Pricing</a></li>',
+    '      <li><a href="' + HOME_HREF + 'blog/"' + navAttrs(HOME_HREF + 'blog/') + '>Blog</a></li>',
+    '      <li><a href="' + HOME_HREF + 'docs/"' + navAttrs(HOME_HREF + 'docs/') + '>Docs</a></li>',
+    '      <li><a href="' + R + 'changelog.html"' + navAttrs(R + 'changelog.html') + '>Changelog</a></li>',
+    '      <li><a href="' + R + 'roadmap.html"' + navAttrs(R + 'roadmap.html') + '>Roadmap</a></li>',
     '    </ul>',
     '    <button class="nav-menu-btn" id="menu-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">',
     '      <span></span><span></span><span></span>',
