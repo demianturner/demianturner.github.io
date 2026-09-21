@@ -49,6 +49,8 @@ MinkNote treats these just as carefully as local changes. If an iCloud file is t
 
 This isn’t a new proprietary sync system. It’s still your files, your folders and iCloud doing the syncing. MinkNote 1.6 simply does a better job of responding to those files changing around it.
 
+The [Changes Made Outside MinkNote](/apps/minknote/docs/understanding-minknote/changes-made-outside-minknote/) guide covers how file watching works, including the choices MinkNote offers when a note changes on disk.
+
 ## **Folder Repair**
 
 MinkNote 1.6 also adds **Folder Repair**.
@@ -60,6 +62,8 @@ If MinkNote loses access to a project, you can now reconnect it to its existing 
 There’s also a **Repair Folders** option for restoring MinkNote’s standard folder structure when necessary.
 
 Folder Repair is deliberately non-destructive. Existing folders and notes are preserved, and most users will probably never need to use it. It’s there to provide a safe recovery path when macOS permissions or folders aren’t in the state MinkNote expects.
+
+The [Repairing Folders](/apps/minknote/docs/understanding-minknote/repairing-folders/) guide explains both Repair and Repair Folders, including how MinkNote restores access without changing your notes.
 
 ## **Your files, with fewer boundaries**
 
