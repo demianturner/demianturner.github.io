@@ -223,6 +223,7 @@ jekyll_compose:
     minknote_posts:
       layout: minknote-post
       description:
+      hero-image:
 
 exclude:
   - "*.gem"

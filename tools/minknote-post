@@ -20,6 +20,7 @@ abort 'Usage: bundle exec ruby tools/minknote-post "My Post Title"' if title.emp
 
 root = File.expand_path("..", __dir__)
 dir = File.join(root, "apps/minknote/blog")
+images_dir = File.join(dir, "images")
 slug = Jekyll::Utils.slugify(title)
 now = Time.now
 date_stamp = now.strftime("%Y-%m-%d")
@@ -30,13 +31,14 @@ abort "A MinkNote post already exists at #{path}" if File.exist?(path)
 
 escaped_title = title.include?(":") ? "\"#{title.gsub('"', '\"')}\"" : title
 
-FileUtils.mkdir_p(dir)
+FileUtils.mkdir_p(images_dir)
 File.write(path, <<~MARKDOWN)
   ---
   layout: minknote-post
   title: #{escaped_title}
   date: #{time_stamp}
   description:
+  hero-image:
   ---
 MARKDOWN
 

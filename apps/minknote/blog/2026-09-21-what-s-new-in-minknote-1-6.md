@@ -3,6 +3,7 @@ layout: minknote-post
 title: What’s New in MinkNote 1.6
 date: 2026-09-21 13:12 +0100
 description: MinkNote 1.6 makes working with your notes outside MinkNote safer and more reliable.
+hero-image: what-s-new-in-minknote-1-6.jpg
 ---
 
 <div class="docs-embed">

@@ -43,13 +43,24 @@
       {% if posts.size > 0 %}
         <ul class="blog-list">
           {% for post in posts %}
+            {% assign hero = post['hero-image'] | default: '' | strip %}
             <li>
               <a class="blog-card" href="{{ post.url }}">
-                <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %B %Y" }}</time>
-                <h2>{{ post.title }}</h2>
-                {% if post.description %}
-                  <p>{{ post.description }}</p>
+                {% if hero != '' %}
+                  {% assign hero_src = hero %}
+                  {% assign hero_prefix = hero | slice: 0, 1 %}
+                  {% unless hero contains '://' or hero_prefix == '/' %}
+                    {% assign hero_src = '/apps/minknote/blog/images/' | append: hero %}
+                  {% endunless %}
+                  <img class="blog-card-hero" src="{{ hero_src }}" alt="{{ post.title | escape }}" />
                 {% endif %}
+                <div class="blog-card-body">
+                  <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %B %Y" }}</time>
+                  <h2>{{ post.title }}</h2>
+                  {% if post.description %}
+                    <p>{{ post.description }}</p>
+                  {% endif %}
+                </div>
               </a>
             </li>
           {% endfor %}

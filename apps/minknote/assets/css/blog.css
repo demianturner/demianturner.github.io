@@ -35,12 +35,24 @@
 
 .blog-card {
   display: block;
+  overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--r-xl);
-  padding: var(--s8) var(--s8);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 16px rgba(0, 0, 0, 0.04);
   transition: border-color 0.2s, transform 0.2s;
+}
+
+.blog-card-hero {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--surface-2);
+}
+
+.blog-card-body {
+  padding: var(--s8);
 }
 
 .blog-card:hover {
@@ -87,7 +99,7 @@
 }
 
 @media (max-width: 640px) {
-  .blog-card {
+  .blog-card-body {
     padding: var(--s6);
   }
 
