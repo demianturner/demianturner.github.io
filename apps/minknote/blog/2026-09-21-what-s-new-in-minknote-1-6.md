@@ -67,3 +67,6 @@ The theme of 1.6 is interoperability.
 MinkNote’s Markdown files aren’t an export format or a copy of your data. **They are your data.** Version 1.6 makes that model more robust when those files are being edited by other apps, changed by tools and agents, or synchronised between Macs.
 
 You can use MinkNote as your editor without making MinkNote the boundary around your notes.
+
+## Download the latest version of the app
+On the [Mac App Store](https://apps.apple.com/app/minknote/id6755822706)
