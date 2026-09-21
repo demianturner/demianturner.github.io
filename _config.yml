@@ -197,6 +197,10 @@ defaults:
       path: "apps/minknote/docs"
     values:
       layout: minknote-docs
+  - scope:
+      path: "apps/minknote/blog"
+    values:
+      layout: minknote-post
 
 sass:
   style: compressed
@@ -209,6 +213,16 @@ compress_html:
   blanklines: false
   ignore:
     envs: [development]
+
+# Personal posts: bundle exec jekyll post "My Post Title"
+# MinkNote posts: bundle exec ruby tools/minknote-post "My Post Title"
+jekyll_compose:
+  default_front_matter:
+    posts:
+      description:
+    minknote_posts:
+      layout: minknote-post
+      description:
 
 exclude:
   - "*.gem"

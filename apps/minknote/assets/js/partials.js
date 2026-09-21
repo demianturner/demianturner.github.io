@@ -11,6 +11,9 @@
   var path = window.location.pathname.replace(/\/+$/, '');
   var nest = 0;
   if (/\/features\//.test(path)) nest = 1;
+  if (/\/blog(\/|$)/.test(path)) {
+    nest = path.replace(/^.*\/apps\/minknote\/blog/, '').split('/').filter(Boolean).length + 1;
+  }
   if (/\/apps\/minknote\/docs\//.test(path + '/')) {
     nest = path.replace(/^.*\/apps\/minknote\/docs/, '').split('/').filter(Boolean).length + 1;
   }
@@ -70,6 +73,7 @@
     '    <ul class="nav-links" id="nav-links" role="list">',
     '      <li><a href="' + R + 'features.html">Features</a></li>',
     '      <li><a href="' + R + 'pricing.html">Pricing</a></li>',
+    '      <li><a href="' + HOME_HREF + 'blog/">Blog</a></li>',
     '      <li><a href="' + HOME_HREF + 'docs/">Docs</a></li>',
     '      <li><a href="' + R + 'changelog.html">Changelog</a></li>',
     '      <li><a href="' + R + 'roadmap.html">Roadmap</a></li>',
@@ -107,6 +111,7 @@
     '          <a href="' + HOME_HREF + '">Home</a>',
     '          <a href="' + R + 'features.html">Features</a>',
     '          <a href="' + R + 'pricing.html">Pricing</a>',
+    '          <a href="' + HOME_HREF + 'blog/">Blog</a>',
     '          <a href="' + HOME_HREF + 'docs/">Docs</a>',
     '          <a href="' + HOME_HREF + '#faq">FAQ</a>',
     '          <a href="' + R + 'accessibility.html">Accessibility</a>',

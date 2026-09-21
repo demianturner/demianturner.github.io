@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Create a MinkNote blog post in apps/minknote/blog/.
+# Companion to `bundle exec jekyll post "My Post Title"` for the personal blog.
+#
+# Usage:
+#   bundle exec ruby tools/minknote-post "My Post Title"
+
+require "fileutils"
+
+begin
+  require "jekyll"
+rescue LoadError
+  abort "Run this with Bundler: bundle exec ruby tools/minknote-post \"My Post Title\""
+end
+
+title = ARGV.join(" ").strip
+abort 'Usage: bundle exec ruby tools/minknote-post "My Post Title"' if title.empty?
+
+root = File.expand_path("..", __dir__)
+dir = File.join(root, "apps/minknote/blog")
+slug = Jekyll::Utils.slugify(title)
+now = Time.now
+date_stamp = now.strftime("%Y-%m-%d")
+time_stamp = now.strftime("%Y-%m-%d %H:%M %z")
+path = File.join(dir, "#{date_stamp}-#{slug}.md")
+
+abort "A MinkNote post already exists at #{path}" if File.exist?(path)
+
+escaped_title = title.include?(":") ? "\"#{title.gsub('"', '\"')}\"" : title
+
+FileUtils.mkdir_p(dir)
+File.write(path, <<~MARKDOWN)
+  ---
+  layout: minknote-post
+  title: #{escaped_title}
+  date: #{time_stamp}
+  description:
+  ---
+MARKDOWN
+
+relative = path.sub(%r{\A#{Regexp.escape(root)}/?}, "")
+puts "New MinkNote post created at #{relative}"
