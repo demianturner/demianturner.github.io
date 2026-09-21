@@ -2,10 +2,16 @@
    MinkNote blog
    ============================================================ */
 
+.blog-header h1 {
+  font-size: clamp(var(--t-4xl), 6vw, var(--t-6xl));
+  margin: var(--s3) 0 var(--s5);
+  letter-spacing: -0.025em;
+}
+
 .blog-header p {
   font-size: var(--t-lg);
   color: var(--text-muted);
-  max-width: 28rem;
+  max-width: 420px;
   margin: 0 auto;
   line-height: 1.7;
 }
