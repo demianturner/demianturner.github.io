@@ -45,7 +45,7 @@
           {% for post in posts %}
             {% assign hero = post['hero-image'] | default: '' | strip %}
             <li>
-              <a class="blog-card" href="{{ post.url }}">
+              <a class="blog-card{% if hero != '' %} blog-card--hero{% endif %}" href="{{ post.url }}">
                 {% if hero != '' %}
                   {% assign hero_src = hero %}
                   {% assign hero_prefix = hero | slice: 0, 1 %}
