@@ -31,7 +31,7 @@ generated: true
 ## Multiple Project Support
 
 * **Independent Projects**: Keep different groups of journals and notes in separate projects anywhere on your Mac
-* **Easy Switching**: Change project location anytime via Preferences → Projects → "Switch Project"
+* **Easy Switching**: Change project location anytime via Settings → Projects → "Switch Project"
 * **Use Cases**: Keep personal journals separate from work notes, organise projects by client or topic, maintain multiple independent knowledge bases
 
 ## Local Storage

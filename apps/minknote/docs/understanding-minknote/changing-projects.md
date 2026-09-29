@@ -14,7 +14,7 @@ A project is simply a folder on your Mac. Switch between projects at any time to
 
 ## How to Switch Projects
 
-* Open **Preferences** and navigate to the **Projects** tab
+* Open **Settings** and navigate to the **Projects** tab
 * Click the **Switch Project** button
 
 ![](/apps/minknote/docs/images/understanding-minknote/CleanShot_2026-09-17_at_12.17.02%402x.png)

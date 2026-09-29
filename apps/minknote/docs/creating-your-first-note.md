@@ -22,7 +22,7 @@ MinkNote is fully keyboard-optimised. See [Keyboard Shortcuts](/apps/minknote/do
 
 Use the **Tags** button (`⌘T`) in the toolbar to tag your notes.
 
-Tags are stored in the note's **Frontmatter**. You can choose to show or hide front matter in **Preferences → Appearance**.
+Tags are stored in the note's **Frontmatter**. You can choose to show or hide front matter in **Settings → Appearance**.
 
 > **Note**: If you edit an external Markdown file, ie not created in MinkNote, you won't get the option to `tag` or `favourite` that note until you add Frontmatter (Note > Add Frontmatter).
 
@@ -35,4 +35,4 @@ MinkNote offers two editor modes that you can cycle through using `⌘E`:
 
 > See the [Markdown Guide](/apps/minknote/docs/editing-and-formatting/using-markdown/) for full details.
 
-You can also use a Side-by-Side layout (available in Preferences → Appearance), which displays Markdown and rendered output simultaneously for instant feedback while you write.
+You can also use a Side-by-Side layout (available in Settings → Appearance), which displays Markdown and rendered output simultaneously for instant feedback while you write.

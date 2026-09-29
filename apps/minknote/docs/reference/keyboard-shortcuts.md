@@ -42,6 +42,6 @@ generated: true
     * `←` / `→` - Collapse/expand journal folders
     * `↑` / `↓` - Navigate search results
     * `Return` - Activate selected search result
-* **Preferences:**
-    * `⌘,` - Open Settings/Preferences
+* **Settings:**
+    * `⌘,` - Open Settings
 * Full menu bar integration with native macOS feel

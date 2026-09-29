@@ -7,17 +7,23 @@ categories:
         url: /apps/minknote/docs/
       - title: "Creating Your First Note"
         url: /apps/minknote/docs/creating-your-first-note/
+      - title: "Finding Your Way Around"
+        url: /apps/minknote/docs/finding-your-way-around/
       - title: "Searching, Navigating, and Sorting"
         url: /apps/minknote/docs/searching-navigating-and-sorting/
       - title: "Moving Notes and Images"
         url: /apps/minknote/docs/moving-notes-and-images/
-      - title: "Setting Preferences"
-        url: /apps/minknote/docs/setting-preferences/
+      - title: "Customising the App"
+        url: /apps/minknote/docs/customising-the-app/
   - id: customising-minknote
     label: "Customising MinkNote"
     pages:
+      - title: "Customising Journal Icons"
+        url: /apps/minknote/docs/customising-minknote/customising-journal-icons/
       - title: "Setting Up a Minimal UI"
         url: /apps/minknote/docs/customising-minknote/setting-up-a-minimal-ui/
+      - title: "Settings"
+        url: /apps/minknote/docs/customising-minknote/settings/
   - id: editing-and-formatting
     label: "Editing and Formatting"
     pages:
@@ -30,6 +36,8 @@ categories:
   - id: finding-notes
     label: "Finding Notes"
     pages:
+      - title: "Finding Your Notes"
+        url: /apps/minknote/docs/finding-notes/finding-your-notes/
       - title: "Navigating the App by Keyboard"
         url: /apps/minknote/docs/finding-notes/navigating-the-app-by-keyboard/
   - id: importing-and-exporting
@@ -39,11 +47,6 @@ categories:
         url: /apps/minknote/docs/importing-and-exporting/exporting-from-apple-notes/
       - title: "Working with External Markdown Files"
         url: /apps/minknote/docs/importing-and-exporting/working-with-external-markdown-files/
-  - id: organising-notes
-    label: "Organising Notes"
-    pages:
-      - title: "Customising Journal Icons"
-        url: /apps/minknote/docs/organising-notes/customising-journal-icons/
   - id: reference
     label: "Reference"
     pages:

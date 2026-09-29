@@ -66,7 +66,7 @@ The **Tags** section in the sidebar shows all tags used across your project. Cli
 
 * A **tag indicator** appears above the note list showing which tag is currently selected
 * Click the **×** button on the indicator to clear the filter and return to the normal view
-* Tag counts show how many notes use each tag (you can hide all counts in Preferences)
+* Tag counts show how many notes use each tag (you can hide all counts in Settings)
 
 ### Adding Tags to Notes
 
