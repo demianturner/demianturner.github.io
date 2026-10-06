@@ -23,7 +23,7 @@ From the site repo root:
 
 ```bash
 python3 .cursor/skills/publish-to-jekyll/scripts/import_docs.py import \
-  --source "/Users/demianturner/Developer/Github/demianturner/ProjectJournal/ProjectJournal/Resources/sample-files/Getting Started" \
+  --source "/Users/demianturner/Developer/Github/demianturner/ProjectJournal/MinkNote/Resources/sample-files/Getting Started" \
   --site-root "/Users/demianturner/Developer/Github/demianturner/demianturner.github.io" \
   --ignore changelog.md roadmap.md
 ```

@@ -36,7 +36,7 @@ Use the toolbar and sidebar to:
 The guides below cover the essentials:
 
 * [2. Creating Your First Note](/apps/minknote/docs/creating-your-first-note/)
-* [3. Finding Your Way Around](/apps/minknote/docs/searching-navigating-and-sorting/)
+* [3. Finding Your Way Around](/apps/minknote/docs/finding-your-way-around/)
 * [4. Moving Notes and Images](/apps/minknote/docs/moving-notes-and-images/)
 * [5. Customising the App](/apps/minknote/docs/customising-the-app/)
 
