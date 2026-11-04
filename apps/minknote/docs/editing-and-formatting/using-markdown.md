@@ -111,7 +111,7 @@ Let's rename \*our-new-project\* to \*our-old-project\*.
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
+[I'm a relative reference to another documentation page](../linking-notes/)
 
 URLs and URLs in angle brackets will automatically get turned into links.
 http://www.example.com or <http://www.example.com> and sometimes
