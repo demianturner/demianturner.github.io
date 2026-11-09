@@ -2,12 +2,14 @@
 layout: minknote-post
 title: Say Hello to iPhone and iPad!
 date: 2026-11-08 12:00 +0000
-description: MinkNote 1.10 brings the app to iPhone and iPad, adds iCloud syncing for Pro users, and makes it easy to move a project to iCloud.
+description: MinkNote comes to iPhone and iPad! Both apps are included at no extra cost for existing Pro customers, with iCloud syncing across all your Apple devices.
 hero-image: say-hello-to-iphone-and-ipad.jpg
 show-hero: false
 ---
 
 It's taken longer than expected to get through Apple's approval process, but I'm excited to announce that **MinkNote is finally available on iPhone and iPad!**
+
+And here's the best part: **if you're already a MinkNote Pro customer, the iPhone and iPad apps are included at no extra cost.** Whether you have a monthly, yearly or lifetime purchase, your existing Pro access now covers MinkNote across your Mac, iPhone and iPad.
 
 Release 1.10 brings MinkNote to three new devices:
 
@@ -15,7 +17,7 @@ Release 1.10 brings MinkNote to three new devices:
 * iPhone Duo
 * iPad
 
-And there's another major addition: **iCloud syncing for Pro users**, making it possible to work with the same notes across your Mac, iPhone and iPad.
+With iCloud syncing, you can now work with the same Markdown notes across all your Apple devices.
 
 ![MinkNote on iPad showing a project with a note list and editor side by side](/apps/minknote/blog/images/say-hello-to-iphone-and-ipad.jpg)
 
@@ -104,7 +106,9 @@ Nevertheless, as with any new release involving cloud syncing, I'd recommend kee
 
 ## Give It a Try!
 
-Bringing MinkNote to iPhone and iPad is a big milestone for the app.
+Bringing MinkNote to iPhone and iPad is a big milestone for the app, and I'm particularly pleased to be able to offer both apps to existing Pro customers without any additional charge.
+
+**One Pro purchase, three platforms, and your Markdown notes available wherever you need them.**
 
 MinkNote started as a Mac-first Markdown notes app built around a simple idea: **your notes are yours, stored as ordinary files, without being locked into a proprietary system.**
 
@@ -115,4 +119,5 @@ There's still work to do, and I'll be improving the mobile experience over the c
 If you try the new apps, I'd be very interested to hear how you get on, particularly if you encounter any issues or have suggestions for what I should tackle next.
 
 ## Download the latest version of the app
+
 On the [App Store](https://apps.apple.com/app/minknote/id6755822706)
