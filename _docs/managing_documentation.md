@@ -2,7 +2,7 @@
 
 Product docs at `/apps/minknote/docs/` are generated from a MinkNote journal. Edit the source notes, then re-run the publisher. Do not hand-edit the generated Markdown.
 
-The publisher is the **publish-to-jekyll** skill from [demianturner/minknote-skills](https://github.com/demianturner/minknote-skills), installed at `.cursor/skills/publish-to-jekyll/`.
+The publisher is the **mink-publish-documentation** skill from [demianturner/minknote-skills](https://github.com/demianturner/minknote-skills), installed at `~/.codex/skills/mink-publish-documentation/`.
 
 ## How the Docs section was added
 
@@ -15,14 +15,14 @@ These site files were set up once. Re-running the publisher does not replace the
 - **Two JS updates**
   - `apps/minknote/assets/js/partials.js` — inserted **Docs** after Pricing in the top nav and footer, and computed a deeper asset prefix for nested docs URLs.
   - `apps/minknote/assets/js/main.js` — highlighted the Docs nav link on any `/docs` path.
-- **Markdown transformation via publish-to-jekyll** — the [publish-to-jekyll](https://github.com/demianturner/minknote-skills) skill converts the Getting Started journal into Jekyll pages: front matter, rewritten `minknote://` links, copied images, YouTube embeds, and the sidebar YAML. Root notes become **Getting Started**; each top-level journal folder becomes its own sidebar section.
+- **Markdown transformation via mink-publish-documentation** — the [mink-publish-documentation](https://github.com/demianturner/minknote-skills) skill converts the Getting Started journal into Jekyll pages: front matter, rewritten `minknote://` links, copied images, YouTube embeds, and the sidebar YAML. Root notes become **Getting Started**; each top-level journal folder becomes its own sidebar section.
 
 ## Update Getting Started
 
 From the site repo root:
 
 ```bash
-python3 .cursor/skills/publish-to-jekyll/scripts/import_docs.py import \
+python3 ~/.codex/skills/mink-publish-documentation/scripts/import_docs.py import \
   --source "/Users/demianturner/Developer/Github/demianturner/ProjectJournal/MinkNote/Resources/sample-files/Getting Started" \
   --site-root "/Users/demianturner/Developer/Github/demianturner/demianturner.github.io" \
   --ignore changelog.md roadmap.md
