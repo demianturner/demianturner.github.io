@@ -4,7 +4,7 @@ title: MinkNote's Documentation Is Written in MinkNote
 date: 2026-09-09 09:45 +0100
 description: MinkNote's user docs live in a MinkNote journal. One agent skill publishes them to this site.
 hero-image: using-minknote-for-documentation.jpg
-show-hero: true
+show-hero: false 
 ---
 
 The [MinkNote documentation](/apps/minknote/docs/) on this site — 19 pages, 8 sections, screenshots and all — isn't maintained here. It lives in a MinkNote journal on my Mac, and I've never hand-edited a single generated page.

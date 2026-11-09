@@ -4,7 +4,7 @@ title: Say Hello to iPhone and iPad!
 date: 2026-11-08 12:00 +0000
 description: MinkNote 1.10 brings the app to iPhone and iPad, adds iCloud syncing for Pro users, and makes it easy to move a project to iCloud.
 hero-image: say-hello-to-iphone-and-ipad.jpg
-show-hero: true
+show-hero: false
 ---
 
 It's taken longer than expected to get through Apple's approval process, but I'm excited to announce that **MinkNote is finally available on iPhone and iPad!**
