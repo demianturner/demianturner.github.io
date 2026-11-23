@@ -28,6 +28,7 @@ generated: true
     * `⌘⇧Y` - Toggle Formatting Toolbar in the frontmost note window
     * `⌘K` - Add a link to another note when the note editor is focused. Uses selected text when available; without a selection, inserts a link using the destination note's title at the cursor.
     * `⌘⇧B` - Toggle/apply a bullet list in the frontmost note editor
+    * `⌘⌥C` - Toggle/apply a code block in the note editor
     * `⌘⌥1` / `⌘⌥2` / `⌘⌥3` - Apply Heading 1 / Heading 2 / Heading 3
     * `⌘⌥4` / `⌘⌥5` / `⌘⌥6` - Apply Heading 4 / Heading 5 / Heading 6
     * `⌘T` - Open Edit Tags in the frontmost note window
@@ -36,6 +37,8 @@ generated: true
     * `⌘⌫` - Delete selected note(s) when the Notes pane is focused
     * `⌘↓` - Open selected note in a new window when the Notes pane is focused (single selection only)
 * **Navigation:**
+    * `⌘⇧P` - Open the project switcher
+    * `⌘⇧K` - Show keyboard shortcuts
     * `⌃⌥←` - Move focus left between journals, notes, and the note editor
     * `⌃⌥→` - Move focus right between journals, notes, and the note editor
     * `↑` / `↓` - Navigate lists

@@ -10,7 +10,7 @@ generated: true
 ---
 ## Showing the Formatting Toolbar
 
-The formatting toolbar is hidden by default to reduce clutter. To reveal it, click the **Aa** button in the note toolbar:
+The formatting toolbar is visible by default. To hide or show it, click the **Aa** button in the note toolbar:
 
 ![](/apps/minknote/docs/images/editing-and-formatting/CleanShot_2026-02-04_at_17.07.09%402x.png)
 

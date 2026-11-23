@@ -32,3 +32,7 @@ When switching between projects, MinkNote remembers:
 * Window layout and view preferences
 
 This means you can seamlessly switch between different projects without losing your place or reconfiguring settings.
+
+## Use a project on other devices
+
+With Pro, you can move a project into MinkNote’s iCloud folder and open it on your other devices. See [Use iCloud with MinkNote](/apps/minknote/docs/understanding-minknote/use-icloud-with-minknote/) for setup and moving instructions.

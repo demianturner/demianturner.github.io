@@ -13,7 +13,7 @@ generated: true
 
 Welcome to **MinkNote**, a Markdown notebook for macOS that stores your notes as plain text files you own.
 
-Everything stays on your Mac. No accounts, no cloud lock-in, and no proprietary database. Your notes remain readable for years, even without MinkNote.
+Keep your projects on your Mac, or use iCloud with Pro to open them on your other devices. MinkNote stores your notes as ordinary files, so they remain readable even without the app.
 
 The *Getting Started* guide introduces the core features in just a few minutes. When you're ready, create your first journal and start writing.
 
@@ -39,5 +39,6 @@ The guides below cover the essentials:
 * [3. Finding Your Way Around](/apps/minknote/docs/finding-your-way-around/)
 * [4. Moving Notes and Images](/apps/minknote/docs/moving-notes-and-images/)
 * [5. Customising the App](/apps/minknote/docs/customising-the-app/)
+* [Use iCloud with MinkNote](/apps/minknote/docs/understanding-minknote/use-icloud-with-minknote/)
 
 Once you're comfortable with the app, you can hide this journal from *Settings*.

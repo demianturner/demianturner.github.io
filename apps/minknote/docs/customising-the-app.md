@@ -8,8 +8,6 @@ permalink: /apps/minknote/docs/customising-the-app/
 uuid: 65D86CD3-10DD-4D2D-91E7-3C168BE465EF
 generated: true
 ---
-# 5. **Customising the App**
-
 MinkNote works out of the box, but you can tailor it to suit the way you work.
 
 Open **MinkNote → Settings** or press `⌘,` to explore your options.
