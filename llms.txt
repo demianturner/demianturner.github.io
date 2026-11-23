@@ -20,6 +20,7 @@ Product documentation currently ships as HTML. Markdown page mirrors are not pub
 - [Pricing](https://muse23.com/apps/minknote/pricing.html): Free and Pro
 - [Manifesto](https://muse23.com/apps/minknote/manifesto.html): product principles
 - [Say Hello to iPhone and iPad!](https://muse23.com/apps/minknote/blog/say-hello-to-iphone-and-ipad/): MinkNote 1.11 brings iPhone and iPad apps, iCloud syncing, a project navigator, Reddit video embeds and more.
+- [Full iCloud Sync Now Available](https://muse23.com/apps/minknote/blog/full-icloud-sync-now-available/)
 
 ## Other apps
 
