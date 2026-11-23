@@ -20,9 +20,11 @@ You do not need to paste a video's HTML embed code. Copy its video or post ID an
     * For a short link like `https://youtu.be/9tzgwwZOvaE`, the ID is the part after the final `/`. Stop before any `?` and the other URL options.
 2. Add the shortcode to your note, replacing the example ID with the video's ID:
 
-    ```text
-    {{youtube:9tzgwwZOvaE}}
-    ```
+{% raw %}
+```
+{{youtube:9tzgwwZOvaE}}
+```
+{% endraw %}
 
 > Switch to MD mode to view embed code
 
@@ -33,9 +35,11 @@ The ID must be 11 characters. In WYSIWYG mode, MinkNote shows a clickable thumbn
 1. Open the Reddit post that contains the video. Use the post's full link, then find the ID immediately after `/comments/` in the address. For example, in `https://www.reddit.com/r/example/comments/1w4fivw/a_video_post/`, the post ID is `1w4fivw`.
 2. Add the shortcode to your note, replacing the example ID with the post's ID:
 
-    ```text
-    {{reddit:1w4fivw}}
-    ```
+{% raw %}
+```
+{{reddit:1w4fivw}}
+```
+{% endraw %}
     
 > Switch to MD mode to view embed code
 
