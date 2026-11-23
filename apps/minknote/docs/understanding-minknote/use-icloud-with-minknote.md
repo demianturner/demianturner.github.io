@@ -28,7 +28,7 @@ On each device, make sure you have:
 4. Click the project’s options button (the circle with three dots), then choose **Move to iCloud** to start the move.
 5. Click **Okay** and the project move will continue to happen in the background.
 
-// Image: The Mac project switcher with a project’s options menu open and Move to iCloud visible.
+![](/apps/minknote/docs/images/understanding-minknote/CleanShot_2026-11-23_at_12.37.50%402x.png)
 
 MinkNote moves the whole project, including its folders, notes and attachments, into its iCloud folder. The project appears under **iCloud projects** when the move finishes. Uploading may continue after the move is complete.
 
@@ -46,7 +46,7 @@ Projects stored elsewhere in iCloud Drive can also use **Move to iCloud** to mov
 
 For now, use iPhone and iPad to read your notes. Changes made in the mobile editor aren’t saved.
 
-// Image: The Projects list on iPhone and iPad, showing a project in the iCloud section.
+![](/apps/minknote/docs/images/understanding-minknote/CleanShot_2026-11-23_at_12.42.01%402x.png)
 
 Only projects in MinkNote’s own iCloud folder appear in this list automatically. Use **Move to iCloud** on your Mac to prepare an existing project for your other devices.
 
