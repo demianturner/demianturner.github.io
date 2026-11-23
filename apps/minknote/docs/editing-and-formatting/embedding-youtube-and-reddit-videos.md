@@ -18,18 +18,26 @@ You do not need to paste a video's HTML embed code. Copy its video or post ID an
 1. Open the video on YouTube and copy its ID from the address bar.
     * For a link like `https://www.youtube.com/watch?v=9tzgwwZOvaE`, the ID is the 11-character value after `v=`. Stop before any `&` and the other URL options.
     * For a short link like `https://youtu.be/9tzgwwZOvaE`, the ID is the part after the final `/`. Stop before any `?` and the other URL options.
-2. Add the shortcode to your note, replacing the example ID with the video's ID: `{% raw %}`{{youtube:9tzgwwZOvaE}}`{% endraw %}`
+2. Add the shortcode to your note, replacing the example ID with the video's ID:
 
-> Switch to MD mode to view embed code
+{% raw %}
+```
+    {{youtube:9tzgwwZOvaE}}
+```
+{% endraw %}
 
 The ID must be 11 characters. In WYSIWYG mode, MinkNote shows a clickable thumbnail. Click it to open the video on YouTube. YouTube videos do not play inside the note.
 
 ## Embed a Reddit video
 
 1. Open the Reddit post that contains the video. Use the post's full link, then find the ID immediately after `/comments/` in the address. For example, in `https://www.reddit.com/r/example/comments/1w4fivw/a_video_post/`, the post ID is `1w4fivw`.
-2. Add the shortcode to your note, replacing the example ID with the post's ID: `{% raw %}`{{reddit:1w4fivw}}`{% endraw %}`
-    
-> Switch to MD mode to view embed code
+2. Add the shortcode to your note, replacing the example ID with the post's ID:
+
+{% raw %}
+```
+    {{reddit:1w4fivw}}
+```
+{% endraw %}
 
 In WYSIWYG mode, MinkNote loads the video in the note with the standard video controls. Reddit video IDs contain 5 to 10 lowercase letters or numbers. MinkNote streams the video from Reddit; it does not save a video file in your project.
 
