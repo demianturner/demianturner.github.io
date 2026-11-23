@@ -44,7 +44,7 @@ Projects stored elsewhere in iCloud Drive can also use **Move to iCloud** to mov
 
 **On iPad:** Tap the current project at the bottom of the sidebar to open **Projects**, then choose the project under **iCloud**.
 
-For now, use iPhone and iPad to read your notes. Changes made in the mobile editor aren’t saved.
+On iPhone and iPad you can read, create and edit notes. Your changes are saved and sync back to your other devices through iCloud.
 
 ![](/apps/minknote/docs/images/understanding-minknote/CleanShot_2026-11-23_at_12.42.01%402x.png)
 
